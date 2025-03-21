@@ -18,7 +18,7 @@ const CustomFooter = () => {
         width: "100%",
         display: "grid",
         placeItems: "center",
-        p: isMobile ? 1 : isTablet ? 2 : 4,
+        py: isMobile ? 1 : isTablet ? 2 : 3,
         boxSizing: "border-box",
         borderTop: "1px solid var(--border-color)",
       }}
@@ -26,8 +26,8 @@ const CustomFooter = () => {
       <Box
         sx={{
           width: "100%",
-          maxWidth: "1440px",
-          px: isMobile ? 1 : 3,
+          maxWidth: "1200px",
+          px: isMobile ? 1 : isTablet ? 2 : 3,
           boxSizing: "border-box",
         }}
       >
@@ -41,7 +41,7 @@ const CustomFooter = () => {
             <Stack direction="row" spacing={1} alignItems="center">
               <Box
                 component="img"
-                src="/img/sportsnetwork_default.png"
+                src="/img/vite.svg"
                 sx={{
                   height: "auto",
                   width: "auto",
@@ -51,8 +51,13 @@ const CustomFooter = () => {
               />
               <Typography
                 variant="h6"
-                fontWeight="bold"
-                fontSize={isMobile ? "16px" : isTablet ? "18px" : "20px"}
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: isMobile ? "28px" : isTablet ? "32px" : "36px",
+                  fontFamily: "AccentFont",
+                  letterSpacing: 2,
+                  lineHeight: 0.85,
+                }}
               >
                 SOMESANKARIT
               </Typography>

@@ -1,4 +1,5 @@
 import "./App.css";
+import "./styles/fonts.css";
 import CustomAppBar from "./components/CustomAppBar";
 import { Box, ThemeProvider } from "@mui/material";
 import CustomFooter from "./components/CustomFooter";
@@ -20,6 +21,7 @@ function App() {
           padding: 0,
           display: "flex",
           flexDirection: "column",
+          gap: 12,
           alignItems: "center",
           overflowX: "hidden",
           position: "relative",
