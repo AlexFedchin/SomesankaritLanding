@@ -9,7 +9,7 @@ const AccentButton = ({ children, sx, ...props }) => {
     <Button
       variant="contained"
       sx={{
-        borderRadius: "2px",
+        borderRadius: "4px",
         bgcolor: "var(--primary)",
         color: "var(--off-white)",
         fontWeight: "bold",

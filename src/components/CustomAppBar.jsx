@@ -91,39 +91,43 @@ const CustomAppBar = () => {
               </Stack>
 
               {/* Navigation Links */}
-              <Stack
-                direction="row"
-                spacing={4}
-                alignItems="center"
-                sx={{
-                  "& a": {
-                    textDecoration: "none",
-                    textAlign: "center",
-                    color: "var(--off-white)",
-                    fontSize: isMobile ? "14px" : isTablet ? "16px" : "18px",
-                    willChange: "font-weight, color, text-shadow",
-                    transition:
-                      "color 0.3s ease, text-shadow 0.3s ease, font-weight 0.1s ease",
-                    "&:hover": {
-                      color: "var(--primary)",
-                      textShadow:
-                        "0 0 8px var(--primary), 0 0 32px var(--primary), 0 0 48px var(--primary), 0 0 100px var(--primary)",
-                      filter: "brightness(2)",
-                      fontWeight: "bold",
+              {isMobile || isTablet ? null : (
+                <Stack
+                  direction="row"
+                  spacing={4}
+                  sx={{
+                    width: "280px",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    "& a": {
+                      textDecoration: "none",
+                      textAlign: "center",
+                      color: "var(--off-white)",
+                      fontSize: isMobile ? "14px" : isTablet ? "16px" : "18px",
+                      willChange: "font-weight, color, text-shadow",
+                      transition:
+                        "color 0.3s ease, text-shadow 0.3s ease, font-weight 0.1s ease",
+                      "&:hover": {
+                        color: "var(--primary)",
+                        textShadow:
+                          "0 0 8px var(--primary), 0 0 32px var(--primary), 0 0 48px var(--primary), 0 0 100px var(--primary)",
+                        filter: "brightness(2)",
+                        fontWeight: "bold",
+                      },
                     },
-                  },
-                }}
-              >
-                <a href="#about" draggable={false}>
-                  ABOUT
-                </a>
-                <a href="#team" draggable={false}>
-                  PRICES
-                </a>
-                <a href="#services" draggable={false}>
-                  PORTFOLIO
-                </a>
-              </Stack>
+                  }}
+                >
+                  <a href="#about" draggable={false}>
+                    ABOUT
+                  </a>
+                  <a href="#team" draggable={false}>
+                    PRICES
+                  </a>
+                  <a href="#services" draggable={false}>
+                    PORTFOLIO
+                  </a>
+                </Stack>
+              )}
             </Stack>
 
             {/* Contact Button */}

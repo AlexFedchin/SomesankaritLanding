@@ -6,6 +6,8 @@ import CustomFooter from "./components/CustomFooter";
 import useScreenSize from "./hooks/useScreenSize";
 import createCustomTheme from "./styles/theme";
 import Intro from "./sections/Intro";
+import About from "./sections/About";
+import OurJourney from "./sections/OurJourney";
 import Team from "./sections/Team";
 
 function App() {
@@ -21,7 +23,7 @@ function App() {
           padding: 0,
           display: "flex",
           flexDirection: "column",
-          gap: 12,
+          gap: 4,
           alignItems: "center",
           overflowX: "hidden",
           position: "relative",
@@ -31,7 +33,11 @@ function App() {
 
         <Intro />
 
+        <About />
+
         <Team />
+
+        <OurJourney />
 
         <CustomFooter />
       </Box>

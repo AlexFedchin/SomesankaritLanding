@@ -1,112 +1,110 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import PersonCard from "../components/PersonCard";
 import useScreenSize from "../hooks/useScreenSize";
+import DefaultContainer from "../components/DefaultContainer";
 
 const Team = () => {
   const { isMobile, isTablet } = useScreenSize();
 
   return (
-    <Container
-      id="team"
+    <Box
       sx={{
-        zIndex: 1,
+        width: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
         alignItems: "center",
-        gap: isMobile ? 4 : isTablet ? 6 : 8,
+        position: "relative",
       }}
     >
+      {/* Image Header */}
+      <Box
+        component="img"
+        src="/img/team.JPG"
+        sx={{
+          width: "100vw",
+          height: isMobile ? "200px" : isTablet ? "300px" : "400px",
+          objectFit: "cover",
+          objectPosition: "center",
+          filter: "brightness(50%)",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          display: "grid",
+          placeItems: "center",
+          zIndex: 0,
+        }}
+      />
       <Typography
         variant="h3"
         sx={{
           fontWeight: "bold",
           fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
+          zIndex: 5,
+          my: isMobile
+            ? "calc((200px - 1.5rem) / 2 - 2px)"
+            : isTablet
+            ? "calc((300px - 2rem) / 2 - 2px)"
+            : "calc((400px - 2.5rem) / 2 - 2px)",
         }}
       >
         MEET THE TEAM
       </Typography>
 
-      <Stack direction="row" spacing={isMobile ? 2 : isTablet ? 4 : 8}>
-        <Box
-          component="img"
-          src="/img/team/mirko.JPG"
-          alt="Mirko"
-          draggable="false"
-          sx={{
-            width: "300px",
-            height: "300px",
-            objectFit: "cover",
-            objectPosition: "center",
-            borderRadius: 2,
-            userSelect: "none",
-          }}
+      {/* Team Cards */}
+      <DefaultContainer sx={{ mt: isMobile ? 1 : isTablet ? 2 : 4 }}>
+        <PersonCard
+          image="/img/team/mirko.JPG"
+          firstName="Mirko"
+          secondName="Asell"
+          roles={["Star", "Cameraman"]}
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin
+          vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur
+          sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula.
+          Proin vulputate condimentum lacus, a tristique mi finibus a.
+          Vivamus lobortis odio vel."
         />
-        <Stack
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-            justifyContent: "center",
-          }}
-        >
-          <Stack
-            direction="row"
-            spacing={2}
-            sx={{ display: "flex", alignItems: "flex-end" }}
-          >
-            <Typography
-              variant="h3"
-              sx={{
-                fontSize: isMobile ? "3rem" : isTablet ? "4rem" : "5rem",
-                fontFamily: "AccentFont",
-                lineHeight: "60px",
-                userSelect: "none",
-              }}
-            >
-              Mirko
-            </Typography>
-            <Typography
-              variant="h2"
-              sx={{
-                color: "var(--primary)",
-                fontSize: isMobile ? "4rem" : isTablet ? "5rem" : "6rem",
-                fontFamily: "AccentFont",
-                lineHeight: "72px",
-                letterSpacing: 2,
-                textShadow: "0 0 16px var(--primary)",
-                userSelect: "none",
-              }}
-            >
-              ASELL
-            </Typography>
-          </Stack>
 
-          <Box
-            sx={{
-              height: "2px",
-              width: "100%",
-              background:
-                "linear-gradient(-45deg, transparent 20%, var(--primary) 100%)",
-            }}
-          />
+        <PersonCard
+          image="/img/team/roman.JPG"
+          firstName="Roman"
+          secondName="Aliev"
+          roles={["Star", "Role", "Manager"]}
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin
+          vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur
+          sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula.
+          Proin vulputate condimentum lacus, a tristique mi finibus a.
+          Vivamus lobortis odio vel."
+        />
 
-          <Typography
-            variant="body1"
-            sx={{
-              textAlign: "left",
-              fontSize: isMobile ? "0.75rem" : isTablet ? "1rem" : "1.25rem",
-            }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            condimentum a eros et sollicitudin. Donec lectus magna, facilisis
-            sed justo sed, facilisis maximus diam. Praesent tortor lectus,
-            aliquam fermentum tincidunt ut, suscipit a lorem. Curabitur vitae
-            convallis odio. Duis ut erat volutpat, rhoncus velit vitae, lacinia
-            tellus. Sed ultricies odio.
-          </Typography>
-        </Stack>
-      </Stack>
-    </Container>
+        <PersonCard
+          image="/img/team/aino.JPG"
+          firstName="Aino"
+          secondName="Asell"
+          roles={["Assistant", "Accountant"]}
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin
+          vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur
+          sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula.
+          Proin vulputate condimentum lacus, a tristique mi finibus a.
+          Vivamus lobortis odio vel."
+        />
+
+        <PersonCard
+          image="/img/team/santeri.JPG"
+          firstName="Santeri"
+          secondName="Koskinen"
+          roles={["Accountant", "CEO"]}
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin
+          vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur
+          sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula.
+          Proin vulputate condimentum lacus, a tristique mi finibus a.
+          Vivamus lobortis odio vel."
+        />
+      </DefaultContainer>
+    </Box>
   );
 };
 
