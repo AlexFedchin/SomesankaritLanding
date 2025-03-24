@@ -81,7 +81,7 @@ const Team = () => {
         <PersonCard
           image="/img/team/aino.JPG"
           firstName="Aino"
-          secondName="Asell"
+          secondName="Skyttälä"
           roles={["Assistant", "Accountant"]}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing
           elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin

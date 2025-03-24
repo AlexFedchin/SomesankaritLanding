@@ -1,8 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import useScreenSize from "../hooks/useScreenSize";
+import { useTranslation } from "react-i18next";
 
 const OurJourney = () => {
   const { isMobile, isTablet } = useScreenSize();
+  const { t } = useTranslation();
 
   const information = [
     {
@@ -46,7 +48,7 @@ const OurJourney = () => {
           mt: 8,
         }}
       >
-        OUR JOURNEY
+        {t("title").toUpperCase()}
       </Typography>
 
       <Box

@@ -1,9 +1,38 @@
-import { Box, Typography, Toolbar, AppBar, Stack } from "@mui/material";
+import { useState } from "react";
+import {
+  Box,
+  Typography,
+  Toolbar,
+  AppBar,
+  Stack,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+} from "@mui/material";
 import useScreenSize from "../hooks/useScreenSize";
 import AccentButton from "./AccentButton";
+import BackIcon from "@mui/icons-material/ArrowBack";
 
 const CustomAppBar = () => {
   const { isMobile, isTablet } = useScreenSize();
+
+  const menuItems = [
+    { text: "ABOUT", href: "#about" },
+    { text: "PRICES", href: "#team" },
+    { text: "PORTFOLIO", href: "#services" },
+    { text: "CONTACT", href: "#contact" },
+  ];
+
+  const [language, setLanguage] = useState("en");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => setDrawerOpen(!drawerOpen);
+
+  const toggleLanguage = () => {
+    if (isMobile || isTablet) toggleDrawer();
+    setLanguage((prev) => (prev === "en" ? "fi" : "en"));
+  };
 
   return (
     <>
@@ -22,8 +51,8 @@ const CustomAppBar = () => {
         <Box
           sx={{
             mx: isMobile || isTablet ? 0 : "16px",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
             borderRadius: isMobile || isTablet ? 0 : 2,
             width: "100%",
             maxWidth:
@@ -34,7 +63,12 @@ const CustomAppBar = () => {
             py: 0.5,
             display: "flex",
             boxSizing: "border-box",
-            border: "1px solid rgba(255, 255, 255, 0.05)",
+            border:
+              !isTablet && !isMobile
+                ? "1px solid rgba(255, 255, 255, 0.1)"
+                : "none",
+            borderBottom:
+              isMobile || isTablet ? "1px solid rgba(255, 255, 255, 0.1)" : "",
           }}
         >
           <Toolbar
@@ -117,24 +151,170 @@ const CustomAppBar = () => {
                     },
                   }}
                 >
-                  <a href="#about" draggable={false}>
-                    ABOUT
-                  </a>
-                  <a href="#team" draggable={false}>
-                    PRICES
-                  </a>
-                  <a href="#services" draggable={false}>
-                    PORTFOLIO
-                  </a>
+                  {menuItems.map(
+                    (item, index) =>
+                      item.href !== "#contact" && (
+                        <a key={index} href={item.href} draggable={false}>
+                          {item.text}
+                        </a>
+                      )
+                  )}
                 </Stack>
               )}
             </Stack>
 
-            {/* Contact Button */}
-            <AccentButton>CONTACT</AccentButton>
+            <Stack
+              direction="row"
+              spacing={isMobile ? 2 : 4}
+              alignItems="center"
+            >
+              {/* Language Select */}
+              {isMobile || isTablet ? null : (
+                <Typography
+                  onClick={toggleLanguage}
+                  sx={{
+                    textDecoration: "none",
+                    textAlign: "center",
+                    color: "var(--off-white)",
+                    fontSize: isMobile ? "14px" : isTablet ? "16px" : "18px",
+                    cursor: "pointer",
+                    willChange: "font-weight, color, text-shadow",
+                    fontWeight: 200,
+                    transition:
+                      "color 0.3s ease, text-shadow 0.3s ease, font-weight 0.1s ease",
+                    "&:hover": {
+                      color: "var(--primary)",
+                      textShadow:
+                        "0 0 8px var(--primary), 0 0 32px var(--primary), 0 0 48px var(--primary), 0 0 100px var(--primary)",
+                      filter: "brightness(2)",
+                      fontWeight: "bold",
+                    },
+                  }}
+                >
+                  {language === "fi" ? "ENG" : "FIN"}
+                </Typography>
+              )}
+              {/* Contact Button */}
+              {isMobile ? null : <AccentButton>CONTACT</AccentButton>}
+              {/* Menu Icon */}
+              {isMobile || isTablet ? (
+                <Box
+                  component="img"
+                  src="/img/menu.svg"
+                  alt="Menu"
+                  onClick={toggleDrawer}
+                  draggable="false"
+                  sx={{
+                    height: "auto",
+                    width: "auto",
+                    maxHeight: isMobile ? "36px" : isTablet ? "40px" : "44px",
+                    maxWidth: "40px",
+                    userSelect: "none",
+                    cursor: "pointer",
+                  }}
+                />
+              ) : null}
+            </Stack>
           </Toolbar>
         </Box>
       </AppBar>
+
+      {/* Drawer for Mobile Sidebar */}
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={toggleDrawer}
+        sx={{
+          display: isTablet ? "block" : "none",
+          ".MuiDrawer-paper": {
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
+            bgcolor: "rgba(0, 0, 0, 0.02)",
+            color: "var(--off-white) !important",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+          },
+        }}
+      >
+        {/* Back and Language Select */}
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          sx={{
+            p: 2,
+            mt: 1,
+          }}
+        >
+          <BackIcon onClick={toggleDrawer} sx={{ cursor: "pointer" }} />
+
+          <Typography
+            onClick={toggleLanguage}
+            sx={{
+              fontSize: isMobile ? "0.9rem" : "1rem",
+              userSelect: "none",
+              cursor: "pointer",
+              transition: "color 0.2s ease, text-shadow 0.2s ease",
+              willChange: "color, text-shadow, filter",
+              "&:hover, &:active": {
+                color: "var(--primary)",
+                textShadow:
+                  "0 0 8px var(--primary), 0 0 32px var(--primary), 0 0 48px var(--primary), 0 0 100px var(--primary)",
+                filter: "brightness(2)",
+              },
+            }}
+          >
+            {language === "fi" ? "ENG" : "FIN"}
+          </Typography>
+        </Stack>
+
+        {/* Divider */}
+        <Box
+          sx={{
+            height: "1px",
+            width: "calc(100% - 16px)",
+            ml: 2,
+            background:
+              "linear-gradient(-45deg, transparent 0%, var(--off-white) 100%)",
+          }}
+        />
+
+        {/* Menu Items */}
+        <List
+          sx={{
+            width: isMobile ? 200 : 250,
+            py: 2,
+          }}
+        >
+          {menuItems.map((item, index) => (
+            <ListItem
+              component="a"
+              href={item.href}
+              key={index}
+              onClick={toggleDrawer}
+              draggable={false}
+            >
+              <ListItemText
+                primary={item.text}
+                primaryTypographyProps={{
+                  sx: {
+                    color: "var(--off-white)",
+                    fontSize: isMobile ? "0.9rem" : "1rem",
+                    transition: "color 0.2s ease, text-shadow 0.2s ease",
+                    willChange: "color, text-shadow, filter",
+                    userSelect: "none",
+                    "&:hover, &:active": {
+                      color: "var(--primary)",
+                      textShadow:
+                        "0 0 8px var(--primary), 0 0 32px var(--primary), 0 0 48px var(--primary), 0 0 100px var(--primary)",
+                      filter: "brightness(2)",
+                    },
+                  },
+                }}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
     </>
   );
 };

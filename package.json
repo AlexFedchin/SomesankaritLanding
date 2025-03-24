@@ -15,10 +15,12 @@
     "@mui/icons-material": "^6.4.8",
     "@mui/material": "^6.4.8",
     "@mui/styles": "^6.4.8",
+    "i18next": "^24.2.3",
     "install": "^0.13.0",
     "npm": "^10.9.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.4.1",
     "react-router-dom": "^6.30.0"
   },
   "devDependencies": {

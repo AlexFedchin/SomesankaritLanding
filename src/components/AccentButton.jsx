@@ -14,8 +14,8 @@ const AccentButton = ({ children, sx, ...props }) => {
         color: "var(--off-white)",
         fontWeight: "bold",
         letterSpacing: 4,
-        p: "8px 16px 6px 16px",
-        fontSize: isMobile ? "16px" : isTablet ? "18px" : "20px",
+        p: "6px 14px 4px 14px",
+        fontSize: isMobile ? "13px" : isTablet ? "16px" : "18px",
         transition: "filter 0.3s ease, box-shadow 0.3s ease",
         "&:hover": {
           filter: "brightness(1.2)",
