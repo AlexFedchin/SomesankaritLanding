@@ -9,24 +9,23 @@ const OurJourney = () => {
   const information = [
     {
       year: "2021",
-      description: "Work as portsari.",
+      description: t("ourJourney.descriptions.2021"),
     },
     {
       year: "2022",
-      description: "We started our journey with a small but passionate team.",
+      description: t("ourJourney.descriptions.2022"),
     },
     {
       year: "2023",
-      description: "Expanded our services and reached new milestones.",
+      description: t("ourJourney.descriptions.2023"),
     },
     {
       year: "2024",
-      description:
-        "Launched innovative marketing campaigns and grew our client base.",
+      description: t("ourJourney.descriptions.2024"),
     },
     {
       year: "2025",
-      description: "Achieved industry recognition and set new standards.",
+      description: t("ourJourney.descriptions.2025"),
     },
   ];
 
@@ -48,7 +47,7 @@ const OurJourney = () => {
           mt: 8,
         }}
       >
-        {t("title").toUpperCase()}
+        {t("ourJourney.title").toUpperCase()}
       </Typography>
 
       <Box

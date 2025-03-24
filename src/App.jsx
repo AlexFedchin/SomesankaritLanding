@@ -9,6 +9,7 @@ import Intro from "./sections/Intro";
 import About from "./sections/About";
 import OurJourney from "./sections/OurJourney";
 import Team from "./sections/Team";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   const { isMobile, isTablet } = useScreenSize();
@@ -40,6 +41,8 @@ function App() {
         <OurJourney />
 
         <CustomFooter />
+
+        <ScrollToTopButton />
       </Box>
     </ThemeProvider>
   );

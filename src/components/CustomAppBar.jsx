@@ -10,28 +10,29 @@ import {
   ListItem,
   ListItemText,
 } from "@mui/material";
-import useScreenSize from "../hooks/useScreenSize";
-import AccentButton from "./AccentButton";
 import BackIcon from "@mui/icons-material/ArrowBack";
+import AccentButton from "./AccentButton";
+import useScreenSize from "../hooks/useScreenSize";
+import { useTranslation } from "react-i18next";
 
 const CustomAppBar = () => {
   const { isMobile, isTablet } = useScreenSize();
+  const { t, i18n } = useTranslation();
 
   const menuItems = [
-    { text: "ABOUT", href: "#about" },
-    { text: "PRICES", href: "#team" },
-    { text: "PORTFOLIO", href: "#services" },
-    { text: "CONTACT", href: "#contact" },
+    { text: t("menuItems.about"), href: "#about" },
+    { text: t("menuItems.prices"), href: "#prices" },
+    { text: t("menuItems.portfolio"), href: "#portfolio" },
+    { text: t("menuItems.contact"), href: "#contact" },
   ];
 
-  const [language, setLanguage] = useState("en");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
   const toggleLanguage = () => {
     if (isMobile || isTablet) toggleDrawer();
-    setLanguage((prev) => (prev === "en" ? "fi" : "en"));
+    i18n.changeLanguage(i18n.language === "en" ? "fi" : "en");
   };
 
   return (
@@ -172,6 +173,7 @@ const CustomAppBar = () => {
               {isMobile || isTablet ? null : (
                 <Typography
                   onClick={toggleLanguage}
+                  tabIndex={0}
                   sx={{
                     textDecoration: "none",
                     textAlign: "center",
@@ -191,11 +193,15 @@ const CustomAppBar = () => {
                     },
                   }}
                 >
-                  {language === "fi" ? "ENG" : "FIN"}
+                  {i18n.language === "fi" ? "ENG" : "FIN"}
                 </Typography>
               )}
               {/* Contact Button */}
-              {isMobile ? null : <AccentButton>CONTACT</AccentButton>}
+              {isMobile ? null : (
+                <AccentButton href="#contact">
+                  {t("menuItems.contact")}
+                </AccentButton>
+              )}
               {/* Menu Icon */}
               {isMobile || isTablet ? (
                 <Box
@@ -263,7 +269,7 @@ const CustomAppBar = () => {
               },
             }}
           >
-            {language === "fi" ? "ENG" : "FIN"}
+            {i18n.language === "fi" ? "ENG" : "FIN"}
           </Typography>
         </Stack>
 

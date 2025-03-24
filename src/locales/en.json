@@ -1,11 +1,18 @@
 {
-  "title": "Our Journey",
-  "description": {
-    "2021": "Work as portsari.",
-    "2022": "We started our journey with a small but passionate team.",
-    "2023": "Expanded our services and reached new milestones.",
-    "2024": "Launched innovative marketing campaigns and grew our client base.",
-    "2025": "Achieved industry recognition and set new standards."
+  "menuItems": {
+    "about": "ABOUT",
+    "prices": "PRICES",
+    "portfolio": "PORTFOLIO",
+    "contact": "CONTACT"
   },
-  "changeLanguage": "Change Language"
+  "ourJourney": {
+    "title": "Our Journey",
+    "descriptions": {
+      "2021": "Work as portsari.",
+      "2022": "We started our journey with a small but passionate team.",
+      "2023": "Expanded our services and reached new milestones.",
+      "2024": "Launched innovative marketing campaigns and grew our client base.",
+      "2025": "Achieved industry recognition and set new standards."
+    }
+  }
 }
