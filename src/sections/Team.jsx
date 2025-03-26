@@ -66,7 +66,7 @@ const Team = () => {
         />
 
         <PersonCard
-          image="/img/team/roman.JPG"
+          image="/img/team/roman.svg"
           firstName="Roman"
           secondName="Aliev"
           roles={["Star", "Role", "Manager"]}
@@ -79,7 +79,7 @@ const Team = () => {
         />
 
         <PersonCard
-          image="/img/team/aino.JPG"
+          image="/img/team/aino.svg"
           firstName="Aino"
           secondName="Skyttälä"
           roles={["Assistant", "Accountant"]}
@@ -92,7 +92,7 @@ const Team = () => {
         />
 
         <PersonCard
-          image="/img/team/santeri.JPG"
+          image="/img/team/santeri.svg"
           firstName="Santeri"
           secondName="Koskinen"
           roles={["Accountant", "CEO"]}

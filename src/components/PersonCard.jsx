@@ -11,19 +11,33 @@ const PersonCard = ({ image, firstName, secondName, roles, description }) => {
       alignItems="center"
     >
       <Box
-        component="img"
-        src={image}
-        alt={`${firstName} ${secondName}`}
-        draggable="false"
+        aria-label="Person Image Wrapper"
         sx={{
-          width: "250px",
+          bgcolor: "rgba(255, 255, 255, 0.02)",
+          backdropFilter: "blur(4px)",
+          WebkitBackdropFilter: "blur(4px)",
+          border: "1px solid rgba(255, 255, 255, 0.02)",
           height: "250px",
-          objectFit: "cover",
-          objectPosition: "center",
+          width: "250px",
           borderRadius: 2,
-          userSelect: "none",
         }}
-      />
+      >
+        <Box
+          component="img"
+          src={image}
+          alt={`${firstName} ${secondName}`}
+          draggable="false"
+          sx={{
+            width: "250px",
+            height: "250px",
+            objectFit: "cover",
+            objectPosition: "center",
+            borderRadius: 2,
+            userSelect: "none",
+          }}
+        />
+      </Box>
+
       <Stack
         sx={{
           display: "flex",

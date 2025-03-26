@@ -180,6 +180,7 @@ const CustomAppBar = () => {
                     color: "var(--off-white)",
                     fontSize: isMobile ? "14px" : isTablet ? "16px" : "18px",
                     cursor: "pointer",
+                    userSelect: "none",
                     willChange: "font-weight, color, text-shadow",
                     fontWeight: 200,
                     transition:
