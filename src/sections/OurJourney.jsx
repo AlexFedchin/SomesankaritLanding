@@ -36,7 +36,9 @@ const OurJourney = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        gap: 2,
         position: "relative",
+        py: isMobile || isTablet ? 4 : 6,
       }}
     >
       <Typography
@@ -44,7 +46,6 @@ const OurJourney = () => {
         sx={{
           fontWeight: "bold",
           fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
-          mt: 8,
         }}
       >
         {t("ourJourney.title").toUpperCase()}

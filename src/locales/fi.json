@@ -26,5 +26,21 @@
       "2024": "Käynnistimme innovatiivisia markkinointikampanjoita ja kasvatimme asiakaskuntaamme.",
       "2025": "Saavutimme alan tunnustusta ja asetimme uusia standardeja."
     }
+  },
+  "prices": {
+    "title": "Palvelumme ja Hinnat",
+    "subtitle": "Etkö löydä sopivaa palvelua? Ota yhteyttä tiimiimme, niin luomme sinulle räätälöidyn paketin.",
+    "services": {
+      "socialMediaManagement": "Sosiaalisen median hallinta",
+      "contentCreation": "Sisällöntuotanto",
+      "socialMediaAds": "Sosiaalisen median mainokset",
+      "analyticsReporting": "Analytiikka ja raportointi"
+    },
+    "descriptions": {
+      "socialMediaManagement": "Kattava hallinta sosiaalisen median tileillesi.",
+      "contentCreation": "Laadukasta sisältöä, joka on räätälöity brändillesi.",
+      "socialMediaAds": "Kohdennetut mainoskampanjat tavoittavuuden lisäämiseksi.",
+      "analyticsReporting": "Yksityiskohtaiset raportit suorituskyvyn seuraamiseen."
+    }
   }
 }

@@ -26,5 +26,21 @@
       "2024": "Launched innovative marketing campaigns and grew our client base.",
       "2025": "Achieved industry recognition and set new standards."
     }
+  },
+  "prices": {
+    "title": "Our Services and Prices",
+    "subtitle": "Don't see the right service? Contact our team and we'll create a custom package for you.",
+    "services": {
+      "socialMediaManagement": "Social Media Management",
+      "contentCreation": "Content Creation",
+      "socialMediaAds": "Social Media Ads",
+      "analyticsReporting": "Analytics & Reporting"
+    },
+    "descriptions": {
+      "socialMediaManagement": "Comprehensive management of your social media accounts.",
+      "contentCreation": "High-quality content tailored to your brand.",
+      "socialMediaAds": "Targeted ad campaigns to boost your reach.",
+      "analyticsReporting": "Detailed reports to track your performance."
+    }
   }
 }

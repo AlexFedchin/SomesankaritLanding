@@ -10,6 +10,7 @@ import About from "./sections/About";
 import OurJourney from "./sections/OurJourney";
 import Team from "./sections/Team";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import Prices from "./sections/Prices";
 
 function App() {
   const { isMobile, isTablet } = useScreenSize();
@@ -39,6 +40,8 @@ function App() {
         <Team />
 
         <OurJourney />
+
+        <Prices />
 
         <CustomFooter />
 

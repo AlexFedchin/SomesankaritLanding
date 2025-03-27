@@ -42,11 +42,14 @@ const CustomFooter = () => {
               <Box
                 component="img"
                 src="/img/vite.svg"
+                draggable="false"
+                alt="Somesankarit Logo"
                 sx={{
                   height: "auto",
                   width: "auto",
                   maxHeight: "56px",
                   maxWidth: "150px",
+                  userSelect: "none",
                 }}
               />
               <Typography
@@ -57,6 +60,7 @@ const CustomFooter = () => {
                   fontFamily: "AccentFont",
                   letterSpacing: 2,
                   lineHeight: 0.85,
+                  userSelect: "none",
                 }}
               >
                 SOMESANKARIT
