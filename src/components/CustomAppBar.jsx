@@ -139,15 +139,14 @@ const CustomAppBar = () => {
                       textAlign: "center",
                       color: "var(--off-white)",
                       fontSize: isMobile ? "14px" : isTablet ? "16px" : "18px",
-                      willChange: "font-weight, color, text-shadow",
+                      willChange: "color, text-shadow, filter",
                       transition:
-                        "color 0.3s ease, text-shadow 0.3s ease, font-weight 0.1s ease",
+                        "color 0.3s ease, text-shadow 0.3s ease, filter 0.3s ease",
                       "&:hover": {
                         color: "var(--primary)",
                         textShadow:
                           "0 0 8px var(--primary), 0 0 32px var(--primary), 0 0 48px var(--primary), 0 0 100px var(--primary)",
                         filter: "brightness(2)",
-                        fontWeight: "bold",
                       },
                     },
                   }}
@@ -169,6 +168,12 @@ const CustomAppBar = () => {
               spacing={isMobile ? 2 : 4}
               alignItems="center"
             >
+              {/* Contact Button */}
+              {isMobile ? null : (
+                <AccentButton href="#contact">
+                  {t("menuItems.contact")}
+                </AccentButton>
+              )}
               {/* Language Select */}
               {isMobile || isTablet ? null : (
                 <Typography
@@ -181,27 +186,20 @@ const CustomAppBar = () => {
                     fontSize: isMobile ? "14px" : isTablet ? "16px" : "18px",
                     cursor: "pointer",
                     userSelect: "none",
-                    willChange: "font-weight, color, text-shadow",
+                    willChange: "color, text-shadow, filter",
                     fontWeight: 200,
                     transition:
-                      "color 0.3s ease, text-shadow 0.3s ease, font-weight 0.1s ease",
+                      "color 0.3s ease, text-shadow 0.3s ease, filter 0.3s ease",
                     "&:hover": {
                       color: "var(--primary)",
                       textShadow:
                         "0 0 8px var(--primary), 0 0 32px var(--primary), 0 0 48px var(--primary), 0 0 100px var(--primary)",
                       filter: "brightness(2)",
-                      fontWeight: "bold",
                     },
                   }}
                 >
                   {i18n.language === "fi" ? "ENG" : "FIN"}
                 </Typography>
-              )}
-              {/* Contact Button */}
-              {isMobile ? null : (
-                <AccentButton href="#contact">
-                  {t("menuItems.contact")}
-                </AccentButton>
               )}
               {/* Menu Icon */}
               {isMobile || isTablet ? (

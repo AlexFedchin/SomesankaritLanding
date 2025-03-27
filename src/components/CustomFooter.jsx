@@ -21,6 +21,7 @@ const CustomFooter = () => {
         py: isMobile ? 1 : isTablet ? 2 : 3,
         boxSizing: "border-box",
         borderTop: "1px solid var(--border-color)",
+        mt: 4,
       }}
     >
       <Box

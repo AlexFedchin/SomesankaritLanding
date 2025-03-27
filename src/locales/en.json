@@ -42,5 +42,13 @@
       "socialMediaAds": "Targeted ad campaigns to boost your reach.",
       "analyticsReporting": "Detailed reports to track your performance."
     }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you!",
+    "description": "Feel free to reach out to us via email, phone, or visit us at our office. We're here to help you grow your social media presence.",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address"
   }
 }

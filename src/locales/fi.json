@@ -42,5 +42,13 @@
       "socialMediaAds": "Kohdennetut mainoskampanjat tavoittavuuden lisäämiseksi.",
       "analyticsReporting": "Yksityiskohtaiset raportit suorituskyvyn seuraamiseen."
     }
+  },
+  "contact": {
+    "title": "Ota Yhteyttä",
+    "subtitle": "Haluamme kuulla sinusta!",
+    "description": "Ota meihin yhteyttä sähköpostitse, puhelimitse tai vieraile toimistollamme. Autamme sinua kasvattamaan sosiaalisen median läsnäoloasi.",
+    "email": "Sähköposti",
+    "phone": "Puhelin",
+    "address": "Osoite"
   }
 }
