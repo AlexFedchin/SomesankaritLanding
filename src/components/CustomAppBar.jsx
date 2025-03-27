@@ -163,6 +163,7 @@ const CustomAppBar = () => {
               )}
             </Stack>
 
+            {/* Contact Button, Language, Menu */}
             <Stack
               direction="row"
               spacing={isMobile ? 2 : 4}
