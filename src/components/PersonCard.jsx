@@ -14,8 +14,8 @@ const PersonCard = ({ image, firstName, secondName, roles, description }) => {
         aria-label="Person Image Wrapper"
         sx={{
           bgcolor: "rgba(255, 255, 255, 0.02)",
-          backdropFilter: "blur(4px)",
-          WebkitBackdropFilter: "blur(4px)",
+          backdropFilter: "blur(2px)",
+          WebkitBackdropFilter: "blur(2px)",
           border: "1px solid rgba(255, 255, 255, 0.02)",
           height: "250px",
           width: "250px",

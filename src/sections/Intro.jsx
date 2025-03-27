@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, Typography, Container } from "@mui/material";
 import useScreenSize from "../hooks/useScreenSize";
+import { useTranslation } from "react-i18next";
 
 const Intro = () => {
   const { isMobile, isTablet } = useScreenSize();
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -32,13 +34,15 @@ const Intro = () => {
         }}
       >
         <source src="/video/intro-bg.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        {/* Fallback */}
+        {t("intro.noVideo")}
       </Box>
       <Container
         sx={{
           position: "relative",
           zIndex: 1,
           display: "flex",
+          gap: 3,
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
@@ -52,7 +56,16 @@ const Intro = () => {
             fontSize: isMobile ? "2rem" : isTablet ? "3rem" : "4rem",
           }}
         >
-          Elevate Your Brand with Social Media Marketing
+          {t("intro.title")}
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: isMobile ? "1rem" : isTablet ? "1.25rem" : "1.5rem",
+            letterSpacing: 2,
+            fontWeight: 200,
+          }}
+        >
+          {t("intro.subtitle")}
         </Typography>
       </Container>
     </Box>

@@ -87,7 +87,7 @@ const OurJourney = () => {
                 transform: "translateY(0)",
               },
 
-              "&:hover .year, &:active .year": {
+              "&:hover .year": {
                 color: "var(--primary)",
                 textShadow: "0 0 16px var(--primary)",
               },

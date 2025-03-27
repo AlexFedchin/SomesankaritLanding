@@ -1,12 +1,22 @@
 import { Box, Stack, Typography } from "@mui/material";
-import useScreenSize from "../hooks/useScreenSize";
 import DefaultContainer from "../components/DefaultContainer";
+import useScreenSize from "../hooks/useScreenSize";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
   const { isMobile, isTablet } = useScreenSize();
+  const { t } = useTranslation();
 
   return (
-    <DefaultContainer id="about">
+    <DefaultContainer
+      id="about"
+      sx={{
+        mb: -4,
+        position: "relative",
+        pb: isMobile ? 8 : isTablet ? 10 : 12,
+        pt: isMobile ? 4 : isTablet ? 6 : 8,
+      }}
+    >
       <Stack
         direction={isMobile || isTablet ? "column" : "row"}
         spacing={isMobile ? 2 : 4}
@@ -23,7 +33,7 @@ const About = () => {
             display: "flex",
             flexDirection: "column",
             gap: 2,
-            textAlign: isMobile || isTablet ? "center" : "left",
+            textAlign: isMobile ? "center" : "left",
           }}
         >
           <Typography
@@ -34,9 +44,10 @@ const About = () => {
               fontFamily: "AccentFont",
               color: "var(--primary)",
               marginBottom: "1rem",
+              textShadow: "0 0 16px var(--primary)",
             }}
           >
-            WHAT WE DO
+            {t("whatWeDo.title").toUpperCase()}
           </Typography>
           <Typography
             variant="body1"
@@ -44,33 +55,30 @@ const About = () => {
               fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
               lineHeight: 1.6,
               color: "var(--text)",
+              textShadow:
+                "0 0 16px var(--off-black), 0 0 24px var(--off-black), 0 0 32px var(--off-black), 0 0 48px var(--off-black)",
             }}
           >
-            Social media marketing companies specialize in promoting brands,
-            products, and services through various social media platforms. They
-            create and manage content tailored to engage target audiences,
-            increase brand awareness, and drive traffic to websites. These
-            companies utilize strategies such as influencer partnerships, paid
-            advertising, and analytics to measure and optimize campaign
-            performance. Their goal is to build a strong online presence and
-            foster meaningful connections between brands and their customers.
+            {t("whatWeDo.description")}
           </Typography>
         </Box>
-        <Box
-          component="img"
-          src="/img/roman-mirko.JPG"
-          sx={{
-            width: isMobile ? "100%" : isTablet ? "80%" : "50%",
-            height: "auto",
-            maxWidth: "350px",
-            borderRadius: "15px",
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-            objectFit: "cover",
-            objectPosition: "center",
-            marginTop: isMobile || isTablet ? "2rem" : "0",
-          }}
-        />
       </Stack>
+      <Box
+        component="img"
+        src="/img/roman-mirko.webp"
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          right: isMobile ? "" : isTablet ? "10%" : "10%",
+          width: "auto",
+          height: isMobile ? "300px" : isTablet ? "350px" : "400px",
+          objectFit: "cover",
+          objectPosition: "center",
+          marginTop: isMobile || isTablet ? "2rem" : "0",
+          zIndex: -1,
+          userSelect: "none",
+        }}
+      />
     </DefaultContainer>
   );
 };

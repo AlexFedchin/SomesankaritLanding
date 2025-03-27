@@ -1,10 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import PersonCard from "../components/PersonCard";
-import useScreenSize from "../hooks/useScreenSize";
 import DefaultContainer from "../components/DefaultContainer";
+import useScreenSize from "../hooks/useScreenSize";
+import { useTranslation } from "react-i18next";
 
 const Team = () => {
   const { isMobile, isTablet } = useScreenSize();
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -31,7 +33,9 @@ const Team = () => {
           left: 0,
           display: "grid",
           placeItems: "center",
-          zIndex: 0,
+          zIndex: 2,
+          boxShadow:
+            "0 -10px 10px rgba(0, 0, 0, 0.2), 0 -20px 20px rgba(0, 0, 0, 0.2)",
         }}
       />
       <Typography
@@ -41,19 +45,19 @@ const Team = () => {
           fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
           zIndex: 5,
           my: isMobile
-            ? "calc((200px - 1.5rem) / 2 - 2px)"
+            ? "calc((200px - 1.5rem) / 2 - 3px)"
             : isTablet
-            ? "calc((300px - 2rem) / 2 - 2px)"
-            : "calc((400px - 2.5rem) / 2 - 2px)",
+            ? "calc((300px - 2rem) / 2 - 3px)"
+            : "calc((400px - 2.5rem) / 2 - 3px)",
         }}
       >
-        MEET THE TEAM
+        {t("meetTheTeam.title").toUpperCase()}
       </Typography>
 
       {/* Team Cards */}
       <DefaultContainer sx={{ mt: isMobile ? 1 : isTablet ? 2 : 4 }}>
         <PersonCard
-          image="/img/team/mirko.JPG"
+          image="/img/team/mirko.svg"
           firstName="Mirko"
           secondName="Asell"
           roles={["Star", "Cameraman"]}

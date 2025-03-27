@@ -5,6 +5,18 @@
     "portfolio": "PORTFOLIO",
     "contact": "YHTEYSTIEDOT"
   },
+  "intro": {
+    "title": "Nosta Brändisi Uudelle Tasolle Sosiaalisen Median Markkinoinnilla",
+    "subtitle": "Autamme brändejä yhdistämään yleisönsä sosiaalisen median kautta",
+    "noVideo": "Selaimesi ei tue videotagia"
+  },
+  "whatWeDo": {
+    "title": "Mitä Teemme",
+    "description": "Sosiaalisen median markkinointiyritykset erikoistuvat brändien, tuotteiden ja palveluiden edistämiseen eri sosiaalisen median alustoilla. Ne luovat ja hallinnoivat sisältöä, joka on räätälöity sitouttamaan kohdeyleisöjä, lisäämään bränditietoisuutta ja ohjaamaan liikennettä verkkosivustoille. Nämä yritykset hyödyntävät strategioita, kuten vaikuttajayhteistyötä, maksettua mainontaa ja analytiikkaa kampanjoiden suorituskyvyn mittaamiseen ja optimointiin. Niiden tavoitteena on rakentaa vahva verkkoläsnäolo ja edistää merkityksellisiä yhteyksiä brändien ja asiakkaiden välillä."
+  },
+  "meetTheTeam": {
+    "title": "Tapaa Tiimi"
+  },
   "ourJourney": {
     "title": "Matkamme",
     "descriptions": {
