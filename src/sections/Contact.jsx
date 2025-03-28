@@ -24,6 +24,23 @@ const Contact = () => {
         {t("contact.title").toUpperCase()}
       </Typography>
 
+      {/* Subtitle Mobile and Tablet */}
+      {isMobile || isTablet ? (
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: "bold",
+            fontSize: isMobile ? "2.5rem" : "3.5rem",
+            fontFamily: "AccentFont",
+            color: "var(--primary)",
+            textShadow: "0 0 16px var(--primary)",
+            my: isMobile ? -1 : -3,
+          }}
+        >
+          {t("contact.subtitle").toUpperCase()}
+        </Typography>
+      ) : null}
+
       <Box
         sx={{
           display: "flex",
@@ -39,20 +56,20 @@ const Contact = () => {
         {!isMobile && (
           <Box
             component="img"
-            src="/img/contact-fun.svg"
+            src="/img/contact-fun.webp"
             alt="Contact Us"
             draggable="false"
             sx={{
-              width: isMobile ? "100%" : isTablet ? "50%" : "40%",
-              maxHeight: "300px",
+              width: "30%",
+              maxHeight: "400px",
               objectFit: "contain",
               userSelect: "none",
-              filter: "drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))",
+              filter: "drop-shadow(0 0 32px rgba(0, 0, 0, 0.75))",
             }}
           />
         )}
 
-        {/* Contact Information */}
+        {/* Main Information */}
         <Stack
           aria-label="Contact Information"
           spacing={3}
@@ -62,18 +79,21 @@ const Contact = () => {
             textAlign: isMobile ? "center" : "left",
           }}
         >
-          <Typography
-            variant="h3"
-            sx={{
-              fontWeight: "bold",
-              fontSize: isMobile ? "2.5rem" : isTablet ? "3.5rem" : "4.5rem",
-              fontFamily: "AccentFont",
-              color: "var(--primary)",
-              textShadow: "0 0 16px var(--primary)",
-            }}
-          >
-            {t("contact.subtitle").toUpperCase()}
-          </Typography>
+          {/* Subtitle Desktop*/}
+          {!isMobile && !isTablet && (
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "bold",
+                fontSize: "4.5rem",
+                fontFamily: "AccentFont",
+                color: "var(--primary)",
+                textShadow: "0 0 16px var(--primary)",
+              }}
+            >
+              {t("contact.subtitle").toUpperCase()}
+            </Typography>
+          )}
 
           <Typography
             variant="body1"
@@ -92,11 +112,32 @@ const Contact = () => {
               width: "100%",
               flexDirection: "row",
               alignItems: "center",
-              justifyContent: isMobile ? "space-between" : "flex-start",
+              justifyContent: isMobile ? "center" : "flex-start",
               gap: 2,
+              flexWrap: "wrap",
+              "& a": {
+                fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
+                color: "var(--off-white)",
+                lineHeight: isMobile ? "20px" : "24px",
+                fontWeight: 200,
+                textDecoration: "none",
+                transition: "all 0.2s ease",
+                "&:hover": {
+                  color: "var(--primary)",
+                  textShadow: "0 0 16px var(--primary)",
+                  filter: "brightness(1.5)",
+                },
+              },
+              "& .contact-info-header": {
+                fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
+                color: "var(--off-white)",
+                fontWeight: "bold",
+                lineHeight: isMobile ? "20px" : "24px",
+              },
             }}
           >
-            <Stack spacing={1}>
+            {/* Contact Details */}
+            <Stack spacing={isMobile ? 1 : isTablet ? 1.5 : 2}>
               {/* Email */}
               <Stack
                 spacing={1}
@@ -104,37 +145,18 @@ const Contact = () => {
                 alignItems="center"
                 aria-label="Email"
               >
-                <EmailIcon />
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontSize: isMobile
-                      ? "1rem"
-                      : isTablet
-                      ? "1.2rem"
-                      : "1.4rem",
-                    color: "var(--off-white)",
-                    fontWeight: "bold",
-                  }}
-                >
+                <EmailIcon fontSize={isMobile ? "small" : "medium"} />
+                <Typography variant="body1" className="contact-info-header">
                   {t("contact.email")}:
                 </Typography>
                 <Typography
+                  component="a"
+                  href="mailto:hello@somesankarit.com"
                   variant="body1"
-                  sx={{
-                    fontSize: isMobile
-                      ? "1rem"
-                      : isTablet
-                      ? "1.2rem"
-                      : "1.4rem",
-                    color: "var(--off-white)",
-                    fontWeight: 200,
-                  }}
                 >
                   hello@somesankarit.com
                 </Typography>
               </Stack>
-
               {/* Phone */}
               <Stack
                 spacing={1}
@@ -142,37 +164,18 @@ const Contact = () => {
                 alignItems="center"
                 aria-label="Phone"
               >
-                <PhoneIcon />
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontSize: isMobile
-                      ? "1rem"
-                      : isTablet
-                      ? "1.2rem"
-                      : "1.4rem",
-                    color: "var(--off-white)",
-                    fontWeight: "bold",
-                  }}
-                >
+                <PhoneIcon fontSize={isMobile ? "small" : "medium"} />
+                <Typography variant="body1" className="contact-info-header">
                   {t("contact.phone")}:
                 </Typography>
                 <Typography
+                  component="a"
+                  href="tel:+358123456789"
                   variant="body1"
-                  sx={{
-                    fontSize: isMobile
-                      ? "1rem"
-                      : isTablet
-                      ? "1.2rem"
-                      : "1.4rem",
-                    color: "var(--off-white)",
-                    fontWeight: 200,
-                  }}
                 >
                   +358 123 456 789
                 </Typography>
               </Stack>
-
               {/* Address */}
               <Stack
                 spacing={1}
@@ -180,32 +183,16 @@ const Contact = () => {
                 alignItems="center"
                 aria-label="Address"
               >
-                <AddressIcon />
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontSize: isMobile
-                      ? "1rem"
-                      : isTablet
-                      ? "1.2rem"
-                      : "1.4rem",
-                    color: "var(--off-white)",
-                    fontWeight: "bold",
-                  }}
-                >
+                <AddressIcon fontSize={isMobile ? "small" : "medium"} />
+                <Typography variant="body1" className="contact-info-header">
                   {t("contact.address")}:
                 </Typography>
                 <Typography
+                  component="a"
+                  href="https://www.google.com/maps?q=Helsinki,+Finland"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variant="body1"
-                  sx={{
-                    fontSize: isMobile
-                      ? "1rem"
-                      : isTablet
-                      ? "1.2rem"
-                      : "1.4rem",
-                    color: "var(--off-white)",
-                    fontWeight: 200,
-                  }}
                 >
                   Helsinki, Finland
                 </Typography>
@@ -216,15 +203,15 @@ const Contact = () => {
             {isMobile && (
               <Box
                 component="img"
-                src="/img/contact-fun.svg"
+                src="/img/contact-fun.webp"
                 alt="Contact Us"
                 draggable="false"
                 sx={{
-                  width: isMobile ? "100%" : isTablet ? "50%" : "40%",
+                  width: "30%",
                   maxHeight: "300px",
                   objectFit: "contain",
                   userSelect: "none",
-                  filter: "drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))",
+                  filter: "drop-shadow(0 0 32px rgba(0, 0, 0, 0.75))",
                 }}
               />
             )}
