@@ -65,7 +65,7 @@ const About = () => {
       </Stack>
       <Box
         component="img"
-        src="/img/roman-mirko.webp"
+        src="/img/roman-mirko-light.webp"
         sx={{
           position: "absolute",
           bottom: 0,

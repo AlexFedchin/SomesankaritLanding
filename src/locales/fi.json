@@ -41,6 +41,11 @@
       "contentCreation": "Laadukasta sisältöä, joka on räätälöity brändillesi.",
       "socialMediaAds": "Kohdennetut mainoskampanjat tavoittavuuden lisäämiseksi.",
       "analyticsReporting": "Yksityiskohtaiset raportit suorituskyvyn seuraamiseen."
+    },
+    "prices": {
+      "socialMediaManagement": "500 € / kk",
+      "contentCreation": "300 € / kk",
+      "socialMediaAds": "Alkaen 200 €"
     }
   },
   "contact": {

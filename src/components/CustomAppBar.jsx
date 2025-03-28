@@ -298,6 +298,11 @@ const CustomAppBar = () => {
               key={index}
               onClick={toggleDrawer}
               draggable={false}
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                },
+              }}
             >
               <ListItemText
                 primary={item.text}
@@ -320,6 +325,42 @@ const CustomAppBar = () => {
             </ListItem>
           ))}
         </List>
+
+        <Stack
+          direction="row"
+          spacing={1}
+          justifyContent="flex-end"
+          alignItems="center"
+          sx={{ mt: "auto", p: 2 }}
+        >
+          <Box
+            component="img"
+            src="/img/vite.svg"
+            alt="Logo"
+            draggable="false"
+            sx={{
+              height: "auto",
+              width: "auto",
+              maxHeight: isMobile ? "24px" : "28px",
+              maxWidth: "120px",
+              userSelect: "none",
+            }}
+          />
+          <Typography
+            variant="h6"
+            draggable="false"
+            sx={{
+              fontWeight: "bold",
+              fontSize: isMobile ? "28px" : isTablet ? "32px" : "36px",
+              fontFamily: "AccentFont",
+              letterSpacing: 2,
+              lineHeight: 0.85,
+              userSelect: "none",
+            }}
+          >
+            SOMESANKARIT
+          </Typography>
+        </Stack>
       </Drawer>
     </>
   );

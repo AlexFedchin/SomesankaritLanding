@@ -33,14 +33,17 @@
     "services": {
       "socialMediaManagement": "Social Media Management",
       "contentCreation": "Content Creation",
-      "socialMediaAds": "Social Media Ads",
-      "analyticsReporting": "Analytics & Reporting"
+      "socialMediaAds": "Social Media Ads"
     },
     "descriptions": {
       "socialMediaManagement": "Comprehensive management of your social media accounts.",
       "contentCreation": "High-quality content tailored to your brand.",
-      "socialMediaAds": "Targeted ad campaigns to boost your reach.",
-      "analyticsReporting": "Detailed reports to track your performance."
+      "socialMediaAds": "Targeted ad campaigns to boost your reach."
+    },
+    "prices": {
+      "socialMediaManagement": "€500 / month",
+      "contentCreation": "€300 / month",
+      "socialMediaAds": "From €200"
     }
   },
   "contact": {

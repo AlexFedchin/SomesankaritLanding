@@ -12,17 +12,17 @@ const Prices = () => {
     {
       title: t("prices.services.socialMediaManagement"),
       description: t("prices.descriptions.socialMediaManagement"),
-      price: "€500 / month",
+      price: t("prices.prices.socialMediaManagement"),
     },
     {
       title: t("prices.services.contentCreation"),
       description: t("prices.descriptions.contentCreation"),
-      price: "€300 / month",
+      price: t("prices.prices.contentCreation"),
     },
     {
       title: t("prices.services.socialMediaAds"),
       description: t("prices.descriptions.socialMediaAds"),
-      price: "From €200",
+      price: t("prices.prices.socialMediaAds"),
     },
   ];
 

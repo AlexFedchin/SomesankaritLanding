@@ -11,7 +11,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <DefaultContainer id="contact">
+    <DefaultContainer id="contact" sx={{ gap: 4 }}>
       <Typography
         variant="h3"
         sx={{
@@ -34,7 +34,7 @@ const Contact = () => {
             fontFamily: "AccentFont",
             color: "var(--primary)",
             textShadow: "0 0 16px var(--primary)",
-            my: isMobile ? -1 : -3,
+            my: -1,
           }}
         >
           {t("contact.subtitle").toUpperCase()}

@@ -21,7 +21,7 @@ const Team = () => {
       {/* Image Header */}
       <Box
         component="img"
-        src="/img/team.JPG"
+        src="/img/banner.webp"
         sx={{
           width: "100vw",
           height: isMobile ? "200px" : isTablet ? "300px" : "400px",
@@ -57,7 +57,7 @@ const Team = () => {
       {/* Team Cards */}
       <DefaultContainer sx={{ mt: isMobile ? 1 : isTablet ? 2 : 4 }}>
         <PersonCard
-          image="/img/team/mirko.svg"
+          image="/img/team/mirko.webp"
           firstName="Mirko"
           secondName="Asell"
           roles={["Star", "Cameraman"]}
@@ -70,7 +70,7 @@ const Team = () => {
         />
 
         <PersonCard
-          image="/img/team/roman.svg"
+          image="/img/team/roman.webp"
           firstName="Roman"
           secondName="Aliev"
           roles={["Star", "Role", "Manager"]}
@@ -83,7 +83,7 @@ const Team = () => {
         />
 
         <PersonCard
-          image="/img/team/aino.svg"
+          image="/img/team/aino.webp"
           firstName="Aino"
           secondName="Skyttälä"
           roles={["Assistant", "Accountant"]}
@@ -96,7 +96,7 @@ const Team = () => {
         />
 
         <PersonCard
-          image="/img/team/santeri.svg"
+          image="/img/team/santeri.webp"
           firstName="Santeri"
           secondName="Koskinen"
           roles={["Accountant", "CEO"]}

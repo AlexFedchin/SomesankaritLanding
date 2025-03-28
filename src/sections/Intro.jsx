@@ -9,6 +9,7 @@ const Intro = () => {
 
   return (
     <Box
+      id="intro"
       sx={{
         position: "relative",
         height: "100vh",
