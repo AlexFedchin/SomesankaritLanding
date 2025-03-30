@@ -1,10 +1,13 @@
-import { Box, Typography } from "@mui/material";
+import { useState } from "react";
+import { Box, Typography, IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import useScreenSize from "../hooks/useScreenSize";
 import { useTranslation } from "react-i18next";
 
 const OurJourney = () => {
   const { isMobile, isTablet } = useScreenSize();
   const { t } = useTranslation();
+  const [selectedYear, setSelectedYear] = useState(null);
 
   const information = [
     {
@@ -29,6 +32,12 @@ const OurJourney = () => {
     },
   ];
 
+  const handleCircleClick = (year) => {
+    setSelectedYear(year === selectedYear ? null : year);
+  };
+
+  const selectedInfo = information.find((info) => info.year === selectedYear);
+
   return (
     <Box
       sx={{
@@ -41,6 +50,7 @@ const OurJourney = () => {
         py: isMobile || isTablet ? 4 : 6,
       }}
     >
+      {/* Title */}
       <Typography
         variant="h3"
         sx={{
@@ -56,11 +66,12 @@ const OurJourney = () => {
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
-          mt: 4,
+          mt: isMobile ? 2 : isTablet ? 3 : 4,
           maxWidth: "1200px",
           width: "100%",
         }}
       >
+        {/* Line */}
         <Box
           sx={{
             width: "100vw",
@@ -74,90 +85,110 @@ const OurJourney = () => {
           }}
         />
 
+        {/* Circles */}
         {information.map((info, index) => (
-          <Box
+          <IconButton
             key={index}
+            className="circle"
+            onClick={(e) => handleCircleClick(info.year, e)}
             sx={{
-              position: "relative",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              "&:hover .description": {
-                opacity: 1,
-                visibility: "visible",
-                transform: "translateY(0)",
+              width: isMobile ? "55px" : isTablet ? "70px" : "80px",
+              height: isMobile ? "55px" : isTablet ? "70px" : "80px",
+              borderRadius: "50%",
+              bgcolor:
+                selectedYear === info.year
+                  ? "rgba(255, 255, 255, 0.02)"
+                  : "rgba(255, 255, 255, 0.05)",
+              backdropFilter: "blur(4px)",
+              display: "grid",
+              placeItems: "center",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              transform: selectedYear === info.year ? "scale(1.2)" : "none",
+              border: "1px solid rgba(255, 255, 255, 0.05)",
+              "&:hover": {
+                transform: isMobile ? "" : "scale(1.2)",
+                bgcolor: "rgba(255, 255, 255, 0.03)",
               },
-
-              "&:hover .year": {
-                color: "var(--primary)",
-                textShadow: "0 0 16px var(--primary)",
-              },
-
-              "&:hover .circle": {
-                transform: "scale(1.2)",
+              "&:active": {
+                transform: isMobile ? "" : "scale(1.1)",
               },
             }}
           >
-            {/* Circle */}
-            <Box
-              className="circle"
+            <Typography
+              variant="h6"
+              className="year"
               sx={{
-                width: isMobile ? "60px" : isTablet ? "70px" : "80px",
-                height: isMobile ? "60px" : isTablet ? "70px" : "80px",
-                borderRadius: "50%",
-                background: "rgba(255, 255, 255, 0.05)",
-                backdropFilter: "blur(4px)",
-                display: "grid",
-                placeItems: "center",
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                cursor: "pointer",
-                transition: "transform 0.3s ease",
-                border: "1px solid rgba(255, 255, 255, 0.05)",
+                fontSize: isMobile ? "0.95rem" : isTablet ? "1.2rem" : "1.5rem",
+                transition: "color 0.3s ease, text-shadow 0.3s ease",
+                fontWeight: "bold",
+                color:
+                  selectedYear === info.year
+                    ? "var(--primary)"
+                    : "var(--off-white)",
+                userSelect: "none",
+                textShadow:
+                  selectedYear === info.year
+                    ? "0 0 16px var(--primary)"
+                    : "none",
               }}
             >
-              <Typography
-                variant="h6"
-                className="year"
-                sx={{
-                  fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.5rem",
-                  transition: "color 0.3s ease, text-shadow 0.3s ease",
-                  fontWeight: "bold",
-                  color: "var(--off-white)",
-                  userSelect: "none",
-                }}
-              >
-                {info.year}
-              </Typography>
-            </Box>
-
-            {/* Text Box */}
-            <Box
-              className="description"
-              sx={{
-                position: "absolute",
-                top: "100%",
-                transform: "translateY(-20px)",
-                width: isMobile ? "100px" : isTablet ? "150px" : "200px",
-                p: 2,
-                mt: isMobile ? 1 : 2,
-                background: "rgba(255, 255, 255, 0.05)",
-                backdropFilter: "blur(5px)",
-                borderRadius: "4px",
-                border: "1px solid rgba(255, 255, 255, 0.05)",
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                opacity: 0,
-                visibility: "hidden",
-                transition: "all 0.3s ease",
-                textAlign: "center",
-                color: "var(--off-white)",
-                zIndex: 4,
-              }}
-            >
-              {info.description}
-            </Box>
-          </Box>
+              {info.year}
+            </Typography>
+          </IconButton>
         ))}
       </Box>
+
+      {/* Description */}
+      {selectedInfo && (
+        <Box
+          sx={{
+            p: 4,
+            m: 2,
+            mb: 0,
+            background: "rgba(255, 255, 255, 0.05)",
+            backdropFilter: "blur(5px)",
+            borderRadius: "4px",
+            border: "1px solid rgba(255, 255, 255, 0.05)",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+            textAlign: "center",
+            maxWidth: "600px",
+            boxSizing: "border-box",
+            width: "90%",
+            position: "relative",
+          }}
+        >
+          <CloseIcon
+            onClick={() => setSelectedYear(null)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") setSelectedYear(null);
+            }}
+            tabIndex={0}
+            role="button"
+            focusable="false"
+            aria-label="Close description"
+            aria-hidden="false"
+            sx={{
+              position: "absolute",
+              top: 8,
+              right: 8,
+              cursor: "pointer",
+              "&:active": {
+                outline: "none",
+              },
+            }}
+          />
+          <Typography
+            sx={{
+              lineHeight: 1.6,
+              fontSize: isMobile ? "0.9rem" : isTablet ? "1.15rem" : "1.25rem",
+            }}
+          >
+            {selectedInfo.description}
+          </Typography>
+        </Box>
+      )}
     </Box>
   );
 };

@@ -44,7 +44,7 @@ const Prices = () => {
           fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
           lineHeight: 1.6,
           fontWeight: 200,
-          mb: 4,
+          mb: isMobile ? 2 : isTablet ? 3 : 4,
         }}
       >
         {t("prices.subtitle")}
@@ -56,7 +56,7 @@ const Prices = () => {
           alignItems: "stretch",
           justifyContent: "center",
           flexDirection: isMobile ? "column" : "row",
-          gap: 4,
+          gap: isMobile ? 2 : isTablet ? 3 : 4,
           width: "100%",
           flexWrap: "wrap",
         }}
