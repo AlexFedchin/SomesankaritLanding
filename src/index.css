@@ -24,10 +24,24 @@ body {
 
 html {
   scroll-behavior: smooth;
-  background-image: url("/img/bg.webp");
+  background-image: url("/img/bg-mobile.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+/* Tablet (600px - 1023px) */
+@media (min-width: 600px) {
+  html {
+    background-image: url("/img/bg-tablet.webp");
+  }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  html {
+    background-image: url("/img/bg-desktop.webp");
+  }
 }
 
 body,
