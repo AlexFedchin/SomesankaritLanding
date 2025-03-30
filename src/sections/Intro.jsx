@@ -19,25 +19,34 @@ const Intro = () => {
         width: "100%",
       }}
     >
+      {/* Video Background */}
       <Box
-        component="video"
-        autoPlay
-        loop
-        muted
         sx={{
           position: "absolute",
           top: 0,
           left: 0,
           width: "100%",
           height: "100%",
-          objectFit: "cover",
-          zIndex: 1,
+          overflow: "hidden",
+          zIndex: -3,
         }}
       >
-        <source src="/video/intro-bg.mp4" type="video/mp4" />
-        {/* Fallback */}
-        {t("intro.noVideo")}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            objectFit: "cover",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <source src="/video/intro-bg.mp4" type="video/mp4" />
+          {t("intro.noVideo")}
+        </video>
       </Box>
+
       <Container
         sx={{
           position: "relative",
