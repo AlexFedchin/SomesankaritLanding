@@ -24,23 +24,37 @@ body {
 
 html {
   scroll-behavior: smooth;
-  background-image: url("/img/bg-mobile.webp");
+  background-image: url("/img/bg/bg-tablet.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Tablet (600px - 1023px) */
-@media (min-width: 600px) {
+/* Aspect Ratio: 3:2 or narrower (e.g., tablets, phones) */
+@media (max-aspect-ratio: 5/7) {
   html {
-    background-image: url("/img/bg-tablet.webp");
+    background-image: url("/img/bg/bg-mobile.webp");
   }
 }
 
-/* Desktop (1024px and up) */
-@media (min-width: 1024px) {
+/* Aspect Ratio: Between 3:2 and 16:9 (e.g., tablets, small laptops) */
+@media (min-aspect-ratio: 5/7) and (max-aspect-ratio: 16/9) {
   html {
-    background-image: url("/img/bg-desktop.webp");
+    background-image: url("/img/bg/bg-tablet.webp");
+  }
+}
+
+/* Aspect Ratio: 16:9 or wider (e.g., desktops, large laptops) */
+@media (min-aspect-ratio: 16/9) and (max-aspect-ratio: 21/9) {
+  html {
+    background-image: url("/img/bg/bg-desktop.webp");
+  }
+}
+
+/* Aspect Ratio: Wider than 21:9 (e.g., ultra-wide monitors) */
+@media (min-aspect-ratio: 21/9) {
+  html {
+    background-image: url("/img/bg/bg-xl-desktop.webp");
   }
 }
 
