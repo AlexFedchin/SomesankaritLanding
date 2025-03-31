@@ -89,7 +89,8 @@ const OurJourney = () => {
         {information.map((info, index) => (
           <IconButton
             key={index}
-            className="circle"
+            className="circle, light-bg-blur"
+            aria-label={`Select year ${info.year}`}
             onClick={(e) => handleCircleClick(info.year, e)}
             sx={{
               width: isMobile ? "55px" : isTablet ? "70px" : "80px",
@@ -99,7 +100,6 @@ const OurJourney = () => {
                 selectedYear === info.year
                   ? "rgba(255, 255, 255, 0.02)"
                   : "rgba(255, 255, 255, 0.05)",
-              backdropFilter: "blur(4px)",
               display: "grid",
               placeItems: "center",
               boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
@@ -143,12 +143,13 @@ const OurJourney = () => {
       {/* Description */}
       {selectedInfo && (
         <Box
+          className="light-bg-blur"
+          aria-label={`Description for year ${selectedInfo.year}`}
           sx={{
             p: 4,
             m: 2,
             mb: 0,
             background: "rgba(255, 255, 255, 0.05)",
-            backdropFilter: "blur(5px)",
             borderRadius: "4px",
             border: "1px solid rgba(255, 255, 255, 0.05)",
             boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",

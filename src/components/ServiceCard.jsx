@@ -7,11 +7,10 @@ const ServiceCard = ({ service }) => {
   return (
     <Card
       aria-label={service.title}
+      className="strong-bg-blur"
       sx={{
         width: isMobile ? "100%" : "25%",
         background: "rgba(255, 255, 255, 0.05)",
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
         p: isMobile ? 2 : 3,
         display: "flex",
         flexDirection: "column",

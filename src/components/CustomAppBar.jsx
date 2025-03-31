@@ -50,10 +50,9 @@ const CustomAppBar = () => {
         }}
       >
         <Box
+          className="strong-bg-blur"
           sx={{
             mx: isMobile || isTablet ? 0 : "16px",
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
             borderRadius: isMobile || isTablet ? 0 : 2,
             width: "100%",
             maxWidth:
@@ -233,12 +232,13 @@ const CustomAppBar = () => {
         sx={{
           display: isTablet ? "block" : "none",
           ".MuiDrawer-paper": {
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
             bgcolor: "rgba(0, 0, 0, 0.02)",
             color: "var(--off-white) !important",
             border: "1px solid rgba(255, 255, 255, 0.1)",
           },
+        }}
+        classes={{
+          paper: "strong-bg-blur",
         }}
       >
         {/* Back and Language Select */}

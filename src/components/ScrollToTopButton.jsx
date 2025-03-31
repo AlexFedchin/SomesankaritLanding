@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import Fab from "@mui/material/Fab";
+import IconButton from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { Box } from "@mui/material";
 
 const ScrollToTopButton = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -20,9 +19,11 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <Box
+    <IconButton
+      aria-label="Scroll to top button"
       color="primary"
       size="small"
+      className="light-bg-blur"
       onClick={scrollToTop}
       sx={{
         position: "fixed",
@@ -37,8 +38,6 @@ const ScrollToTopButton = () => {
         zIndex: 5,
         opacity: showScrollButton ? 1 : 0,
         transform: showScrollButton ? "" : "translateX(60px)",
-        backdropFilter: "blur(5px)",
-        WebkitBackdropFilter: "blur(5px)",
         bgcolor: "transparent",
         color: "var(--off-white)",
         border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -55,7 +54,7 @@ const ScrollToTopButton = () => {
       }}
     >
       <KeyboardArrowUpIcon fontSize="large" />
-    </Box>
+    </IconButton>
   );
 };
 

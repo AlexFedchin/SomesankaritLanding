@@ -1,5 +1,6 @@
 import "./App.css";
 import "./styles/fonts.css";
+import "./styles/global.css";
 import CustomAppBar from "./components/CustomAppBar";
 import { Box, ThemeProvider } from "@mui/material";
 import CustomFooter from "./components/CustomFooter";
