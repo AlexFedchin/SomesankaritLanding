@@ -1,4 +1,5 @@
 import {
+  Box,
   Typography,
   Card,
   CardActionArea,
@@ -8,23 +9,24 @@ import {
 import useScreenSize from "../hooks/useScreenSize";
 
 const PortfolioCard = ({ project }) => {
-  const { isMobile } = useScreenSize();
+  const { isMobile, isTablet } = useScreenSize();
 
   return (
     <Card
+      aria-label={project.title}
+      className="strong-bg-blur"
       sx={{
         width: isMobile ? "200px" : "250px",
         minWidth: isMobile ? "200px" : "250px",
         borderRadius: 2,
         boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-        background: "rgba(255, 255, 255, 0.05)",
+        bgcolor: "rgba(255, 255, 255, 0.01)",
         border: "1px solid rgba(255, 255, 255, 0.1)",
+        transition: "0.3s ease",
         "&:hover": {
-          boxShadow: "0 8px 40px rgba(0, 0, 0, 0.2)",
-          transform: "scale(1.02)",
+          bgcolor: "rgba(255, 255, 255, 0.1)",
+          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)",
         },
-        transition: "transform 0.3s ease, box-shadow 0.3s ease",
-        willChange: "transform, box-shadow",
       }}
     >
       <CardActionArea
@@ -45,22 +47,41 @@ const PortfolioCard = ({ project }) => {
         />
         <CardContent>
           <Typography
-            variant="h6"
+            variant="h5"
             sx={{
               textAlign: "left",
               fontWeight: "bold",
+              fontSize: isMobile ? "1.2rem" : isTablet ? "1.5rem" : "1.75rem",
+              display: "-webkit-box",
+              overflow: "hidden",
               color: "var(--off-white)",
-              mb: 1,
+              WebkitBoxOrient: "vertical",
+              WebkitLineClamp: 2,
+              wordBreak: "break-word",
+              overflowWrap: "break-word",
+              hyphens: "auto",
+              textOverflow: "ellipsis",
             }}
           >
             {project.title}
           </Typography>
+
+          {/* Divider */}
+          <Box
+            sx={{
+              height: "1px",
+              my: 1,
+              background:
+                "linear-gradient(to right, var(--border) 0%, var(--border) 66%, transparent 100%)",
+            }}
+          />
+
           <Typography
-            variant="body2"
+            variant="body1"
             sx={{
               textAlign: "left",
+              fontSize: isMobile ? "0.9rem" : isTablet ? "1rem" : "1.1rem",
               color: "var(--off-white)",
-              lineHeight: 1.5,
             }}
           >
             {project.description}

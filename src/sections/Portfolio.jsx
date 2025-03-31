@@ -56,7 +56,7 @@ const Portfolio = () => {
   const handleScroll = (direction) => {
     if (!scrollRef.current) return;
 
-    const scrollAmount = isMobile ? 216 : 266;
+    const scrollAmount = isMobile ? 218 : 268;
     scrollRef.current.scrollBy({
       left: direction === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
@@ -82,15 +82,7 @@ const Portfolio = () => {
 
   return (
     <DefaultContainer id="portfolio" sx={{ gap: 4 }}>
-      <Typography
-        variant="h3"
-        sx={{
-          fontWeight: "bold",
-          fontSize: isMobile ? "1.5rem" : "2rem",
-          color: "var(--off-white)",
-          textAlign: "center",
-        }}
-      >
+      <Typography variant="section-title">
         {t("portfolio.title").toUpperCase()}
       </Typography>
 
@@ -153,7 +145,6 @@ const Portfolio = () => {
           ref={scrollRef}
           sx={{
             display: "flex",
-            py: 1,
             overflowX: "auto",
             scrollBehavior: "smooth",
             gap: 2,

@@ -28,14 +28,7 @@ const Prices = () => {
 
   return (
     <DefaultContainer id="prices" sx={{ gap: 2 }}>
-      <Typography
-        variant="h3"
-        sx={{
-          fontWeight: "bold",
-          fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
-          textAlign: "center",
-        }}
-      >
+      <Typography variant="section-title">
         {t("prices.title").toUpperCase()}
       </Typography>
       <Typography

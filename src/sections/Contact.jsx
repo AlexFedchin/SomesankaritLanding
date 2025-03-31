@@ -12,31 +12,13 @@ const Contact = () => {
 
   return (
     <DefaultContainer id="contact" sx={{ gap: 4 }}>
-      <Typography
-        variant="h3"
-        sx={{
-          fontWeight: "bold",
-          fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
-          color: "var(--off-white)",
-          textAlign: "center",
-        }}
-      >
+      <Typography variant="section-title">
         {t("contact.title").toUpperCase()}
       </Typography>
 
       {/* Subtitle Mobile and Tablet */}
       {isMobile || isTablet ? (
-        <Typography
-          variant="h3"
-          sx={{
-            fontWeight: "bold",
-            fontSize: isMobile ? "2.5rem" : "3.5rem",
-            fontFamily: "AccentFont",
-            color: "var(--primary)",
-            textShadow: "0 0 16px var(--primary)",
-            my: -1,
-          }}
-        >
+        <Typography variant="styled-title" fontFamily="AccentFont">
           {t("contact.subtitle").toUpperCase()}
         </Typography>
       ) : null}
@@ -81,16 +63,7 @@ const Contact = () => {
         >
           {/* Subtitle Desktop*/}
           {!isMobile && !isTablet && (
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: "bold",
-                fontSize: "4.5rem",
-                fontFamily: "AccentFont",
-                color: "var(--primary)",
-                textShadow: "0 0 16px var(--primary)",
-              }}
-            >
+            <Typography variant="styled-title" fontFamily="AccentFont">
               {t("contact.subtitle").toUpperCase()}
             </Typography>
           )}

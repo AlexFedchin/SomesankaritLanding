@@ -5,6 +5,21 @@ const createCustomTheme = ({ isMobile, isTablet }) =>
     typography: {
       fontFamily: "'Oxanium', 'Montserrat', Arial, Helvetica, sans-serif",
       color: "var(--off-white)",
+      "section-title": {
+        fontFamily: "'Oxanium', 'Montserrat', Arial, Helvetica, sans-serif",
+        fontWeight: 700,
+        fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
+        textAlign: "center",
+        color: "var(--off-white)",
+      },
+      "styled-title": {
+        fontWeight: 700,
+        fontSize: isMobile ? "2.75rem" : isTablet ? "3.5rem" : "4.5rem",
+        textAlign: "center",
+        color: "var(--primary)",
+        textShadow: "0 0 16px var(--primary)",
+        lineHeight: isMobile ? "34px" : isTablet ? "43px" : "56px",
+      },
     },
     components: {
       MuiInputLabel: {

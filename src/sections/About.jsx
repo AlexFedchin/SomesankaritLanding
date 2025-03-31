@@ -37,15 +37,9 @@ const About = () => {
           }}
         >
           <Typography
-            variant="h3"
-            sx={{
-              fontWeight: "bold",
-              fontSize: isMobile ? "2.5rem" : isTablet ? "3.5rem" : "4.5rem",
-              fontFamily: "AccentFont",
-              color: "var(--primary)",
-              marginBottom: "1rem",
-              textShadow: "0 0 16px var(--primary)",
-            }}
+            variant="styled-title"
+            fontFamily="AccentFont"
+            marginBottom={4}
           >
             {t("whatWeDo.title").toUpperCase()}
           </Typography>

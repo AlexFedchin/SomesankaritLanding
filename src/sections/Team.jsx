@@ -39,10 +39,8 @@ const Team = () => {
         }}
       />
       <Typography
-        variant="h3"
+        variant="section-title"
         sx={{
-          fontWeight: "bold",
-          fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
           zIndex: 5,
           my: isMobile
             ? "calc((200px - 1.5rem) / 2 - 3px)"
@@ -73,7 +71,7 @@ const Team = () => {
           image="/img/team/roman.webp"
           firstName="Roman"
           secondName="Aliev"
-          roles={["Star", "Role", "Manager"]}
+          roles={["Star", "Cameraman"]}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing
           elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin
           vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur
@@ -86,7 +84,7 @@ const Team = () => {
           image="/img/team/aino.webp"
           firstName="Aino"
           secondName="Skyttälä"
-          roles={["Assistant", "Accountant"]}
+          roles={["Manager", "Accountant"]}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing
           elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin
           vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur

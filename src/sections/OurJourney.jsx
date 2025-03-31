@@ -51,13 +51,7 @@ const OurJourney = () => {
       }}
     >
       {/* Title */}
-      <Typography
-        variant="h3"
-        sx={{
-          fontWeight: "bold",
-          fontSize: isMobile ? "1.5rem" : isTablet ? "2rem" : "2.5rem",
-        }}
-      >
+      <Typography variant="section-title">
         {t("ourJourney.title").toUpperCase()}
       </Typography>
 
