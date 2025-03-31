@@ -205,7 +205,7 @@ const CustomAppBar = () => {
               {isMobile || isTablet ? (
                 <Box
                   component="img"
-                  src="/img/menu.svg"
+                  src="/img/icons/menu.svg"
                   alt="Menu"
                   onClick={toggleDrawer}
                   draggable="false"
