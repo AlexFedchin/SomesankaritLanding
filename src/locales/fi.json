@@ -5,18 +5,40 @@
     "portfolio": "PORTFOLIO",
     "contact": "YHTEYSTIEDOT"
   },
+
   "intro": {
     "title": "Nosta Brändisi Uudelle Tasolle Sosiaalisen Median Markkinoinnilla",
     "subtitle": "Autamme brändejä yhdistämään yleisönsä sosiaalisen median kautta",
     "noVideo": "Selaimesi ei tue videotagia"
   },
+
   "whatWeDo": {
     "title": "Mitä Teemme",
     "description": "Sosiaalisen median markkinointiyritykset erikoistuvat brändien, tuotteiden ja palveluiden edistämiseen eri sosiaalisen median alustoilla. Ne luovat ja hallinnoivat sisältöä, joka on räätälöity sitouttamaan kohdeyleisöjä, lisäämään bränditietoisuutta ja ohjaamaan liikennettä verkkosivustoille. Nämä yritykset hyödyntävät strategioita, kuten vaikuttajayhteistyötä, maksettua mainontaa ja analytiikkaa kampanjoiden suorituskyvyn mittaamiseen ja optimointiin. Niiden tavoitteena on rakentaa vahva verkkoläsnäolo ja edistää merkityksellisiä yhteyksiä brändien ja asiakkaiden välillä."
   },
+
   "meetTheTeam": {
     "title": "Tapaa Tiimi"
   },
+
+  "portfolio": {
+    "title": "Projektimme",
+    "projects": {
+      "project1": {
+        "title": "Sosiaalisen median kampanja Brändille A",
+        "description": "Johti onnistunutta kampanjaa, joka lisäsi sitoutumista 40%."
+      },
+      "project2": {
+        "title": "Sisällöntuotanto Brändille B",
+        "description": "Luoimme kiinnostavaa sisältöä, joka kasvatti seuraajia 25%."
+      },
+      "project3": {
+        "title": "Mainosstrategia Brändille C",
+        "description": "Toteutimme mainosstrategian, joka kaksinkertaisti konversiot."
+      }
+    }
+  },
+
   "ourJourney": {
     "title": "Matkamme",
     "descriptions": {
@@ -27,6 +49,7 @@
       "2025": "Saavutimme alan tunnustusta ja asetimme uusia standardeja."
     }
   },
+
   "prices": {
     "title": "Palvelumme ja Hinnat",
     "subtitle": "Etkö löydä sopivaa palvelua? Ota yhteyttä tiimiimme, niin luomme sinulle räätälöidyn paketin.",
@@ -48,6 +71,7 @@
       "socialMediaAds": "Alkaen 200 €"
     }
   },
+
   "contact": {
     "title": "Ota Yhteyttä",
     "subtitle": "Haluamme kuulla sinusta!",

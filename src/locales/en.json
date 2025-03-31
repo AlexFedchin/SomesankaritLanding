@@ -5,18 +5,40 @@
     "portfolio": "PORTFOLIO",
     "contact": "CONTACT"
   },
+
   "intro": {
     "title": "Elevate Your Brand with Social Media Marketing",
     "subtitle": "We help brands connect with their audience through social media",
     "noVideo": "Your browser does not support the video tag"
   },
+
   "whatWeDo": {
     "title": "What We Do",
     "description": "Social media marketing companies specialize in promoting brands, products, and services through various social media platforms. They create and manage content tailored to engage target audiences, increase brand awareness, and drive traffic to websites. These companies utilize strategies such as influencer partnerships, paid advertising, and analytics to measure and optimize campaign performance. Their goal is to build a strong online presence and foster meaningful connections between brands and their customers."
   },
+
   "meetTheTeam": {
     "title": "Meet the Team"
   },
+
+  "portfolio": {
+    "title": "Our Projects",
+    "projects": {
+      "project1": {
+        "title": "Social Media Campaign for Brand A",
+        "description": "Managed a successful campaign that increased engagement by 40%."
+      },
+      "project2": {
+        "title": "Content Creation for Brand B",
+        "description": "Created engaging content that boosted followers by 25%."
+      },
+      "project3": {
+        "title": "Ad Strategy for Brand C",
+        "description": "Implemented an ad strategy that doubled conversions."
+      }
+    }
+  },
+
   "ourJourney": {
     "title": "Our Journey",
     "descriptions": {
@@ -27,6 +49,7 @@
       "2025": "Achieved industry recognition and set new standards."
     }
   },
+
   "prices": {
     "title": "Our Services and Prices",
     "subtitle": "Don't see the right service? Contact our team and we'll create a custom package for you.",
@@ -46,6 +69,7 @@
       "socialMediaAds": "From €200"
     }
   },
+
   "contact": {
     "title": "Get in Touch",
     "subtitle": "We'd love to hear from you!",

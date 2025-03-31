@@ -235,10 +235,9 @@ const CustomAppBar = () => {
             bgcolor: "rgba(0, 0, 0, 0.02)",
             color: "var(--off-white) !important",
             border: "1px solid rgba(255, 255, 255, 0.1)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
           },
-        }}
-        classes={{
-          paper: "strong-bg-blur",
         }}
       >
         {/* Back and Language Select */}

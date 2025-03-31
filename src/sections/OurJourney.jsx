@@ -47,7 +47,7 @@ const OurJourney = () => {
         alignItems: "center",
         gap: 2,
         position: "relative",
-        py: isMobile || isTablet ? 4 : 6,
+        py: isMobile ? 2 : isTablet ? 4 : 6,
       }}
     >
       {/* Title */}

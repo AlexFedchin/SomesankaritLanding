@@ -13,6 +13,7 @@ import Team from "./sections/Team";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Prices from "./sections/Prices";
 import Contact from "./sections/Contact";
+import Portfolio from "./sections/Portfolio";
 
 function App() {
   const { isMobile, isTablet } = useScreenSize();
@@ -40,6 +41,8 @@ function App() {
         <About />
 
         <Team />
+
+        <Portfolio />
 
         <OurJourney />
 
