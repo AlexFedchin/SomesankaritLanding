@@ -162,12 +162,12 @@ const Contact = () => {
                 </Typography>
                 <Typography
                   component="a"
-                  href="https://www.google.com/maps?q=Helsinki,+Finland"
+                  href="https://www.google.com/maps?q=Tampere,+Finland"
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="body1"
                 >
-                  Helsinki, Finland
+                  Tampere, Finland
                 </Typography>
               </Stack>
             </Stack>
