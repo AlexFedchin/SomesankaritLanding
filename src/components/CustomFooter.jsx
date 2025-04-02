@@ -92,7 +92,36 @@ const CustomFooter = () => {
             </Typography>
           </Box>
 
-          {/* Right Section - Social Media Icons */}
+          {isMobile && (
+            <Box
+              sx={{
+                width: "100%",
+                height: "1px",
+                background:
+                  "linear-gradient(to right, transparent 0%, var(--border) 33%, var(--border) 66%, transparent 100%)",
+              }}
+            />
+          )}
+
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+            <Typography variant="body2" sx={{ color: "var(--border)" }}>
+              Media by{" "}
+              <a
+                href="https://videezy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "inherit" }}
+              >
+                Videezy
+              </a>
+            </Typography>
+            <Typography variant="body2" sx={{ color: "var(--border)" }}>
+              © Somesankarit 2025
+            </Typography>
+          </Box>
+
+          {/* Right Section - Social Media Icons
+          Here until the moment when we have real social networks
           <Box
             sx={{
               display: "flex",
@@ -164,10 +193,11 @@ const CustomFooter = () => {
                 sx={{ width: 20, height: 20 }}
               />
             </IconButton>
-          </Box>
+          </Box> */}
         </Box>
 
-        {/* Divider Line */}
+        {/* Divider Line
+        Here until the moment when we have real social networks
         <Box
           sx={{
             width: "100%",
@@ -175,9 +205,10 @@ const CustomFooter = () => {
             background:
               "linear-gradient(to right, transparent 0%, var(--border) 33%, var(--border) 66%, transparent 100%)",
           }}
-        />
+        /> */}
 
-        {/* Bottom Section - Copyright & Attribution */}
+        {/* Bottom Section - Copyright & Attribution
+        Here untile the moment when we have real social networks
         <Box
           sx={{
             display: "flex",
@@ -200,7 +231,7 @@ const CustomFooter = () => {
               Videezy
             </a>
           </Typography>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );
