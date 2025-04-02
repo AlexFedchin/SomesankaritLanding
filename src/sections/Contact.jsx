@@ -119,9 +119,13 @@ const Contact = () => {
                 aria-label="Email"
               >
                 <EmailIcon fontSize={isMobile ? "small" : "medium"} />
-                <Typography variant="body1" className="contact-info-header">
-                  {t("contact.email")}:
-                </Typography>
+
+                {!isMobile && (
+                  <Typography variant="body1" className="contact-info-header">
+                    {t("contact.email")}:
+                  </Typography>
+                )}
+
                 <Typography
                   component="a"
                   href="mailto:hello@somesankarit.com"
@@ -138,9 +142,13 @@ const Contact = () => {
                 aria-label="Phone"
               >
                 <PhoneIcon fontSize={isMobile ? "small" : "medium"} />
-                <Typography variant="body1" className="contact-info-header">
-                  {t("contact.phone")}:
-                </Typography>
+
+                {!isMobile && (
+                  <Typography variant="body1" className="contact-info-header">
+                    {t("contact.phone")}:
+                  </Typography>
+                )}
+
                 <Typography
                   component="a"
                   href="tel:+358123456789"
@@ -157,9 +165,13 @@ const Contact = () => {
                 aria-label="Address"
               >
                 <AddressIcon fontSize={isMobile ? "small" : "medium"} />
-                <Typography variant="body1" className="contact-info-header">
-                  {t("contact.address")}:
-                </Typography>
+
+                {!isMobile && (
+                  <Typography variant="body1" className="contact-info-header">
+                    {t("contact.address")}:
+                  </Typography>
+                )}
+
                 <Typography
                   component="a"
                   href="https://www.google.com/maps?q=Tampere,+Finland"
