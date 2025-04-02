@@ -34,6 +34,14 @@ const Team = () => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula. Proin vulputate condimentum lacus, a tristique mi finibus a. Vivamus lobortis odio vel.",
     },
     {
+      image: "/img/team/alex.webp",
+      firstName: "Alexander",
+      secondName: "Fedchin",
+      roles: ["Dev", "Videographer"],
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula. Proin vulputate condimentum lacus, a tristique mi finibus a. Vivamus lobortis odio vel.",
+    },
+    {
       image: "/img/team/santeri.webp",
       firstName: "Santeri",
       secondName: "Koskinen",
