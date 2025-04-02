@@ -54,21 +54,86 @@
     "title": "Palvelumme ja Hinnat",
     "subtitle": "Etkö löydä sopivaa palvelua? Ota yhteyttä tiimiimme, niin luomme sinulle räätälöidyn paketin.",
     "services": {
-      "socialMediaManagement": "Sosiaalisen median hallinta",
-      "contentCreation": "Sisällöntuotanto",
-      "socialMediaAds": "Sosiaalisen median mainokset",
-      "analyticsReporting": "Analytiikka ja raportointi"
-    },
-    "descriptions": {
-      "socialMediaManagement": "Kattava hallinta sosiaalisen median tileillesi.",
-      "contentCreation": "Laadukasta sisältöä, joka on räätälöity brändillesi.",
-      "socialMediaAds": "Kohdennetut mainoskampanjat tavoittavuuden lisäämiseksi.",
-      "analyticsReporting": "Yksityiskohtaiset raportit suorituskyvyn seuraamiseen."
-    },
-    "prices": {
-      "socialMediaManagement": "500 € / kk",
-      "contentCreation": "300 € / kk",
-      "socialMediaAds": "Alkaen 200 €"
+      "socialMediaManagement": {
+        "title": "Sosiaalisen Median Hallinta",
+        "description": "Kattava hallinta sosiaalisen median tileillesi.",
+        "bulletpoints": {
+          "1": "Tilien luominen ja optimointi",
+          "2": "Sisältökalenterin luominen",
+          "3": "Yhteisön hallinta ja sitoutuminen"
+        },
+        "price": "500 € / kuukausi"
+      },
+      "contentCreation": {
+        "title": "Sisällöntuotanto",
+        "description": "Laadukasta sisältöä, joka on räätälöity brändillesi.",
+        "bulletpoints": {
+          "1": "Graafinen suunnittelu ja visuaalinen sisältö",
+          "2": "Videotuotanto ja editointi",
+          "3": "Blogikirjoitukset ja artikkelit"
+        },
+        "price": "300 € / kuukausi"
+      },
+      "socialMediaAds": {
+        "title": "Sosiaalisen Median Mainokset",
+        "description": "Kohdennetut mainoskampanjat näkyvyytesi lisäämiseksi.",
+        "bulletpoints": {
+          "1": "Mainoskampanjoiden suunnittelu ja toteutus",
+          "2": "Kohdennetut mainokset eri alustoilla",
+          "3": "A/B-testaus ja optimointi"
+        },
+        "price": "Alkaen 200 €"
+      },
+      "seoOptimization": {
+        "title": "SEO-Optimointi",
+        "description": "Paranna verkkosivustosi näkyvyyttä hakukoneissa.",
+        "bulletpoints": {
+          "1": "Avainsanatutkimus ja analyysi",
+          "2": "On-page ja off-page optimointi",
+          "3": "Kuukausittaiset suorituskykyraportit"
+        },
+        "price": "400 € / kuukausi"
+      },
+      "emailMarketing": {
+        "title": "Sähköpostimarkkinointi",
+        "description": "Sitouta yleisösi kohdennetuilla sähköpostikampanjoilla.",
+        "bulletpoints": {
+          "1": "Sähköpostilistan segmentointi",
+          "2": "Räätälöidyt sähköpostimallit",
+          "3": "Suorituskyvyn seuranta ja raportointi"
+        },
+        "price": "250 € / kuukausi"
+      },
+      "brandingStrategy": {
+        "title": "Brändäysstrategia",
+        "description": "Kehitä vahva ja johdonmukainen brändi-identiteetti.",
+        "bulletpoints": {
+          "1": "Logon ja visuaalisen identiteetin suunnittelu",
+          "2": "Brändiviestintä ja äänensävy",
+          "3": "Kattavat brändiohjeet"
+        },
+        "price": "600 € / projekti"
+      },
+      "influencerMarketing": {
+        "title": "Vaikuttajamarkkinointi",
+        "description": "Tee yhteistyötä vaikuttajien kanssa brändisi edistämiseksi.",
+        "bulletpoints": {
+          "1": "Sopivien vaikuttajien tunnistaminen",
+          "2": "Kampanjoiden suunnittelu ja toteutus",
+          "3": "Suorituskyvyn analysointi"
+        },
+        "price": "Alkaen 500 €"
+      },
+      "analyticsAndReporting": {
+        "title": "Analytiikka ja Raportointi",
+        "description": "Seuraa ja analysoi markkinointisi suorituskykyä.",
+        "bulletpoints": {
+          "1": "Räätälöidyt analytiikkapaneelit",
+          "2": "Kuukausittaiset suorituskykyarviot",
+          "3": "Toimintakelpoiset oivallukset ja suositukset"
+        },
+        "price": "300 € / kuukausi"
+      }
     }
   },
 

@@ -8,23 +8,17 @@ const Prices = () => {
   const { isMobile, isTablet } = useScreenSize();
   const { t } = useTranslation();
 
-  const services = [
-    {
-      title: t("prices.services.socialMediaManagement"),
-      description: t("prices.descriptions.socialMediaManagement"),
-      price: t("prices.prices.socialMediaManagement"),
-    },
-    {
-      title: t("prices.services.contentCreation"),
-      description: t("prices.descriptions.contentCreation"),
-      price: t("prices.prices.contentCreation"),
-    },
-    {
-      title: t("prices.services.socialMediaAds"),
-      description: t("prices.descriptions.socialMediaAds"),
-      price: t("prices.prices.socialMediaAds"),
-    },
-  ];
+  // Fetch all the services from the locale file
+  const services = Object.keys(
+    t("prices.services", { returnObjects: true })
+  ).map((key) => ({
+    title: t(`prices.services.${key}.title`),
+    description: t(`prices.services.${key}.description`),
+    bulletpoints: Object.values(
+      t(`prices.services.${key}.bulletpoints`, { returnObjects: true })
+    ),
+    price: t(`prices.services.${key}.price`),
+  }));
 
   return (
     <DefaultContainer id="prices" sx={{ gap: 2 }}>
@@ -42,16 +36,16 @@ const Prices = () => {
       >
         {t("prices.subtitle")}
       </Typography>
+
       <Box
         aria-label="services"
         sx={{
           display: "flex",
-          alignItems: "stretch",
+          alignItems: "center",
           justifyContent: "center",
-          flexDirection: isMobile ? "column" : "row",
-          gap: isMobile ? 2 : isTablet ? 3 : 4,
+          flexDirection: "column",
+          gap: isMobile || isTablet ? 2 : 3,
           width: "100%",
-          flexWrap: "wrap",
         }}
       >
         {services.map((service, index) => (

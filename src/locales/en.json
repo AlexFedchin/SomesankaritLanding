@@ -54,19 +54,86 @@
     "title": "Our Services and Prices",
     "subtitle": "Don't see the right service? Contact our team and we'll create a custom package for you.",
     "services": {
-      "socialMediaManagement": "Social Media Management",
-      "contentCreation": "Content Creation",
-      "socialMediaAds": "Social Media Ads"
-    },
-    "descriptions": {
-      "socialMediaManagement": "Comprehensive management of your social media accounts.",
-      "contentCreation": "High-quality content tailored to your brand.",
-      "socialMediaAds": "Targeted ad campaigns to boost your reach."
-    },
-    "prices": {
-      "socialMediaManagement": "€500 / month",
-      "contentCreation": "€300 / month",
-      "socialMediaAds": "From €200"
+      "socialMediaManagement": {
+        "title": "Social Media Management",
+        "description": "Comprehensive management of your social media accounts.",
+        "bulletpoints": {
+          "1": "Account creation and optimization",
+          "2": "Creating a content calendar",
+          "3": "Engagement and community management"
+        },
+        "price": "€500 / month"
+      },
+      "contentCreation": {
+        "title": "Content Creation",
+        "description": "High-quality content tailored to your brand.",
+        "bulletpoints": {
+          "1": "Graphic design and visual content",
+          "2": "Video production and editing",
+          "3": "Blog posts and articles"
+        },
+        "price": "€300 / month"
+      },
+      "socialMediaAds": {
+        "title": "Social Media Ads",
+        "description": "Targeted ad campaigns to boost your reach.",
+        "bulletpoints": {
+          "1": "Planning and executing ad campaigns",
+          "2": "Targeted ads on various platforms",
+          "3": "A/B testing and optimization"
+        },
+        "price": "From €200"
+      },
+      "seoOptimization": {
+        "title": "SEO Optimization",
+        "description": "Improve your website's visibility on search engines.",
+        "bulletpoints": {
+          "1": "Keyword research and analysis",
+          "2": "On-page and off-page optimization",
+          "3": "Monthly performance reports"
+        },
+        "price": "€400 / month"
+      },
+      "emailMarketing": {
+        "title": "Email Marketing",
+        "description": "Engage your audience with targeted email campaigns.",
+        "bulletpoints": {
+          "1": "Email list segmentation",
+          "2": "Custom email templates",
+          "3": "Performance tracking and reporting"
+        },
+        "price": "€250 / month"
+      },
+      "brandingStrategy": {
+        "title": "Branding Strategy",
+        "description": "Develop a strong and consistent brand identity.",
+        "bulletpoints": {
+          "1": "Logo and visual identity design",
+          "2": "Brand messaging and tone of voice",
+          "3": "Comprehensive brand guidelines"
+        },
+        "price": "€600 / project"
+      },
+      "influencerMarketing": {
+        "title": "Influencer Marketing",
+        "description": "Collaborate with influencers to promote your brand.",
+        "bulletpoints": {
+          "1": "Identifying suitable influencers",
+          "2": "Campaign planning and execution",
+          "3": "Performance analysis"
+        },
+        "price": "From €500"
+      },
+      "analyticsAndReporting": {
+        "title": "Analytics and Reporting",
+        "description": "Track and analyze your marketing performance.",
+        "bulletpoints": {
+          "1": "Custom analytics dashboards",
+          "2": "Monthly performance reviews",
+          "3": "Actionable insights and recommendations"
+        },
+        "price": "€300 / month"
+      }
     }
   },
 

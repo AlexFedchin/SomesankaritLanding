@@ -36,41 +36,21 @@ const createCustomTheme = ({ isMobile, isTablet }) =>
           },
         },
       },
-      MuiDivider: {
+      MuiCard: {
         styleOverrides: {
           root: {
-            backgroundColor: "var(--off-white)",
-            opacity: 0.2,
-          },
-        },
-      },
-      MuiOutlinedInput: {
-        styleOverrides: {
-          root: {
-            fontSize: isMobile ? "0.8rem" : isTablet ? "0.9rem" : "1rem",
+            backgroundColor: "rgba(255, 255, 255, 0.01)",
             borderRadius: "8px",
-            ".MuiOutlinedInput-notchedOutline": {
-              transition: "all 0.2s ease",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              boxShadow: "0 8px 40px rgba(0, 0, 0, 0.2)",
+              backgroundColor: "rgba(255, 255, 255, 0.05)",
             },
-            "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              border: "1px solid var(--off-white)",
-              opacity: 1,
-            },
-            "&:hover .MuiOutlinedInput-notchedOutline": {
-              opacity: 0.75,
-              border: "1px solid var(--off-white) !important",
-            },
-          },
-          notchedOutline: {
-            opacity: 0.5,
-            border: "1px solid var(--off-white)",
-          },
-          input: {
-            color: "var(--off-white)",
-            "&:-webkit-autofill": {
-              boxShadow: "0 0 0 100px transparent inset !important",
-              WebkitTextFillColor: "var(--off-white) !important",
-              transition: "background-color 5000s ease-in-out 0s",
+            "&:active": {
+              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+              backgroundColor: "rgba(255, 255, 255, 0.035)",
             },
           },
         },

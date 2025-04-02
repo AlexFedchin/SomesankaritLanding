@@ -18,15 +18,6 @@ const PortfolioCard = ({ project }) => {
       sx={{
         width: isMobile ? "200px" : "250px",
         minWidth: isMobile ? "200px" : "250px",
-        borderRadius: 2,
-        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-        bgcolor: "rgba(255, 255, 255, 0.01)",
-        border: "1px solid rgba(255, 255, 255, 0.1)",
-        transition: "0.3s ease",
-        "&:hover": {
-          bgcolor: "rgba(255, 255, 255, 0.1)",
-          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)",
-        },
       }}
     >
       <CardActionArea
