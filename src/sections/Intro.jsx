@@ -29,6 +29,7 @@ const Intro = () => {
           height: "100%",
           overflow: "hidden",
           zIndex: -3,
+          filter: "brightness(0.85)",
         }}
       >
         <video
@@ -54,7 +55,7 @@ const Intro = () => {
           display: "flex",
           gap: 3,
           flexDirection: "column",
-          justifyContent: "center",
+          pt: "25vh",
           alignItems: "center",
           height: "100%",
         }}
@@ -64,6 +65,7 @@ const Intro = () => {
           sx={{
             fontWeight: "bold",
             fontSize: isMobile ? "2rem" : isTablet ? "3rem" : "4rem",
+            textShadow: "0 0 16px var(--off-black)",
           }}
         >
           {t("intro.title")}
@@ -72,6 +74,7 @@ const Intro = () => {
           sx={{
             fontSize: isMobile ? "1rem" : isTablet ? "1.25rem" : "1.5rem",
             letterSpacing: 2,
+            textShadow: "0 0 16px var(--off-black)",
             fontWeight: 200,
           }}
         >
