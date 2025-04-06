@@ -147,19 +147,7 @@ const PersonCard = ({ image, firstName, secondName, roles, description }) => {
                 }}
               />
               {/* Description */}
-              <Typography
-                variant="body1"
-                sx={{
-                  textAlign: "left",
-                  fontSize: isMobile
-                    ? "0.9rem"
-                    : isTablet
-                    ? "1.15rem"
-                    : "1.25rem",
-                }}
-              >
-                {description}
-              </Typography>
+              <Typography variant="body-text">{description}</Typography>
             </>
           )}
         </Stack>

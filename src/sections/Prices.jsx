@@ -26,12 +26,10 @@ const Prices = () => {
         {t("prices.title").toUpperCase()}
       </Typography>
       <Typography
-        variant="body1"
+        variant="body-text"
         sx={{
-          fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
-          lineHeight: 1.6,
-          fontWeight: 200,
           mb: isMobile ? 2 : isTablet ? 3 : 4,
+          textAlign: "center",
         }}
       >
         {t("prices.subtitle")}

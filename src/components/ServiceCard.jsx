@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card, Typography, Box, IconButton } from "@mui/material";
+import { Card, Typography, Box, IconButton, Stack } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import useScreenSize from "../hooks/useScreenSize";
 
@@ -45,12 +45,9 @@ const ServiceCard = ({ service }) => {
         }}
       >
         <Typography
-          variant="h5"
+          variant="card-title"
           className="title"
           sx={{
-            textAlign: "left",
-            fontWeight: "bold",
-            fontSize: isMobile ? "1.2rem" : isTablet ? "1.5rem" : "1.75rem",
             color: expanded ? "var(--primary)" : "var(--off-white)",
             overflow: expanded ? "" : "hidden",
             transition: "all 0.3s ease",
@@ -90,54 +87,71 @@ const ServiceCard = ({ service }) => {
           gap: 2,
         }}
       >
-        <Typography
-          variant="body1"
-          sx={{
-            textAlign: "left",
-            fontSize: isMobile ? "0.9rem" : isTablet ? "1rem" : "1.1rem",
-            color: "var(--off-white)",
-          }}
-        >
-          {service.description}
-        </Typography>
+        <Typography variant="card-text">{service.description}</Typography>
+
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: isMobile ? "column" : "row",
             gap: 2,
-            alignItems: "flex-end",
+            alignItems: isMobile ? "flex-start" : "flex-end",
             justifyContent: "space-between",
             width: "100%",
             flexWrap: "wrap",
           }}
         >
+          {/* Features Section */}
           <Box
-            component="ul"
             sx={{
-              listStyleType: "disc",
-              pl: 4,
-              my: 0,
-              color: "var(--off-white)",
-              fontSize: isMobile ? "0.9rem" : isTablet ? "1rem" : "1.1rem",
+              display: "flex",
+              flexDirection: "column",
+              gap: isMobile ? 1 : 1.5,
+              pl: 2,
             }}
           >
             {service.bulletpoints.map((feature, index) => (
-              <Box component="li" key={index} sx={{ mb: 1, textAlign: "left" }}>
-                {feature}
-              </Box>
+              <Stack key={index} direction="row" gap={1} alignItems="center">
+                <Box
+                  component="img"
+                  src="/img/icons/flash.webp"
+                  alt="Flash"
+                  sx={{
+                    height: isMobile ? "16px" : isTablet ? "18px" : "20px",
+                    width: "auto",
+                  }}
+                />
+                <Typography variant="card-text">{feature}</Typography>
+              </Stack>
             ))}
           </Box>
+
+          {/* Price Button */}
           <Typography
             variant="h6"
+            component="a"
+            href="#contact"
+            className="strong-bg-blur"
+            onClick={(e) => e.stopPropagation()}
             sx={{
+              textDecoration: "none",
               fontWeight: "bold",
               fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.5rem",
               color: "var(--off-white)",
-              background: "rgba(255, 255, 255, 0.1)",
+              backgroundColor: "rgba(255, 255, 255, 0.05)",
               px: 2,
               py: 1,
+              ml: isMobile ? "auto" : 0,
               borderRadius: "4px",
               border: "1px solid rgba(255, 255, 255, 0.1)",
+              transition: "all 0.3s ease",
+              "&:active": {
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+              },
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+              },
             }}
           >
             {service.price}

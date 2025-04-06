@@ -38,7 +38,7 @@ const CustomFooter = () => {
             display: "flex",
             gap: 2,
             flexDirection: isMobile ? "column" : "row",
-            alignItems: "center",
+            alignItems: isMobile ? "center" : "flex-end",
             justifyContent: "space-between",
           }}
         >
@@ -103,22 +103,9 @@ const CustomFooter = () => {
             />
           )}
 
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-            <Typography variant="body2" sx={{ color: "var(--border)" }}>
-              Media by{" "}
-              <a
-                href="https://videezy.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "inherit" }}
-              >
-                Videezy
-              </a>
-            </Typography>
-            <Typography variant="body2" sx={{ color: "var(--border)" }}>
-              © Somesankarit 2025
-            </Typography>
-          </Box>
+          <Typography variant="body2" sx={{ color: "var(--border)" }}>
+            © Somesankarit 2025
+          </Typography>
 
           {/* Right Section - Social Media Icons
           Here until the moment when we have real social networks

@@ -54,7 +54,7 @@ const Contact = () => {
         {/* Main Information */}
         <Stack
           aria-label="Contact Information"
-          spacing={3}
+          spacing={isMobile ? 2 : isTablet ? 3 : 4}
           sx={{
             flex: 1,
             alignItems: isMobile ? "center" : "flex-start",
@@ -68,14 +68,7 @@ const Contact = () => {
             </Typography>
           )}
 
-          <Typography
-            variant="body1"
-            sx={{
-              fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
-              color: "var(--off-white)",
-              lineHeight: 1.6,
-            }}
-          >
+          <Typography variant="body-text">
             {t("contact.description")}
           </Typography>
 
@@ -89,10 +82,6 @@ const Contact = () => {
               gap: 2,
               flexWrap: "wrap",
               "& a": {
-                fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
-                color: "var(--off-white)",
-                lineHeight: isMobile ? "20px" : "24px",
-                fontWeight: 200,
                 textDecoration: "none",
                 transition: "all 0.2s ease",
                 "&:hover": {
@@ -102,10 +91,7 @@ const Contact = () => {
                 },
               },
               "& .contact-info-header": {
-                fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
-                color: "var(--off-white)",
                 fontWeight: "bold",
-                lineHeight: isMobile ? "20px" : "24px",
               },
             }}
           >
@@ -121,7 +107,10 @@ const Contact = () => {
                 <EmailIcon fontSize={isMobile ? "small" : "medium"} />
 
                 {!isMobile && (
-                  <Typography variant="body1" className="contact-info-header">
+                  <Typography
+                    variant="body-text"
+                    className="contact-info-header"
+                  >
                     {t("contact.email")}:
                   </Typography>
                 )}
@@ -129,7 +118,7 @@ const Contact = () => {
                 <Typography
                   component="a"
                   href="mailto:hello@somesankarit.com"
-                  variant="body1"
+                  variant="body-text"
                 >
                   hello@somesankarit.com
                 </Typography>
@@ -144,7 +133,10 @@ const Contact = () => {
                 <PhoneIcon fontSize={isMobile ? "small" : "medium"} />
 
                 {!isMobile && (
-                  <Typography variant="body1" className="contact-info-header">
+                  <Typography
+                    variant="body-text"
+                    className="contact-info-header"
+                  >
                     {t("contact.phone")}:
                   </Typography>
                 )}
@@ -152,7 +144,7 @@ const Contact = () => {
                 <Typography
                   component="a"
                   href="tel:+358123456789"
-                  variant="body1"
+                  variant="body-text"
                 >
                   +358 123 456 789
                 </Typography>
@@ -167,7 +159,10 @@ const Contact = () => {
                 <AddressIcon fontSize={isMobile ? "small" : "medium"} />
 
                 {!isMobile && (
-                  <Typography variant="body1" className="contact-info-header">
+                  <Typography
+                    variant="body-text"
+                    className="contact-info-header"
+                  >
                     {t("contact.address")}:
                   </Typography>
                 )}
@@ -177,7 +172,7 @@ const Contact = () => {
                   href="https://www.google.com/maps?q=Tampere,+Finland"
                   target="_blank"
                   rel="noopener noreferrer"
-                  variant="body1"
+                  variant="body-text"
                 >
                   Tampere, Finland
                 </Typography>

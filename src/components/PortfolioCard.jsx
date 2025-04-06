@@ -9,7 +9,7 @@ import {
 import useScreenSize from "../hooks/useScreenSize";
 
 const PortfolioCard = ({ project }) => {
-  const { isMobile, isTablet } = useScreenSize();
+  const { isMobile } = useScreenSize();
 
   return (
     <Card
@@ -38,14 +38,10 @@ const PortfolioCard = ({ project }) => {
         />
         <CardContent>
           <Typography
-            variant="h5"
+            variant="card-title"
             sx={{
-              textAlign: "left",
-              fontWeight: "bold",
-              fontSize: isMobile ? "1.2rem" : isTablet ? "1.5rem" : "1.75rem",
               display: "-webkit-box",
               overflow: "hidden",
-              color: "var(--off-white)",
               WebkitBoxOrient: "vertical",
               WebkitLineClamp: 2,
               wordBreak: "break-word",
@@ -67,16 +63,7 @@ const PortfolioCard = ({ project }) => {
             }}
           />
 
-          <Typography
-            variant="body1"
-            sx={{
-              textAlign: "left",
-              fontSize: isMobile ? "0.9rem" : isTablet ? "1rem" : "1.1rem",
-              color: "var(--off-white)",
-            }}
-          >
-            {project.description}
-          </Typography>
+          <Typography variant="card-text">{project.description}</Typography>
         </CardContent>
       </CardActionArea>
     </Card>

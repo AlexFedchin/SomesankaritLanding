@@ -44,11 +44,8 @@ const About = () => {
             {t("whatWeDo.title").toUpperCase()}
           </Typography>
           <Typography
-            variant="body1"
+            variant="body-text"
             sx={{
-              fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.4rem",
-              lineHeight: 1.6,
-              color: "var(--text)",
               textShadow:
                 "0 0 16px var(--off-black), 0 0 24px var(--off-black), 0 0 32px var(--off-black), 0 0 48px var(--off-black)",
             }}
