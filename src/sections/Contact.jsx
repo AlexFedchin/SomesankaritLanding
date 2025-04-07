@@ -68,7 +68,7 @@ const Contact = () => {
             </Typography>
           )}
 
-          <Typography variant="body-text">
+          <Typography variant="body-text" zIndex={2}>
             {t("contact.description")}
           </Typography>
 
@@ -78,7 +78,9 @@ const Contact = () => {
               width: "100%",
               flexDirection: "row",
               alignItems: "center",
-              justifyContent: isMobile ? "center" : "flex-start",
+              pt: isMobile ? 2 : 0,
+              position: isMobile ? "relative" : "",
+              justifyContent: isMobile ? "" : "flex-start",
               gap: 2,
               flexWrap: "wrap",
               "& a": {
@@ -96,7 +98,7 @@ const Contact = () => {
             }}
           >
             {/* Contact Details */}
-            <Stack spacing={isMobile ? 1 : isTablet ? 1.5 : 2}>
+            <Stack spacing={isMobile ? 1 : isTablet ? 1.5 : 2} zIndex={2}>
               {/* Email */}
               <Stack
                 spacing={1}
@@ -187,11 +189,14 @@ const Contact = () => {
                 alt="Contact Us"
                 draggable="false"
                 sx={{
-                  width: "30%",
+                  width: "32%",
                   maxHeight: "300px",
                   objectFit: "contain",
                   userSelect: "none",
                   filter: "drop-shadow(0 0 32px rgba(0, 0, 0, 0.75))",
+                  position: "absolute",
+                  right: 0,
+                  zIndex: 1,
                 }}
               />
             )}
