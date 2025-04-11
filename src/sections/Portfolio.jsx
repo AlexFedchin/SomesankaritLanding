@@ -1,8 +1,8 @@
 import { Box, Typography, IconButton, Stack } from "@mui/material";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import PortfolioCard from "../components/PortfolioCard";
+import IphonePortfolioCard from "../components/IphonePortfolioCard";
 import useScreenSize from "../hooks/useScreenSize";
 import { useTranslation } from "react-i18next";
 import DefaultContainer from "../components/DefaultContainer";
@@ -13,45 +13,49 @@ const Portfolio = () => {
   const scrollRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
+  const [cardStyles, setCardStyles] = useState([]);
 
-  const projects = [
-    {
-      title: t("portfolio.projects.project1.title"),
-      description: t("portfolio.projects.project1.description"),
-      image: "/img/projects/project1.jpg",
-      link: "https://example.com/project1",
-    },
-    {
-      title: t("portfolio.projects.project2.title"),
-      description: t("portfolio.projects.project2.description"),
-      image: "/img/projects/project2.jpg",
-      link: "https://example.com/project2",
-    },
-    {
-      title: t("portfolio.projects.project3.title"),
-      description: t("portfolio.projects.project3.description"),
-      image: "/img/projects/project3.jpg",
-      link: "https://example.com/project3",
-    },
-    {
-      title: t("portfolio.projects.project1.title"),
-      description: t("portfolio.projects.project1.description"),
-      image: "/img/projects/project1.jpg",
-      link: "https://example.com/project1",
-    },
-    {
-      title: t("portfolio.projects.project2.title"),
-      description: t("portfolio.projects.project2.description"),
-      image: "/img/projects/project2.jpg",
-      link: "https://example.com/project2",
-    },
-    {
-      title: t("portfolio.projects.project3.title"),
-      description: t("portfolio.projects.project3.description"),
-      image: "/img/projects/project3.jpg",
-      link: "https://example.com/project3",
-    },
-  ];
+  const projects = useMemo(
+    () => [
+      {
+        title: t("portfolio.projects.project1.title"),
+        description: t("portfolio.projects.project1.description"),
+        image: "/img/projects/project1.jpg",
+        link: "https://example.com/project1",
+      },
+      {
+        title: t("portfolio.projects.project2.title"),
+        description: t("portfolio.projects.project2.description"),
+        image: "/img/projects/project2.jpg",
+        link: "https://example.com/project2",
+      },
+      {
+        title: t("portfolio.projects.project3.title"),
+        description: t("portfolio.projects.project3.description"),
+        image: "/img/projects/project3.jpg",
+        link: "https://example.com/project3",
+      },
+      {
+        title: t("portfolio.projects.project1.title"),
+        description: t("portfolio.projects.project1.description"),
+        image: "/img/projects/project1.jpg",
+        link: "https://example.com/project1",
+      },
+      {
+        title: t("portfolio.projects.project2.title"),
+        description: t("portfolio.projects.project2.description"),
+        image: "/img/projects/project2.jpg",
+        link: "https://example.com/project2",
+      },
+      {
+        title: t("portfolio.projects.project3.title"),
+        description: t("portfolio.projects.project3.description"),
+        image: "/img/projects/project3.jpg",
+        link: "https://example.com/project3",
+      },
+    ],
+    [t]
+  );
 
   const handleScroll = (direction) => {
     if (!scrollRef.current) return;
@@ -63,6 +67,30 @@ const Portfolio = () => {
     });
   };
 
+  const updateCardStyles = useCallback(() => {
+    if (!scrollRef.current) return;
+
+    const { scrollLeft, clientWidth } = scrollRef.current;
+    const center = scrollLeft + clientWidth / 2;
+
+    const styles = projects.map((_, index) => {
+      const card = scrollRef.current.children[index];
+      if (!card) return { scale: 1, opacity: 1 };
+
+      const cardCenter =
+        card.offsetLeft + card.offsetWidth / 2 - scrollRef.current.offsetLeft;
+      const distance = Math.abs((center - cardCenter) * 0.33);
+
+      // Calculate scale and opacity based on distance
+      const scale = 1 - distance / clientWidth;
+      const opacity = Math.max(0.5, 1 - distance / clientWidth);
+
+      return { scale, opacity };
+    });
+
+    setCardStyles(styles);
+  }, [projects]);
+
   // Update arrow visibility on scroll
   useEffect(() => {
     const updateArrows = () => {
@@ -73,12 +101,19 @@ const Portfolio = () => {
       setShowRightArrow(scrollLeft + clientWidth < scrollWidth);
     };
 
-    const currentScrollRef = scrollRef.current;
-    currentScrollRef?.addEventListener("scroll", updateArrows);
-    updateArrows(); // Initial check
+    const handleScrollEvent = () => {
+      updateArrows();
+      updateCardStyles();
+    };
 
-    return () => currentScrollRef?.removeEventListener("scroll", updateArrows);
-  }, []);
+    const currentScrollRef = scrollRef.current;
+    currentScrollRef?.addEventListener("scroll", handleScrollEvent);
+    updateArrows();
+    updateCardStyles(); // Initial styles
+
+    return () =>
+      currentScrollRef?.removeEventListener("scroll", handleScrollEvent);
+  }, [projects, updateCardStyles]);
 
   return (
     <DefaultContainer id="portfolio" sx={{ gap: 4 }}>
@@ -105,8 +140,8 @@ const Portfolio = () => {
             height: "100%",
             width: "80px",
             background:
-              "linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent)",
-            zIndex: 1,
+              "linear-gradient(to right, var(--off-black), transparent)",
+            zIndex: 4,
             pointerEvents: "none",
             opacity: showLeftArrow ? 1 : 0,
             transition: "opacity 0.3s ease",
@@ -118,7 +153,7 @@ const Portfolio = () => {
           sx={{
             position: "absolute",
             left: 10,
-            zIndex: 2,
+            zIndex: 5,
             opacity: showLeftArrow ? 1 : 0,
             visibility: showLeftArrow ? "visible" : "hidden",
             transition: "opacity 0.3s ease, visibility 0.3s ease",
@@ -148,14 +183,24 @@ const Portfolio = () => {
             overflowX: "auto",
             scrollBehavior: "smooth",
             gap: 2,
+            px: isMobile ? "calc(50% - 100px)" : "calc(50% - 125px)",
             width: "100%",
+            minHeight: "500px",
             "&::-webkit-scrollbar": {
               display: "none",
             },
           }}
         >
           {projects.map((project, index) => (
-            <PortfolioCard key={index} project={project} />
+            <IphonePortfolioCard
+              key={index}
+              project={project}
+              style={{
+                transform: `scale(${cardStyles[index]?.scale || 1})`,
+                opacity: cardStyles[index]?.opacity || 1,
+                // transition: "transform 0.1s ease, opacity 0.1s ease",
+              }}
+            />
           ))}
         </Box>
 
@@ -164,7 +209,7 @@ const Portfolio = () => {
           sx={{
             position: "absolute",
             right: 10,
-            zIndex: 2,
+            zIndex: 5,
             opacity: showRightArrow ? 1 : 0,
             visibility: showRightArrow ? "visible" : "hidden",
             transition: "opacity 0.3s ease, visibility 0.3s ease",
@@ -195,8 +240,8 @@ const Portfolio = () => {
             height: "100%",
             width: "80px",
             background:
-              "linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent)",
-            zIndex: 1,
+              "linear-gradient(to left, var(--off-black), transparent)",
+            zIndex: 4,
             pointerEvents: "none",
             opacity: showRightArrow ? 1 : 0,
             transition: "opacity 0.3s ease",
