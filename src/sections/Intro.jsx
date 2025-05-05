@@ -53,7 +53,7 @@ const Intro = () => {
           position: "relative",
           zIndex: 1,
           display: "flex",
-          gap: 3,
+          gap: 40,
           flexDirection: "column",
           pt: "25vh",
           alignItems: "center",
@@ -64,7 +64,7 @@ const Intro = () => {
           variant="h1"
           sx={{
             fontWeight: "bold",
-            fontSize: isMobile ? "2rem" : isTablet ? "3rem" : "4rem",
+            fontSize: isMobile ? "1.5rem" : isTablet ? "2.5rem" : "3.5rem",
             textShadow: "0 0 16px var(--off-black)",
           }}
         >
@@ -74,7 +74,8 @@ const Intro = () => {
           sx={{
             fontSize: isMobile ? "1rem" : isTablet ? "1.25rem" : "1.5rem",
             letterSpacing: 2,
-            textShadow: "0 0 16px var(--off-black)",
+            textShadow:
+              "0 0 4px var(--off-black), 0 0 8px var(--off-black), 0 0 16px var(--off-black)",
             fontWeight: 200,
           }}
         >

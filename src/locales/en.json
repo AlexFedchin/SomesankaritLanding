@@ -1,24 +1,62 @@
 {
   "menuItems": {
-    "about": "ABOUT",
-    "prices": "PRICES",
-    "portfolio": "PORTFOLIO",
+    "whatWeDo": "WHAT WE DO",
+    "heroes": "HEROES",
+    "ourServices": "OUR SERVICES",
+    "references": "REFERENCES",
     "contact": "CONTACT"
   },
 
   "intro": {
-    "title": "Elevate Your Brand with Social Media Marketing",
-    "subtitle": "We help brands connect with their audience through social media",
+    "title": "The Power of Short Videos – Big Change Starts with One Video!",
+    "subtitle": "A Superpower That Makes Your Brand a Crowd Favorite",
     "noVideo": "Your browser does not support the video tag"
   },
 
   "whatWeDo": {
     "title": "What We Do",
-    "description": "Social media marketing companies specialize in promoting brands, products, and services through various social media platforms. They create and manage content tailored to engage target audiences, increase brand awareness, and drive traffic to websites. These companies utilize strategies such as influencer partnerships, paid advertising, and analytics to measure and optimize campaign performance. Their goal is to build a strong online presence and foster meaningful connections between brands and their customers."
+    "description": "We create <strong style=\"font-weight: 700;\">authentic and bold short videos</strong> that speak for your brand. We reach the right audience and help <strong style=\"font-weight: 700;\">build trust</strong> between your customers and your brand. Videos are a powerful way to communicate – they make your brand approachable and help your message stand out. <strong style=\"font-weight: 700;\">Human-to-human</strong> communication makes marketing more personal, genuine, and impactful."
   },
 
   "meetTheTeam": {
-    "title": "Meet the Team"
+    "title": "Meet the Team",
+    "subtitle": "The Story of Somesankarit",
+    "description": {
+      "1": "The story of Somesankarit begins at the Nääshalli wrestling gym, where Mirko and Roman met. A shared passion and enthusiasm for creating short videos brought them together, and making videos became a fun joint venture.",
+      "2": "Mirko and Roman are also known from nightclub doors, where they filmed content related to nightlife. Nightclubs were also their first short video marketing clients. This sparked the idea of transitioning from bouncer work to focusing entirely on short video marketing.",
+      "3": "The idea gained momentum when the nightclub where Mirko and Roman worked announced, just a day before New Year's Eve, that it was closing its doors. Mirko came up with the idea of creating an open job application video explaining that they had become unemployed. The job application video was filmed and published on the first day of 2025, and through it, the video reached Matias Niemi, who hired them to create content for Same Goal Clothing's TikTok. The videos garnered over a million views in the first month, leading to a significant increase in demand for their services."
+    },
+    "team": {
+      "mirko": {
+        "roles": {
+          "1": "Creative Director",
+          "2": "Content Creator"
+        },
+        "description": "His energetic and warm personality makes him approachable, even from a brand's perspective. Collaborations are natural, inventive, and genuinely connect with the target audience. He knows how to create content that is entertaining yet impactful, leaving a lasting impression."
+      },
+      "roman": {
+        "roles": {
+          "1": "Content Creator"
+        },
+        "description": "Humor is his superpower! This creative social media influencer charms with his short videos that combine humor, self-irony, and genuine enthusiasm. A warm and always positive hero whose content brings a smile to the viewer's face every time."
+      },
+      "aino": {
+        "description": "One of the boys! You know the saying, 'Behind every great man is a woman ;)'. Well, not entirely, but Aino's superpower in this team is keeping everything organized, from projects to administrative tasks. Aino strikes a perfect balance between spontaneity and precision. Her educational background includes sports and coaching, and she is currently pursuing general education studies with electives in communication and journalism."
+      },
+      "alex": {
+        "roles": {
+          "1": "Videographer",
+          "2": "Web Developer"
+        },
+        "description": "Alex is the technical genius of our team, mastering the skills of videography and editing. He is also an expert in web development, bringing technical expertise and creativity to the team. Alex's ability to combine visual storytelling and technology makes him an invaluable member of our team."
+      },
+      "santeri": {
+        "roles": {
+          "1": "Client Director"
+        },
+        "description": "Responsible for client relationships and strategic partnerships, Santeri specializes in deeply analyzing and solving client needs. He has extensive experience in the financial sector and business development. This hero also holds a higher education degree in Business Administration with a focus on marketing."
+      }
+    }
   },
 
   "portfolio": {
@@ -26,15 +64,15 @@
     "projects": {
       "project1": {
         "title": "Social Media Campaign for Brand A",
-        "description": "Managed a successful campaign that increased engagement by 40%."
+        "description": "Led a successful campaign that increased engagement by 40%."
       },
       "project2": {
         "title": "Content Creation for Brand B",
-        "description": "Created engaging content that boosted followers by 25%."
+        "description": "Created engaging content that grew followers by 25%."
       },
       "project3": {
-        "title": "Ad Strategy for Brand C",
-        "description": "Implemented an ad strategy that doubled conversions."
+        "title": "Advertising Strategy for Brand C",
+        "description": "Implemented an advertising strategy that doubled conversions."
       }
     }
   },
@@ -42,8 +80,8 @@
   "ourJourney": {
     "title": "Our Journey",
     "descriptions": {
-      "2021": "Work as portsari.",
-      "2022": "We started our journey with a small but passionate team.",
+      "2021": "Worked as bouncers.",
+      "2022": "Started our journey with a small but passionate team.",
       "2023": "Expanded our services and reached new milestones.",
       "2024": "Launched innovative marketing campaigns and grew our client base.",
       "2025": "Achieved industry recognition and set new standards."
@@ -51,16 +89,16 @@
   },
 
   "prices": {
-    "title": "Our Services and Prices",
-    "subtitle": "Don't see the right service? Contact our team and we'll create a custom package for you.",
+    "title": "Our Services",
+    "subtitle": "Can't find the right service? Contact our team, and we'll create a custom package for you.",
     "services": {
       "socialMediaManagement": {
         "title": "Social Media Management",
-        "description": "Comprehensive management of your social media accounts.",
+        "description": "Comprehensive management for your social media accounts.",
         "bulletpoints": {
           "1": "Account creation and optimization",
-          "2": "Creating a content calendar",
-          "3": "Engagement and community management"
+          "2": "Content calendar creation",
+          "3": "Community management and engagement"
         },
         "price": "€500 / month"
       },
@@ -76,17 +114,17 @@
       },
       "socialMediaAds": {
         "title": "Social Media Ads",
-        "description": "Targeted ad campaigns to boost your reach.",
+        "description": "Targeted ad campaigns to boost your visibility.",
         "bulletpoints": {
-          "1": "Planning and executing ad campaigns",
+          "1": "Ad campaign planning and execution",
           "2": "Targeted ads on various platforms",
           "3": "A/B testing and optimization"
         },
-        "price": "From €200"
+        "price": "Starting at €200"
       },
       "seoOptimization": {
         "title": "SEO Optimization",
-        "description": "Improve your website's visibility on search engines.",
+        "description": "Improve your website's visibility in search engines.",
         "bulletpoints": {
           "1": "Keyword research and analysis",
           "2": "On-page and off-page optimization",
@@ -122,14 +160,14 @@
           "2": "Campaign planning and execution",
           "3": "Performance analysis"
         },
-        "price": "From €500"
+        "price": "Starting at €500"
       },
       "analyticsAndReporting": {
         "title": "Analytics and Reporting",
         "description": "Track and analyze your marketing performance.",
         "bulletpoints": {
           "1": "Custom analytics dashboards",
-          "2": "Monthly performance reviews",
+          "2": "Monthly performance evaluations",
           "3": "Actionable insights and recommendations"
         },
         "price": "€300 / month"
@@ -138,9 +176,9 @@
   },
 
   "contact": {
-    "title": "Get in Touch",
+    "title": "Contact Us",
     "subtitle": "We'd love to hear from you!",
-    "description": "Feel free to reach out to us via email, phone, or visit us at our office. We're here to help you grow your social media presence.",
+    "description": "Reach out to us via email, phone, or visit our office. We're here to help you grow your social media presence.",
     "email": "Email",
     "phone": "Phone",
     "address": "Address"

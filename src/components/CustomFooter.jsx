@@ -104,7 +104,7 @@ const CustomFooter = () => {
           )}
 
           <Typography variant="body2" sx={{ color: "var(--border)" }}>
-            © Somesankarit 2025
+            © Somesankarit {new Date().getFullYear()}
           </Typography>
 
           {/* Right Section - Social Media Icons

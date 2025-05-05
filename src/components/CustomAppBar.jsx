@@ -20,9 +20,10 @@ const CustomAppBar = () => {
   const { t, i18n } = useTranslation();
 
   const menuItems = [
-    { text: t("menuItems.about"), href: "#about" },
-    { text: t("menuItems.prices"), href: "#prices" },
-    { text: t("menuItems.portfolio"), href: "#portfolio" },
+    { text: t("menuItems.whatWeDo"), href: "#whatWeDo" },
+    { text: t("menuItems.heroes"), href: "#heroes" },
+    { text: t("menuItems.references"), href: "#references" },
+    { text: t("menuItems.ourServices"), href: "#ourServices" },
     { text: t("menuItems.contact"), href: "#contact" },
   ];
 
@@ -59,7 +60,7 @@ const CustomAppBar = () => {
               isMobile || isTablet
                 ? "1200px"
                 : "min(1200px, calc(100% - 32px))",
-            px: isMobile ? 1 : isTablet ? 2 : 3,
+            px: isMobile ? 1 : 2,
             py: 0.5,
             display: "flex",
             boxSizing: "border-box",
@@ -83,19 +84,19 @@ const CustomAppBar = () => {
           >
             <Stack
               direction="row"
-              spacing={isMobile ? 2 : 4}
+              spacing={isMobile ? 2 : 3}
               flexWrap="nowrap"
               alignItems="center"
             >
               {/* Logo */}
               <Stack
                 direction="row"
-                spacing={isMobile ? 1 : 2}
+                spacing={isMobile ? 1 : 1}
                 flexWrap="nowrap"
                 alignItems="center"
                 draggable="false"
               >
-                <Box
+                {/* <Box
                   component="img"
                   src="/img/vite.svg"
                   alt="Logo"
@@ -107,7 +108,7 @@ const CustomAppBar = () => {
                     maxWidth: "120px",
                     userSelect: "none",
                   }}
-                />
+                /> */}
                 <Typography
                   variant="h6"
                   draggable="false"
@@ -128,9 +129,8 @@ const CustomAppBar = () => {
               {isMobile || isTablet ? null : (
                 <Stack
                   direction="row"
-                  spacing={4}
+                  spacing={2}
                   sx={{
-                    width: "280px",
                     alignItems: "center",
                     justifyContent: "space-between",
                     "& a": {
@@ -165,7 +165,7 @@ const CustomAppBar = () => {
             {/* Contact Button, Language, Menu */}
             <Stack
               direction="row"
-              spacing={isMobile ? 2 : 4}
+              spacing={isMobile ? 2 : 2}
               alignItems="center"
             >
               {/* Contact Button */}

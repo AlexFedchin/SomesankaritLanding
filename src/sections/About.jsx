@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <DefaultContainer
-      id="about"
+      id="whatWeDo"
       sx={{
         mb: -4,
         position: "relative",
@@ -50,7 +50,11 @@ const About = () => {
                 "0 0 16px var(--off-black), 0 0 24px var(--off-black), 0 0 32px var(--off-black), 0 0 48px var(--off-black)",
             }}
           >
-            {t("whatWeDo.description")}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t("whatWeDo.description"),
+              }}
+            />
           </Typography>
         </Box>
       </Stack>

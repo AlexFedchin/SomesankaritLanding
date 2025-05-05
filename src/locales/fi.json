@@ -1,24 +1,62 @@
 {
   "menuItems": {
-    "about": "TIETOA",
-    "prices": "HINNAT",
-    "portfolio": "PORTFOLIO",
+    "whatWeDo": "MITÄ TEEMME",
+    "heroes": "SANKARIT",
+    "ourServices": "PALVELUMME",
+    "references": "REFERENSSIT",
     "contact": "YHTEYSTIEDOT"
   },
 
   "intro": {
-    "title": "Nosta Brändisi Uudelle Tasolle Sosiaalisen Median Markkinoinnilla",
-    "subtitle": "Autamme brändejä yhdistämään yleisönsä sosiaalisen median kautta",
+    "title": "Lyhytvideoiden voima – suuri muutos alkaa yhdestä videosta!",
+    "subtitle": "Supervoima, joka tekee brändistäsi yleisön suosikin",
     "noVideo": "Selaimesi ei tue videotagia"
   },
 
   "whatWeDo": {
     "title": "Mitä Teemme",
-    "description": "Sosiaalisen median markkinointiyritykset erikoistuvat brändien, tuotteiden ja palveluiden edistämiseen eri sosiaalisen median alustoilla. Ne luovat ja hallinnoivat sisältöä, joka on räätälöity sitouttamaan kohdeyleisöjä, lisäämään bränditietoisuutta ja ohjaamaan liikennettä verkkosivustoille. Nämä yritykset hyödyntävät strategioita, kuten vaikuttajayhteistyötä, maksettua mainontaa ja analytiikkaa kampanjoiden suorituskyvyn mittaamiseen ja optimointiin. Niiden tavoitteena on rakentaa vahva verkkoläsnäolo ja edistää merkityksellisiä yhteyksiä brändien ja asiakkaiden välillä."
+    "description": "Me luomme <strong style=\"font-weight: 700;\">aitoja ja rohkeita lyhytvideoita</strong>, jotka puhuvat brändisi puolesta. Tavoitamme oikeat ihmiset ja autamme <strong style=\"font-weight: 700;\">rakentamaan luottamusta</strong> asiakkaiden ja brändisi välille. Videot ovat tehokas tapa viestiä – ne tekevät brändistäsi helposti lähestyttävän ja auttavat viestisi erottumaan. <strong style=\"font-weight: 700;\">Ihmiseltä ihmiselle</strong> -viestintä tekee markkinoinnista henkilökohtaisempaa, aidompaa ja vaikuttavampaa."
   },
 
   "meetTheTeam": {
-    "title": "Tapaa Tiimi"
+    "title": "Tapaa Tiimi",
+    "subtitle": "Somesankareiden tarina",
+    "description": {
+      "1": "Somesankareiden tarina alkaa Nääshallin painisalilta jossa Mirko ja Roman tutustuivat. Yhteinen intohimo ja halu lyhytvideoiden tekoon yhdisti ja yhteisiä videoita oli hauska alkaa toteuttamaan.",
+      "2": "Mirko ja Roman tiedetään myös baarien ovilta josta sankarit kuvasi yöelämään liittyvää sisältöä. Baarit olivat myös heidän ensimmäisiä lyhytvideo markkinointi asiakkaita. Tästä ajatus portsari työn vaihtamisesta kokonaan lyhytvideo markkinointiin keskittyvään työhön syntyi.",
+      "3": "Idea sai tuulta purjeisiin, kun baari jossa Mirko ja Roman työskenteli ilmoitti päivää ennen uudenvuoden aattoa sulkevan ovensa. Mirko sai idean, että tehdään avoin työnhakuvideo jossa kerrotaan, että ollaan jääty työttömiksi. Työnhakuvideo kuvattiin ja julkaistiin vuoden 2025 ensimmäisenä päivänä ja sen kautta video tavoitti Matias Niemen, joka palkkasi sankarit tekemään Same Goal Clothingin TikTokkiin sisältöä. Videot keräsivät yli miljoona näyttökertaa ensimmäiseen kuukauteen, jonka seurauksena sankareiden kysyntä alkoi kasvamaan huimasti."
+    },
+    "team": {
+      "mirko": {
+        "roles": {
+          "1": "Luovajohtaja",
+          "2": "sisällöntuottaja"
+        },
+        "description": "Hänen energinen ja lämmin persoona tekee hänestä helposti lähestyttävän myös brändien näkökulmasta. Yhteistyöt ovat luontevia, kekseliäitä ja tavoittavat kohdeyleisön aidolla tavalla. Hän osaa rakentaa sisällöistä viihdyttäviä, mutta samalla vaikuttavia, jolloin viesti on mieleenpainuva."
+      },
+      "roman": {
+        "roles": {
+          "1": "Sisällöntuottaja"
+        },
+        "description": "Hauskuus on hänen supervoimansa! Tämä idearikas somevaikuttaja hurmaa lyhytvideoillaan, joissa yhdistyy huumori, itseironia ja aito heittäytyminen. Lämmin ja aina positiivinen sankari, jonka sisällöt nostavat katsojan hymyn huulille joka kerta."
+      },
+      "aino": {
+        "description": "One of the boys! Kyllähän te tiedätte, että kaiken takana on nainen ;) Ei nyt täysin, mutta todellakin Ainon supervoima tässä tiimissä on pitää langat käsissä niin projektien, kuin hallinnollisten tehtävien osalta. Ainossa on loistavassa suhteessa heittäytymiskykyä ja säntillisyyttä. Koulutustaustaa löytyy liikunnan ja valmennuksen puolelta, mutta tuoreimpana käynnissä on yleisen kasvatustieteen opinnot, sekä viestinnän ja journalistiikan valinnaiset opinnot."
+      },
+      "alex": {
+        "roles": {
+          "1": "Videokuvaja",
+          "2": "verkkoohjelmoija"
+        },
+        "description": "Alex on tiimimme tekninen nero, joka hallitsee videokuvauksen ja editoinnin taidot. Hän on myös verkkosivujen kehittämisen asiantuntija, joka tuo tiimiin teknistä osaamista ja luovuutta. Alexin kyky yhdistää visuaalinen kerronta ja teknologia tekee hänestä arvokkaan jäsenen tiimissämme."
+      },
+      "santeri": {
+        "roles": {
+          "1": "Asiakkuusjohtaja"
+        },
+        "description": "Asiakkuuksista sekä strategisista kumppanuuksista vastaava Santeri on erikoistunut asiakkaiden tarpeiden syvälliseen analysointiin ja niiden ratkaisemiseen. Häneltä löytyy laaja-alaista kokemusta finanssialalta sekä liiketoiminnan kehittämisestä. Tämän sankarin povitaskusta löytyy myös Liiketalouden korkeakoulututkinto markkinoinnin parista."
+      }
+    }
   },
 
   "portfolio": {
@@ -51,7 +89,7 @@
   },
 
   "prices": {
-    "title": "Palvelumme ja Hinnat",
+    "title": "Palvelumme",
     "subtitle": "Etkö löydä sopivaa palvelua? Ota yhteyttä tiimiimme, niin luomme sinulle räätälöidyn paketin.",
     "services": {
       "socialMediaManagement": {

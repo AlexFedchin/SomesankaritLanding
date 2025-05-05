@@ -115,6 +115,16 @@ const Portfolio = () => {
       currentScrollRef?.removeEventListener("scroll", handleScrollEvent);
   }, [projects, updateCardStyles]);
 
+  useEffect(() => {
+    if (scrollRef.current) {
+      const scrollAmount = 2 * (isMobile ? 218 : 268);
+      scrollRef.current.scrollTo({
+        left: scrollAmount,
+        behavior: "auto",
+      });
+    }
+  }, [isMobile]);
+
   return (
     <DefaultContainer id="portfolio" sx={{ gap: 4 }}>
       <Typography variant="section-title">
@@ -185,7 +195,7 @@ const Portfolio = () => {
             gap: 2,
             px: isMobile ? "calc(50% - 100px)" : "calc(50% - 125px)",
             width: "100%",
-            minHeight: "500px",
+            minHeight: isMobile ? "410px" : "500px",
             "&::-webkit-scrollbar": {
               display: "none",
             },
@@ -198,7 +208,6 @@ const Portfolio = () => {
               style={{
                 transform: `scale(${cardStyles[index]?.scale || 1})`,
                 opacity: cardStyles[index]?.opacity || 1,
-                // transition: "transform 0.1s ease, opacity 0.1s ease",
               }}
             />
           ))}

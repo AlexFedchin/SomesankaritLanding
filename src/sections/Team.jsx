@@ -13,46 +13,48 @@ const Team = () => {
       image: "/img/team/mirko.webp",
       firstName: "Mirko",
       secondName: "Asell",
-      roles: ["Star", "Cameraman"],
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula. Proin vulputate condimentum lacus, a tristique mi finibus a. Vivamus lobortis odio vel.",
+      roles: [
+        t("meetTheTeam.team.mirko.roles.1"),
+        t("meetTheTeam.team.mirko.roles.2"),
+      ],
+      description: t("meetTheTeam.team.mirko.description"),
     },
     {
       image: "/img/team/roman.webp",
       firstName: "Roman",
       secondName: "Aliev",
-      roles: ["Star", "Cameraman"],
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula. Proin vulputate condimentum lacus, a tristique mi finibus a. Vivamus lobortis odio vel.",
+      roles: [t("meetTheTeam.team.roman.roles.1")],
+      description: t("meetTheTeam.team.roman.description"),
     },
     {
       image: "/img/team/aino.webp",
       firstName: "Aino",
       secondName: "Skyttälä",
-      roles: ["Manager", "Accountant"],
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula. Proin vulputate condimentum lacus, a tristique mi finibus a. Vivamus lobortis odio vel.",
+      roles: [],
+      description: t("meetTheTeam.team.aino.description"),
     },
     {
       image: "/img/team/alex.webp",
       firstName: "Alexander",
       secondName: "Fedchin",
-      roles: ["Dev", "Videographer"],
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula. Proin vulputate condimentum lacus, a tristique mi finibus a. Vivamus lobortis odio vel.",
+      roles: [
+        t("meetTheTeam.team.alex.roles.1"),
+        t("meetTheTeam.team.alex.roles.2"),
+      ],
+      description: t("meetTheTeam.team.alex.description"),
     },
     {
       image: "/img/team/santeri.webp",
       firstName: "Santeri",
       secondName: "Koskinen",
-      roles: ["Accountant", "CEO"],
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim tempor ipsum, quis luctus neque sollicitudin vel. Aliquam hendrerit sapien sed metus malesuada, nec efficitur sem dictum. Cras eu mi ac mauris tristique eleifend sed eget ligula. Proin vulputate condimentum lacus, a tristique mi finibus a. Vivamus lobortis odio vel.",
+      roles: [t("meetTheTeam.team.santeri.roles.1")],
+      description: t("meetTheTeam.team.santeri.description"),
     },
   ];
 
   return (
     <Box
+      id="heroes"
       sx={{
         width: "100%",
         display: "flex",
@@ -105,6 +107,41 @@ const Team = () => {
 
       {/* Team Cards */}
       <DefaultContainer sx={{ mt: isMobile ? 1 : isTablet ? 2 : 4 }}>
+        <Typography
+          variant="styled-title"
+          fontFamily="AccentFont"
+          sx={{
+            width: "100%",
+            textAlign: "left",
+          }}
+        >
+          {t("meetTheTeam.subtitle").toUpperCase()}
+        </Typography>
+
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+          <Typography variant="body-text">
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t("meetTheTeam.description.1"),
+              }}
+            />
+          </Typography>
+          <Typography variant="body-text">
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t("meetTheTeam.description.2"),
+              }}
+            />
+          </Typography>
+          <Typography variant="body-text">
+            <span
+              dangerouslySetInnerHTML={{
+                __html: t("meetTheTeam.description.3"),
+              }}
+            />
+          </Typography>
+        </Box>
+
         {teamMembers.map((member, index) => (
           <PersonCard
             key={index}
