@@ -61,7 +61,7 @@ const CustomAppBar = () => {
                 ? "1200px"
                 : "min(1200px, calc(100% - 32px))",
             px: isMobile ? 1 : 2,
-            py: 0.5,
+            py: isMobile ? 1 : 1.5,
             display: "flex",
             boxSizing: "border-box",
             border:
@@ -80,6 +80,7 @@ const CustomAppBar = () => {
               gap: 2,
               p: 0,
               width: "100%",
+              minHeight: "unset !important",
             }}
           >
             <Stack
@@ -332,7 +333,7 @@ const CustomAppBar = () => {
           alignItems="center"
           sx={{ mt: "auto", p: 2 }}
         >
-          <Box
+          {/* <Box
             component="img"
             src="/img/vite.svg"
             alt="Logo"
@@ -344,17 +345,19 @@ const CustomAppBar = () => {
               maxWidth: "120px",
               userSelect: "none",
             }}
-          />
+          /> */}
           <Typography
             variant="h6"
             draggable="false"
             sx={{
+              width: "100%",
               fontWeight: "bold",
               fontSize: isMobile ? "28px" : isTablet ? "32px" : "36px",
               fontFamily: "AccentFont",
               letterSpacing: 2,
               lineHeight: 0.85,
               userSelect: "none",
+              textAlign: "center",
             }}
           >
             SOMESANKARIT

@@ -43,7 +43,12 @@ const Intro = () => {
             height: "100%",
           }}
         >
-          <source src="/video/intro-bg.mp4" type="video/mp4" />
+          <source
+            src={
+              isMobile ? "/video/intro-bg-mobile.mp4" : "/video/intro-bg.mp4"
+            }
+            type="video/mp4"
+          />
           {t("intro.noVideo")}
         </video>
       </Box>
@@ -53,9 +58,9 @@ const Intro = () => {
           position: "relative",
           zIndex: 1,
           display: "flex",
-          gap: 40,
+          gap: 2,
           flexDirection: "column",
-          pt: "25vh",
+          pt: "20vh",
           alignItems: "center",
           height: "100%",
         }}
@@ -74,8 +79,7 @@ const Intro = () => {
           sx={{
             fontSize: isMobile ? "1rem" : isTablet ? "1.25rem" : "1.5rem",
             letterSpacing: 2,
-            textShadow:
-              "0 0 4px var(--off-black), 0 0 8px var(--off-black), 0 0 16px var(--off-black)",
+            textShadow: "0 0 8px var(--off-black), 0 0 16px var(--off-black)",
             fontWeight: 200,
           }}
         >

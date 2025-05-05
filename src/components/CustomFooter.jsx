@@ -52,7 +52,7 @@ const CustomFooter = () => {
                 justifyContent: isMobile ? "center" : "flex-start",
               }}
             >
-              <Box
+              {/* <Box
                 component="img"
                 src="/img/vite.svg"
                 draggable="false"
@@ -64,7 +64,7 @@ const CustomFooter = () => {
                   maxWidth: "150px",
                   userSelect: "none",
                 }}
-              />
+              /> */}
               <Typography
                 variant="h6"
                 sx={{
