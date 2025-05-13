@@ -10,9 +10,10 @@ import Intro from "./sections/Intro";
 import About from "./sections/About";
 import Team from "./sections/Team";
 import ScrollToTopButton from "./components/ScrollToTopButton";
-import Prices from "./sections/Prices";
 import Contact from "./sections/Contact";
+import Prices from "./sections/Prices";
 import Portfolio from "./sections/Portfolio";
+import Services from "./sections/Services";
 
 function App() {
   const { isMobile, isTablet } = useScreenSize();
@@ -43,7 +44,7 @@ function App() {
 
         <Portfolio />
 
-        <Prices />
+        <Services />
 
         <Contact />
 
