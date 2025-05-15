@@ -60,7 +60,7 @@
   },
 
   "portfolio": {
-    "title": "Our Projects",
+    "title": "References",
     "projects": {
       "project1": {
         "title": "Social Media Campaign for Brand A",
@@ -171,6 +171,55 @@
           "3": "Actionable insights and recommendations"
         },
         "price": "€300 / month"
+      }
+    }
+  },
+
+  "ourServices": {
+    "title": "Our Services",
+    "services": {
+      "romanMirko": {
+        "shortTitle": "Mirko & Roman",
+        "longTitle": "Short Video Marketing",
+        "description": "We create authentic and bold short videos that speak for your brand. We reach the right audience and help build trust between your customers and your brand. Videos are a powerful way to communicate – they make your brand approachable and help your message stand out.",
+        "features": {
+          "1": "Short video marketing",
+          "2": "Content creation for social media",
+          "3": "Video editing and post-production",
+          "4": "Creative storytelling"
+        },
+        "prices": {
+          "2months": "300€ / 2 months",
+          "4months": "400€ / 4 months",
+          "6months": "500€ / 6 months"
+        }
+      },
+      "photoVideo": {
+        "shortTitle": "Photo Video",
+        "longTitle": "Photo and Video Production",
+        "description": "We create high-quality photo and video content that captures your brand's essence. Our team specializes in storytelling through visuals, ensuring your message resonates with your audience.",
+        "features": {
+          "1": "Brand photo shoots",
+          "2": "Event coverage",
+          "3": "Post-production editing and enhancement",
+          "4": "Music videos"
+        },
+        "prices": {
+          "default": "Starting at 500€"
+        }
+      },
+      "other": {
+        "shortTitle": "Other Services",
+        "longTitle": "Additional Services",
+        "description": "We offer a range of additional services to complement our core offerings. Whether you need social media management, influencer marketing, or branding strategy, we've got you covered.",
+        "features": {
+          "1": "Social media management",
+          "2": "Influencer marketing",
+          "3": "Building a website for your brand"
+        },
+        "prices": {
+          "default": "Contact us for pricing"
+        }
       }
     }
   },

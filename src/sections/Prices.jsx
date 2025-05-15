@@ -21,7 +21,7 @@ const Prices = () => {
   }));
 
   return (
-    <DefaultContainer id="prices" sx={{ gap: 2 }}>
+    <DefaultContainer sx={{ gap: 2 }}>
       <Typography variant="section-title">
         {t("prices.title").toUpperCase()}
       </Typography>

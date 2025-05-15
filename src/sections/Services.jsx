@@ -2,53 +2,24 @@ import { useState } from "react";
 import { Box, Typography, IconButton, Card, Stack } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import useScreenSize from "../hooks/useScreenSize";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
-  const services = [
-    {
-      title: "Website",
-      description: "Build a websit for you.",
-      features: [
-        "Responsive design",
-        "SEO optimization",
-        "E-commerce integration",
-        "Custom CMS",
-      ],
-      price: "From 500€",
-    },
-    {
-      title: "Photo Video",
-      description: "Some photo and video services we offer.",
-      features: ["Photography", "Videography", "Editing", "Music videos"],
-      price: "Get quote",
-    },
-    {
-      title: "TikTok",
-      description: "Some TikTok services we offer.",
-      features: [
-        "Content creation",
-        "Editing",
-        "Marketing strategy",
-        "Analytics tracking",
-      ],
-      price: "400€ / month",
-    },
-    {
-      title: "Other",
-      description: "Some other services we offer.",
-      features: [
-        "Consulting",
-        "Branding",
-        "Social media management",
-        "Graphic design",
-      ],
-      price: "Get quote",
-    },
-  ];
-
+  const { t } = useTranslation();
   const { isMobile, isTablet } = useScreenSize();
-  //   const { t } = useTranslation();
+
+  // Get services from translation file
+  const servicesObj = t("ourServices.services", { returnObjects: true });
+
+  // Map translation object to array for rendering
+  const services = Object.values(servicesObj).map((service) => ({
+    title: service.shortTitle,
+    longTitle: service.longTitle,
+    description: service.description,
+    features: Object.values(service.features || {}),
+    prices: Object.values(service.prices || {}),
+  }));
+
   const [activeService, setActiveService] = useState(null);
   const [selectedService, setSelectedService] = useState(services[0]);
   const [showDetailsCard, setShowDetailsCard] = useState(false);
@@ -66,6 +37,7 @@ const Services = () => {
 
   return (
     <Box
+      id="ourServices"
       sx={{
         width: "100%",
         display: "flex",
@@ -79,7 +51,9 @@ const Services = () => {
       }}
     >
       {/* Title */}
-      <Typography variant="section-title">OUR SERVICES</Typography>
+      <Typography variant="section-title">
+        {t("ourServices.title").toUpperCase()}
+      </Typography>
 
       <Box
         sx={{
@@ -109,7 +83,7 @@ const Services = () => {
           <IconButton
             key={index}
             className="circle, light-bg-blur"
-            aria-label={`Select service ${service.title}`}
+            aria-label={`Select service: ${service.title}`}
             onClick={() => handleCircleClick(index)}
             sx={{
               width: isMobile ? "80px" : isTablet ? "100px" : "120px",
@@ -173,7 +147,7 @@ const Services = () => {
             "opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease",
           opacity: showDetailsCard ? 1 : 0,
           transform: showDetailsCard ? "translateY(0)" : "translateY(-20px)",
-          maxHeight: showDetailsCard ? "500px" : 0,
+          maxHeight: showDetailsCard ? "600px" : 0,
           overflow: "hidden",
         }}
       >
@@ -190,6 +164,14 @@ const Services = () => {
             boxSizing: "border-box",
             justifyContent: "space-between",
             color: "var(--off-white)",
+            "&:hover": {
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              backgroundColor: "rgba(255, 255, 255, 0.01)",
+            },
+            "&:active": {
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              backgroundColor: "rgba(255, 255, 255, 0.01)",
+            },
           }}
         >
           <IconButton
@@ -225,80 +207,83 @@ const Services = () => {
               textShadow: "0 0 16px var(--primary)",
             }}
           >
-            {selectedService?.title}
+            {selectedService?.longTitle}
           </Typography>
 
           <Typography variant="card-text">
             {selectedService?.description}
           </Typography>
 
+          {/* Features Section */}
           <Box
             sx={{
               display: "flex",
-              flexDirection: isMobile ? "column" : "row",
-              gap: isMobile ? 1 : 2,
-              alignItems: isMobile ? "flex-start" : "flex-end",
-              justifyContent: "space-between",
-              width: "100%",
-              flexWrap: "wrap",
+              flexDirection: "column",
+              gap: isMobile ? 1 : 1.5,
+              pl: 2,
             }}
           >
-            {/* Features Section */}
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: isMobile ? 1 : 1.5,
-                pl: 2,
-              }}
-            >
-              {selectedService?.features.map((feature, index) => (
-                <Stack key={index} direction="row" gap={1} alignItems="center">
-                  <Box
-                    component="img"
-                    src="/img/icons/flash.webp"
-                    alt="Flash"
-                    sx={{
-                      height: isMobile ? "16px" : isTablet ? "18px" : "20px",
-                      width: "auto",
-                    }}
-                  />
-                  <Typography variant="card-text">{feature}</Typography>
-                </Stack>
-              ))}
-            </Box>
+            {selectedService?.features.map((feature, index) => (
+              <Stack key={index} direction="row" gap={1} alignItems="center">
+                <Box
+                  component="img"
+                  src="/img/icons/flash.webp"
+                  alt="Flash"
+                  sx={{
+                    height: isMobile ? "16px" : isTablet ? "18px" : "20px",
+                    width: "auto",
+                  }}
+                />
+                <Typography variant="card-text">{feature}</Typography>
+              </Stack>
+            ))}
+          </Box>
 
-            {/* Price Button */}
-            <Typography
-              variant="h6"
-              component="a"
-              href="#contact"
-              className="strong-bg-blur"
-              onClick={(e) => e.stopPropagation()}
-              sx={{
-                textDecoration: "none",
-                fontWeight: "bold",
-                fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.5rem",
-                color: "var(--off-white)",
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
-                px: 2,
-                py: 1,
-                ml: isMobile ? "auto" : 0,
-                borderRadius: "4px",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-                transition: "all 0.3s ease",
-                "&:active": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
-                },
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
-                },
-              }}
-            >
-              {selectedService?.price}
-            </Typography>
+          {/* Prices */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-around",
+              width: "100%",
+              flexWrap: "wrap",
+              gap: 1,
+            }}
+          >
+            {selectedService?.prices.map((price, index) => (
+              <Typography
+                variant="h6"
+                component="a"
+                key={index}
+                aria-label={`Price for ${selectedService?.longTitle}`}
+                href="#contact"
+                className="strong-bg-blur"
+                onClick={(e) => e.stopPropagation()}
+                sx={{
+                  textAlign: "center",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                  color: "var(--off-white)",
+                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  px: 2,
+                  py: 1,
+                  borderRadius: "4px",
+                  border: "1px solid rgba(255, 255, 255, 0.1)",
+                  transition: "all 0.3s ease",
+                  "&:active": {
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+                  },
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+                  },
+                }}
+              >
+                {price}
+              </Typography>
+            ))}
           </Box>
         </Card>
       </Box>

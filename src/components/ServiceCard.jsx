@@ -60,6 +60,7 @@ const ServiceCard = ({ service }) => {
           {service.title}
         </Typography>
         <IconButton
+          aria-label={`Expand or collapse service details for ${service.title}`}
           sx={{
             transform: expanded ? "rotate(180deg)" : "rotate(0deg)",
             transition: "transform 0.3s ease",

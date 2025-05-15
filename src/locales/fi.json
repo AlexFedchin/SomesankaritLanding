@@ -60,7 +60,7 @@
   },
 
   "portfolio": {
-    "title": "Projektimme",
+    "title": "Referenssit",
     "projects": {
       "project1": {
         "title": "Sosiaalisen median kampanja Brändille A",
@@ -171,6 +171,55 @@
           "3": "Toimintakelpoiset oivallukset ja suositukset"
         },
         "price": "300 € / kuukausi"
+      }
+    }
+  },
+
+  "ourServices": {
+    "title": "Palvelumme",
+    "services": {
+      "romanMirko": {
+        "shortTitle": "Mirko & Roman",
+        "longTitle": "Lyhytvideomarkkinointi",
+        "description": "Luomme aitoja ja rohkeita lyhytvideoita, jotka puhuvat brändisi puolesta. Tavoitamme oikean yleisön ja autamme rakentamaan luottamusta asiakkaidesi ja brändisi välille. Videot ovat tehokas tapa viestiä – ne tekevät brändistäsi helposti lähestyttävän ja auttavat viestisi erottumaan.",
+        "features": {
+          "1": "Lyhytvideomarkkinointi",
+          "2": "Sisällöntuotanto sosiaaliseen mediaan",
+          "3": "Videoeditointi ja jälkituotanto",
+          "4": "Luova tarinankerronta"
+        },
+        "prices": {
+          "2months": "300€ / 2 kuukautta",
+          "4months": "400€ / 4 kuukautta",
+          "6months": "500€ / 6 kuukautta"
+        }
+      },
+      "photoVideo": {
+        "shortTitle": "Kuva & Video",
+        "longTitle": "Kuva- ja Videotuotanto",
+        "description": "Tuotamme korkealaatuista kuva- ja videosisältöä, joka vangitsee brändisi ytimen. Tiimimme on erikoistunut visuaaliseen tarinankerrontaan, jotta viestisi tavoittaa yleisösi vaikuttavasti.",
+        "features": {
+          "1": "Brändikuvausten järjestäminen",
+          "2": "Tapahtumien taltiointi",
+          "3": "Jälkituotanto ja editointi",
+          "4": "Musiikkivideot"
+        },
+        "prices": {
+          "default": "Alkaen 500€"
+        }
+      },
+      "other": {
+        "shortTitle": "Muut Palvelut",
+        "longTitle": "Lisäpalvelut",
+        "description": "Tarjoamme joukon lisäpalveluita täydentämään ydintarjontaamme. Tarvitsetpa sosiaalisen median hallintaa, vaikuttajamarkkinointia tai brändäysstrategiaa, autamme mielellämme.",
+        "features": {
+          "1": "Sosiaalisen median hallinta",
+          "2": "Vaikuttajamarkkinointi",
+          "3": "Verkkosivujen rakentaminen brändillesi"
+        },
+        "prices": {
+          "default": "Ota yhteyttä hinnoittelusta"
+        }
       }
     }
   },

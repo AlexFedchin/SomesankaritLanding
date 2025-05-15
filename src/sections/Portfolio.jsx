@@ -126,7 +126,7 @@ const Portfolio = () => {
   }, [isMobile]);
 
   return (
-    <DefaultContainer id="portfolio" sx={{ gap: 4 }}>
+    <DefaultContainer id="references" sx={{ gap: 4 }}>
       <Typography variant="section-title">
         {t("portfolio.title").toUpperCase()}
       </Typography>
