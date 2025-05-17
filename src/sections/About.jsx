@@ -33,7 +33,7 @@ const About = () => {
           flexDirection: "column",
           gap: 2,
           textAlign: isMobile ? "center" : "left",
-          maxWidth: isMobile ? "100%" : "50%",
+          maxWidth: isMobile ? "100%" : isTablet ? "50%" : "60%",
         }}
       >
         <Typography
@@ -56,15 +56,15 @@ const About = () => {
         src="/img/roman-mirko-light.webp"
         alt="Roman Mirko"
         loading="lazy"
+        draggable="false"
         sx={{
           position: "absolute",
           bottom: 0,
-          right: isMobile ? "5%" : "10%",
+          right: isMobile ? "16px" : "5%",
           width: "auto",
           height: isMobile ? "300px" : isTablet ? "350px" : "400px",
           objectFit: "cover",
           objectPosition: "center",
-          marginTop: isMobile || isTablet ? "2rem" : "0",
           zIndex: -1,
           userSelect: "none",
         }}

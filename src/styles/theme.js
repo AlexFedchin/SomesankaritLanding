@@ -39,6 +39,14 @@ const createCustomTheme = ({ isMobile, isTablet }) =>
         textAlign: "left",
         color: "var(--off-white)",
       },
+      "card-subtext": {
+        fontFamily: "'Oxanium', 'Montserrat', Arial, Helvetica, sans-serif",
+        fontWeight: 200,
+        lineHeight: 1,
+        fontSize: isMobile ? "0.8rem" : isTablet ? "0.9rem" : "1rem",
+        textAlign: "left",
+        color: "var(--off-grey)",
+      },
       "styled-title": {
         fontWeight: 700,
         fontSize: isMobile ? "2.75rem" : isTablet ? "3.5rem" : "4.5rem",

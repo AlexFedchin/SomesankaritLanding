@@ -1,23 +1,25 @@
-import { Box, Typography } from "@mui/material";
+import React from "react";
+import { Box, Divider, Typography } from "@mui/material";
+import LikeIcon from "@mui/icons-material/FavoriteRounded";
+import CommentIcon from "@mui/icons-material/CommentRounded";
+import ViewsIcon from "@mui/icons-material/PlayArrowRounded";
+import SaveIcon from "@mui/icons-material/BookmarkRounded";
 import useScreenSize from "../hooks/useScreenSize";
+import { useTranslation } from "react-i18next";
 
 const IphonePortfolioCard = ({ project, style }) => {
   const { isMobile, isTablet } = useScreenSize();
+  const { i18n } = useTranslation();
 
   return (
     <Box
       aria-label={project.title}
-      component="a"
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
       sx={{
-        width: isMobile ? "200px" : "250px",
         minWidth: isMobile ? "200px" : "250px",
+        maxWidth: isMobile ? "200px" : "250px",
         position: "relative",
         background: "transparent",
         boxShadow: "none",
-        cursor: "pointer",
         ...style,
       }}
     >
@@ -39,79 +41,120 @@ const IphonePortfolioCard = ({ project, style }) => {
         }}
       />
 
-      {/* Project Image Inside the iPhone Screen */}
-      <Box
-        component="img"
-        src={project.image}
-        alt={project.title}
-        draggable="false"
-        sx={{
-          position: "absolute",
-          top: "12%",
-          left: "10%",
-          width: "80%",
-          height: "45%",
-          objectFit: "cover",
-          borderRadius: "10px",
-          zIndex: 3,
-        }}
-      />
-
-      {/* Project Text Inside the iPhone */}
+      {/* Content of the phone */}
       <Box
         sx={{
-          position: "absolute",
-          bottom: "8%",
-          left: "10%",
-          width: "80%",
-          zIndex: 3,
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 1,
+          boxSizing: "border-box",
+          px: isMobile ? 2 : 2.5,
+          pt: isMobile ? 4.25 : 5,
+          pb: isMobile ? 2.5 : 3,
           color: "var(--off-black)",
         }}
       >
-        <Typography
-          variant="h5"
+        {/* Project Image Inside the iPhone Screen */}
+        <Box
+          component={project.link ? "a" : "div"}
+          href={project?.link || null}
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
-            fontWeight: "bold",
-            fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.5rem",
+            width: "100%",
+            height: "auto",
+            zIndex: 3,
+            borderRadius: "10px",
+            cursor: project.link ? "pointer" : "default",
             overflow: "hidden",
-            WebkitBoxOrient: "vertical",
-            WebkitLineClamp: 2,
-            wordBreak: "break-word",
-            overflowWrap: "break-word",
-            hyphens: "auto",
-            textOverflow: "ellipsis",
-            textAlign: "left",
-            display: "-webkit-box",
           }}
         >
-          {project.title}
-        </Typography>
-
+          <Box
+            component="img"
+            src={project.image}
+            alt={project.title}
+            draggable="false"
+            sx={{
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        </Box>
         <Box
           sx={{
-            height: "1px",
-            my: 1,
-            background: "var(--off-black)",
-          }}
-        />
-
-        <Typography
-          variant="body1"
-          sx={{
-            fontSize: isMobile ? "0.8rem" : isTablet ? "0.9rem" : "1rem",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            wordBreak: "break-word",
-            overflowWrap: "break-word",
-            hyphens: "auto",
-            WebkitLineClamp: 3,
-            display: "-webkit-box",
-            WebkitBoxOrient: "vertical",
-            textAlign: "left",
+            display: "flex",
+            alignItems: "center",
+            gap: 0.5,
+            color: "var(--off-grey)",
+            zIndex: 3,
           }}
         >
-          {project.description}
-        </Typography>
+          <ViewsIcon sx={{ fontSize: 16 }} />
+          <Typography variant="card-subtext">{project.views}</Typography>
+          <Divider orientation="vertical" flexItem />
+          <LikeIcon sx={{ fontSize: 16 }} />
+          <Typography variant="card-subtext">{project.likes}</Typography>
+          <Divider orientation="vertical" flexItem />
+          <SaveIcon sx={{ fontSize: 16 }} />
+          <Typography variant="card-subtext">{project.saves}</Typography>
+        </Box>
+
+        {/* Project Text Inside the iPhone */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 1,
+            maxHeight: "200px",
+            overflowY: "auto",
+          }}
+        >
+          <Typography
+            variant="h5"
+            sx={{
+              fontWeight: "bold",
+              fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.5rem",
+              hyphens: "auto",
+              textOverflow: "ellipsis",
+              textAlign: "left",
+              zIndex: 3,
+              my: -0.5,
+            }}
+          >
+            {project.title}
+          </Typography>
+
+          <Divider
+            width="100%"
+            sx={{
+              zIndex: 3,
+              background: "var(--off-black)",
+            }}
+          />
+
+          <Typography
+            variant="body1"
+            lang={i18n.language}
+            sx={{
+              fontSize: isMobile ? "0.8rem" : isTablet ? "0.9rem" : "1rem",
+              wordBreak: "break-word",
+              overflowWrap: "break-word",
+              hyphens: "auto",
+              textAlign: "left",
+              zIndex: 3,
+            }}
+          >
+            {project.description.split("\n").map((line, idx) => (
+              <React.Fragment key={idx}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );

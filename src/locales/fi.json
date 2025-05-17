@@ -41,12 +41,15 @@
         "description": "Hauskuus on hänen supervoimansa! Tämä idearikas somevaikuttaja hurmaa lyhytvideoillaan, joissa yhdistyy huumori, itseironia ja aito heittäytyminen. Lämmin ja aina positiivinen sankari, jonka sisällöt nostavat katsojan hymyn huulille joka kerta."
       },
       "aino": {
+        "roles": {
+          "1": "Projektipäällikkö"
+        },
         "description": "One of the boys! Kyllähän te tiedätte, että kaiken takana on nainen ;) Ei nyt täysin, mutta todellakin Ainon supervoima tässä tiimissä on pitää langat käsissä niin projektien, kuin hallinnollisten tehtävien osalta. Ainossa on loistavassa suhteessa heittäytymiskykyä ja säntillisyyttä. Koulutustaustaa löytyy liikunnan ja valmennuksen puolelta, mutta tuoreimpana käynnissä on yleisen kasvatustieteen opinnot, sekä viestinnän ja journalistiikan valinnaiset opinnot."
       },
       "alex": {
         "roles": {
-          "1": "Videokuvaja",
-          "2": "verkkoohjelmoija"
+          "1": "Videokuvaaja",
+          "2": "web-kehittäjä"
         },
         "description": "Alex on tiimimme tekninen nero, joka hallitsee videokuvauksen ja editoinnin taidot. Hän on myös verkkosivujen kehittämisen asiantuntija, joka tuo tiimiin teknistä osaamista ja luovuutta. Alexin kyky yhdistää visuaalinen kerronta ja teknologia tekee hänestä arvokkaan jäsenen tiimissämme."
       },
@@ -63,16 +66,14 @@
     "title": "Referenssit",
     "projects": {
       "project1": {
-        "title": "Sosiaalisen median kampanja Brändille A",
-        "description": "Johti onnistunutta kampanjaa, joka lisäsi sitoutumista 40%."
+        "description": "Näyttökertojen keskiarvo +58K\nTykkäykset suosituimmassa videossa +6K"
       },
       "project2": {
-        "title": "Sisällöntuotanto Brändille B",
-        "description": "Luoimme kiinnostavaa sisältöä, joka kasvatti seuraajia 25%."
+        "description": "Ensimmäisenä kuukautena +1.1 miljoonaa näyttökertaa\nKokonaisuutena +2.9 miljoonaa näyttökertaa\nTykkäykset +130K\nSeuraajat +20K\nYhteistyö jatkuu"
       },
       "project3": {
-        "title": "Mainosstrategia Brändille C",
-        "description": "Toteutimme mainosstrategian, joka kaksinkertaisti konversiot."
+        "title": "Advertising Strategy for Brand C",
+        "description": "Implemented an advertising strategy that doubled conversions."
       }
     }
   },

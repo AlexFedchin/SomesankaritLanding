@@ -41,6 +41,9 @@
         "description": "Humor is his superpower! This creative social media influencer charms with his short videos that combine humor, self-irony, and genuine enthusiasm. A warm and always positive hero whose content brings a smile to the viewer's face every time."
       },
       "aino": {
+        "roles": {
+          "1": "Project Manager"
+        },
         "description": "One of the boys! You know the saying, 'Behind every great man is a woman ;)'. Well, not entirely, but Aino's superpower in this team is keeping everything organized, from projects to administrative tasks. Aino strikes a perfect balance between spontaneity and precision. Her educational background includes sports and coaching, and she is currently pursuing general education studies with electives in communication and journalism."
       },
       "alex": {
@@ -63,12 +66,10 @@
     "title": "References",
     "projects": {
       "project1": {
-        "title": "Social Media Campaign for Brand A",
-        "description": "Led a successful campaign that increased engagement by 40%."
+        "description": "Näyttökertojen keskiarvo +58K<br/>Tykkäykset suosituimmassa videossa +6K"
       },
       "project2": {
-        "title": "Content Creation for Brand B",
-        "description": "Created engaging content that grew followers by 25%."
+        "description": "Ensimmäisenä kuukautena +1,1 miljoonaa näyttökertaa<br/>"
       },
       "project3": {
         "title": "Advertising Strategy for Brand C",

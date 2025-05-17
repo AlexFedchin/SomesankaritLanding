@@ -18,40 +18,58 @@ const Portfolio = () => {
   const projects = useMemo(
     () => [
       {
-        title: t("portfolio.projects.project1.title"),
+        title: "POHJANHEIMO",
         description: t("portfolio.projects.project1.description"),
-        image: "/img/projects/project1.jpg",
-        link: "https://example.com/project1",
+        image: "/img/projects/project1.webp",
+        likes: "5.8K",
+        comments: "38",
+        saves: "224",
+        views: "164.2K",
+        link: "https://www.tiktok.com/@mirkoasell/video/7473872455438994711?is_from_webapp=1&sender_device=pc&web_id=7486393158625936918",
       },
       {
-        title: t("portfolio.projects.project2.title"),
+        title: "SAME GOAL",
         description: t("portfolio.projects.project2.description"),
-        image: "/img/projects/project2.jpg",
-        link: "https://example.com/project2",
+        image: "/img/projects/project2.webp",
+        likes: "3.3K",
+        comments: "44",
+        saves: "65",
+        views: "122.2K",
+        link: "https://www.tiktok.com/@samegoalclothing/video/7470538855192595734?is_from_webapp=1&sender_device=pc&web_id=7486393158625936918",
       },
       {
-        title: t("portfolio.projects.project3.title"),
+        title: "SHAKEY",
         description: t("portfolio.projects.project3.description"),
-        image: "/img/projects/project3.jpg",
-        link: "https://example.com/project3",
+        image: "/img/projects/project3.webp",
+        likes: "3K",
+        comments: "17",
+        saves: "63",
+        views: "56.9K",
+        link: "https://www.tiktok.com/@shakeymilkshakes/video/7483906585648041238?is_from_webapp=1&sender_device=pc&web_id=7486393158625936918",
       },
       {
-        title: t("portfolio.projects.project1.title"),
-        description: t("portfolio.projects.project1.description"),
-        image: "/img/projects/project1.jpg",
-        link: "https://example.com/project1",
+        title: "RYMY-EETU",
+        description: t("portfolio.projects.project4.description"),
+        image: "/img/projects/project4.webp",
+        link: "https://www.tiktok.com/@romanalievv/video/7403648482306772256?is_from_webapp=1&sender_device=pc&web_id=7486393158625936918",
       },
       {
-        title: t("portfolio.projects.project2.title"),
-        description: t("portfolio.projects.project2.description"),
-        image: "/img/projects/project2.jpg",
-        link: "https://example.com/project2",
+        title: "PUMPPUPOSSE",
+        description: t("portfolio.projects.project5.description"),
+        image: "/img/projects/project5.webp",
+        link: "https://www.tiktok.com/@pumppuposse/video/7491301435829685526?is_from_webapp=1&sender_device=pc&web_id=7486393158625936918",
       },
       {
-        title: t("portfolio.projects.project3.title"),
-        description: t("portfolio.projects.project3.description"),
-        image: "/img/projects/project3.jpg",
-        link: "https://example.com/project3",
+        title: "ROSKAFEST",
+        description: t("portfolio.projects.project6.description"),
+        image: "/img/projects/project6.webp",
+        link: "https://www.tiktok.com/@roskafest/video/7500918509128535318?is_from_webapp=1&sender_device=pc&web_id=7486393158625936918",
+      },
+      {
+        title: "F2F EVENT",
+        description: t("portfolio.projects.project7.description"),
+        image: "/img/projects/project7.webp",
+        link: "",
       },
     ],
     [t]
@@ -172,6 +190,7 @@ const Portfolio = () => {
           <IconButton
             onClick={() => handleScroll("left")}
             className="light-bg-blur"
+            aria-label="Scroll left"
             sx={{
               color: "var(--off-white)",
               background: "rgba(0, 0, 0, 0.1)",
@@ -227,6 +246,7 @@ const Portfolio = () => {
           <IconButton
             onClick={() => handleScroll("right")}
             className="light-bg-blur"
+            aria-label="Scroll right"
             sx={{
               color: "var(--off-white)",
               background: "rgba(0, 0, 0, 0.1)",

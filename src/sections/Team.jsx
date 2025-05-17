@@ -30,7 +30,7 @@ const Team = () => {
       image: "/img/team/aino.webp",
       firstName: "Aino",
       secondName: "Skyttälä",
-      roles: [],
+      roles: [t("meetTheTeam.team.aino.roles.1")],
       description: t("meetTheTeam.team.aino.description"),
     },
     {
