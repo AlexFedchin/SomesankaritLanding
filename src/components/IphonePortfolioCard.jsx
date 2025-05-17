@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Divider, Typography, Stack } from "@mui/material";
 import LikeIcon from "@mui/icons-material/FavoriteRounded";
 import CommentIcon from "@mui/icons-material/CommentRounded";
+import RepostIcon from "@mui/icons-material/ReplyRounded";
 import ViewsIcon from "@mui/icons-material/PlayArrowRounded";
 import SaveIcon from "@mui/icons-material/BookmarkRounded";
 import useScreenSize from "../hooks/useScreenSize";
@@ -87,19 +88,44 @@ const IphonePortfolioCard = ({ project, style }) => {
           sx={{
             display: "flex",
             alignItems: "center",
-            gap: 0.5,
+            gap: 1,
             color: "var(--off-grey)",
             zIndex: 3,
           }}
         >
-          <ViewsIcon sx={{ fontSize: 16 }} />
-          <Typography variant="card-subtext">{project.views}</Typography>
+          <Stack direction="column" alignItems="center" gap={0.5}>
+            <ViewsIcon sx={{ fontSize: 16 }} />
+            <Typography variant="card-subtext">
+              {project.views || "-"}
+            </Typography>
+          </Stack>
+
           <Divider orientation="vertical" flexItem />
-          <LikeIcon sx={{ fontSize: 16 }} />
-          <Typography variant="card-subtext">{project.likes}</Typography>
+
+          <Stack direction="column" alignItems="center" gap={0.5}>
+            <LikeIcon sx={{ fontSize: 16 }} />
+            <Typography variant="card-subtext">
+              {project.likes || "-"}
+            </Typography>
+          </Stack>
+
           <Divider orientation="vertical" flexItem />
-          <SaveIcon sx={{ fontSize: 16 }} />
-          <Typography variant="card-subtext">{project.saves}</Typography>
+
+          <Stack direction="column" alignItems="center" gap={0.5}>
+            <SaveIcon sx={{ fontSize: 16 }} />
+            <Typography variant="card-subtext">
+              {project.saves || "-"}
+            </Typography>
+          </Stack>
+
+          <Divider orientation="vertical" flexItem />
+
+          <Stack direction="column" alignItems="center" gap={0.5}>
+            <RepostIcon sx={{ fontSize: 16 }} />
+            <Typography variant="card-subtext">
+              {project.reposts || "-"}
+            </Typography>
+          </Stack>
         </Box>
 
         {/* Project Text Inside the iPhone */}
@@ -139,12 +165,14 @@ const IphonePortfolioCard = ({ project, style }) => {
             variant="body1"
             lang={i18n.language}
             sx={{
-              fontSize: isMobile ? "0.8rem" : isTablet ? "0.9rem" : "1rem",
-              wordBreak: "break-word",
+              fontSize: isMobile ? "0.75rem" : isTablet ? "0.85rem" : "0.95rem",
               overflowWrap: "break-word",
+              wordBreak: "break-word",
               hyphens: "auto",
               textAlign: "left",
               zIndex: 3,
+              WebkitHyphens: "auto",
+              msHyphens: "auto",
             }}
           >
             {project.description.split("\n").map((line, idx) => (

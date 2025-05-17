@@ -66,14 +66,25 @@
     "title": "References",
     "projects": {
       "project1": {
-        "description": "Näyttökertojen keskiarvo +58K<br/>Tykkäykset suosituimmassa videossa +6K"
+        "description": "Average views +58K\nLikes on most popular video +6K"
       },
       "project2": {
-        "description": "Ensimmäisenä kuukautena +1,1 miljoonaa näyttökertaa<br/>"
+        "description": "In the first month +1.1 million views\nTotal +2.9 million views\nLikes +130K\nFollowers +20K\nCollaboration continues"
       },
       "project3": {
-        "title": "Advertising Strategy for Brand C",
-        "description": "Implemented an advertising strategy that doubled conversions."
+        "description": "Average views +22K\nComments on most popular video 1.4K\nCollaboration continues"
+      },
+      "project4": {
+        "description": "Average views +59K\nLikes on most popular video +24K\nCollaboration continues"
+      },
+      "project5": {
+        "description": "Average views +26K\nComments on most popular video +5K\nCollaboration continues"
+      },
+      "project6": {
+        "description": "Average views +31K\nCollaboration continues, more analytics coming"
+      },
+      "project7": {
+        "description": "Collaboration starting, analytics coming soon"
       }
     }
   },
@@ -86,93 +97,6 @@
       "2023": "Expanded our services and reached new milestones.",
       "2024": "Launched innovative marketing campaigns and grew our client base.",
       "2025": "Achieved industry recognition and set new standards."
-    }
-  },
-
-  "prices": {
-    "title": "Our Services",
-    "subtitle": "Can't find the right service? Contact our team, and we'll create a custom package for you.",
-    "services": {
-      "socialMediaManagement": {
-        "title": "Social Media Management",
-        "description": "Comprehensive management for your social media accounts.",
-        "bulletpoints": {
-          "1": "Account creation and optimization",
-          "2": "Content calendar creation",
-          "3": "Community management and engagement"
-        },
-        "price": "€500 / month"
-      },
-      "contentCreation": {
-        "title": "Content Creation",
-        "description": "High-quality content tailored to your brand.",
-        "bulletpoints": {
-          "1": "Graphic design and visual content",
-          "2": "Video production and editing",
-          "3": "Blog posts and articles"
-        },
-        "price": "€300 / month"
-      },
-      "socialMediaAds": {
-        "title": "Social Media Ads",
-        "description": "Targeted ad campaigns to boost your visibility.",
-        "bulletpoints": {
-          "1": "Ad campaign planning and execution",
-          "2": "Targeted ads on various platforms",
-          "3": "A/B testing and optimization"
-        },
-        "price": "Starting at €200"
-      },
-      "seoOptimization": {
-        "title": "SEO Optimization",
-        "description": "Improve your website's visibility in search engines.",
-        "bulletpoints": {
-          "1": "Keyword research and analysis",
-          "2": "On-page and off-page optimization",
-          "3": "Monthly performance reports"
-        },
-        "price": "€400 / month"
-      },
-      "emailMarketing": {
-        "title": "Email Marketing",
-        "description": "Engage your audience with targeted email campaigns.",
-        "bulletpoints": {
-          "1": "Email list segmentation",
-          "2": "Custom email templates",
-          "3": "Performance tracking and reporting"
-        },
-        "price": "€250 / month"
-      },
-      "brandingStrategy": {
-        "title": "Branding Strategy",
-        "description": "Develop a strong and consistent brand identity.",
-        "bulletpoints": {
-          "1": "Logo and visual identity design",
-          "2": "Brand messaging and tone of voice",
-          "3": "Comprehensive brand guidelines"
-        },
-        "price": "€600 / project"
-      },
-      "influencerMarketing": {
-        "title": "Influencer Marketing",
-        "description": "Collaborate with influencers to promote your brand.",
-        "bulletpoints": {
-          "1": "Identifying suitable influencers",
-          "2": "Campaign planning and execution",
-          "3": "Performance analysis"
-        },
-        "price": "Starting at €500"
-      },
-      "analyticsAndReporting": {
-        "title": "Analytics and Reporting",
-        "description": "Track and analyze your marketing performance.",
-        "bulletpoints": {
-          "1": "Custom analytics dashboards",
-          "2": "Monthly performance evaluations",
-          "3": "Actionable insights and recommendations"
-        },
-        "price": "€300 / month"
-      }
     }
   },
 
