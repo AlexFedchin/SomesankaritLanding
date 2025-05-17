@@ -43,7 +43,7 @@ const createCustomTheme = ({ isMobile, isTablet }) =>
         fontFamily: "'Oxanium', 'Montserrat', Arial, Helvetica, sans-serif",
         fontWeight: 200,
         lineHeight: 1,
-        fontSize: isMobile ? "0.8rem" : isTablet ? "0.9rem" : "1rem",
+        fontSize: isMobile ? "0.75rem" : isTablet ? "0.85rem" : "0.95rem",
         textAlign: "left",
         color: "var(--off-grey)",
       },

@@ -53,7 +53,7 @@ const IphonePortfolioCard = ({ project, style }) => {
           gap: 1,
           boxSizing: "border-box",
           px: isMobile ? 2 : 2.5,
-          pt: isMobile ? 4.25 : 5,
+          pt: isMobile ? 4.25 : 5.5,
           pb: isMobile ? 2.5 : 3,
           color: "var(--off-black)",
         }}
@@ -86,9 +86,11 @@ const IphonePortfolioCard = ({ project, style }) => {
         </Box>
         <Box
           sx={{
+            width: "100%",
             display: "flex",
             alignItems: "center",
             gap: 1,
+            justifyContent: "space-evenly",
             color: "var(--off-grey)",
             zIndex: 3,
           }}
@@ -177,7 +179,7 @@ const IphonePortfolioCard = ({ project, style }) => {
           >
             {project.description.split("\n").map((line, idx) => (
               <React.Fragment key={idx}>
-                {line}
+                · {line}
                 <br />
               </React.Fragment>
             ))}
