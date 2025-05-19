@@ -112,7 +112,6 @@ const Services = () => {
             }}
           >
             <Typography
-              variant="h6"
               className="service"
               sx={{
                 fontSize: isMobile ? "0.95rem" : isTablet ? "1.2rem" : "1.5rem",
