@@ -35,7 +35,7 @@ const Team = () => {
     },
     {
       image: "/img/team/alex.webp",
-      firstName: "Alexander",
+      firstName: "Alex",
       secondName: "Fedchin",
       roles: [
         t("meetTheTeam.team.alex.roles.1"),

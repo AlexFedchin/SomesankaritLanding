@@ -18,6 +18,7 @@ const IphonePortfolioCard = ({ project, style }) => {
       sx={{
         minWidth: isMobile ? "200px" : "250px",
         maxWidth: isMobile ? "200px" : "250px",
+        aspectRatio: "200 / 410",
         position: "relative",
         background: "transparent",
         boxShadow: "none",

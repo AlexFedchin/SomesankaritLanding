@@ -114,6 +114,7 @@ const CustomAppBar = () => {
                   variant="h6"
                   draggable="false"
                   sx={{
+                    textAlign: "left",
                     fontWeight: "bold",
                     fontSize: isMobile ? "28px" : isTablet ? "32px" : "36px",
                     fontFamily: "AccentFont",
