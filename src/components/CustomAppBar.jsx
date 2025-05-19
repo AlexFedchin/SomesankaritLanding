@@ -212,10 +212,8 @@ const CustomAppBar = () => {
                   onClick={toggleDrawer}
                   draggable="false"
                   sx={{
-                    height: "auto",
-                    width: "auto",
-                    maxHeight: isMobile ? "36px" : isTablet ? "40px" : "44px",
-                    maxWidth: "40px",
+                    height: isMobile ? "36px" : isTablet ? "40px" : "44px",
+                    width: isMobile ? "36px" : isTablet ? "40px" : "44px",
                     userSelect: "none",
                     cursor: "pointer",
                   }}
