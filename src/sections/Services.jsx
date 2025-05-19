@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Box, Typography, IconButton, Card, Stack } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import useScreenSize from "../hooks/useScreenSize";
@@ -20,9 +20,9 @@ const Services = () => {
     prices: Object.values(service.prices || {}),
   }));
 
-  const [activeService, setActiveService] = useState(null);
+  const [activeService, setActiveService] = useState(services[0]);
   const [selectedService, setSelectedService] = useState(services[0]);
-  const [showDetailsCard, setShowDetailsCard] = useState(false);
+  const [showDetailsCard, setShowDetailsCard] = useState(true);
 
   const handleCircleClick = (index) => {
     if (activeService && activeService.title === services[index].title) {
@@ -210,9 +210,11 @@ const Services = () => {
             {selectedService?.longTitle}
           </Typography>
 
-          <Typography variant="card-text">
-            {selectedService?.description}
-          </Typography>
+          {selectedService?.description && (
+            <Typography variant="card-text">
+              {selectedService?.description}
+            </Typography>
+          )}
 
           {/* Features Section */}
           <Box
@@ -224,7 +226,7 @@ const Services = () => {
             }}
           >
             {selectedService?.features.map((feature, index) => (
-              <Stack key={index} direction="row" gap={1} alignItems="center">
+              <Stack key={index} direction="row" gap={1}>
                 <Box
                   component="img"
                   src="/img/icons/flash.webp"
@@ -234,7 +236,20 @@ const Services = () => {
                     width: "auto",
                   }}
                 />
-                <Typography variant="card-text">{feature}</Typography>
+                <Typography variant="card-text">
+                  {feature.split("\n").map((line, idx, arr) => (
+                    <React.Fragment key={idx}>
+                      <span
+                        style={{
+                          fontWeight: arr.length > 1 && idx === 0 ? "bold" : "",
+                        }}
+                      >
+                        {line}
+                      </span>
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </Typography>
               </Stack>
             ))}
           </Box>
@@ -244,7 +259,7 @@ const Services = () => {
             sx={{
               display: "flex",
               flexDirection: "row",
-              alignItems: "center",
+              alignItems: "stretch",
               justifyContent: "space-around",
               width: "100%",
               flexWrap: "wrap",
@@ -252,24 +267,25 @@ const Services = () => {
             }}
           >
             {selectedService?.prices.map((price, index) => (
-              <Typography
-                variant="h6"
-                component="a"
+              <Box
                 key={index}
-                aria-label={`Price for ${selectedService?.longTitle}`}
+                component="a"
                 href="#contact"
+                aria-label={`Price for ${selectedService?.longTitle}`}
                 className="strong-bg-blur"
+                draggable="false"
+                role="button"
                 onClick={(e) => e.stopPropagation()}
                 sx={{
-                  textAlign: "center",
+                  display: "grid",
+                  placeItems: "center",
                   textDecoration: "none",
-                  fontWeight: "bold",
-                  color: "var(--off-white)",
                   backgroundColor: "rgba(255, 255, 255, 0.05)",
-                  px: 2,
-                  py: 1,
                   borderRadius: "4px",
                   border: "1px solid rgba(255, 255, 255, 0.1)",
+                  px: 2,
+                  py: 1,
+                  flexWrap: "wrap",
                   transition: "all 0.3s ease",
                   "&:active": {
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -281,8 +297,42 @@ const Services = () => {
                   },
                 }}
               >
-                {price}
-              </Typography>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    textAlign: "center",
+                    color: "var(--off-white)",
+                    fontSize: isMobile
+                      ? "0.9rem"
+                      : isTablet
+                      ? "1rem"
+                      : "1.2rem",
+                    width: "100%",
+                  }}
+                >
+                  {price.split("\n").map((line, idx, arr) => (
+                    <React.Fragment key={idx}>
+                      <span
+                        style={{
+                          fontWeight:
+                            idx === arr.length - 1 ? "lighter" : "bold",
+                          color:
+                            idx === arr.length - 1
+                              ? "inherit"
+                              : "var(--primary)",
+                          textShadow:
+                            idx === arr.length - 1
+                              ? "none"
+                              : "0 0 24px var(--primary)",
+                        }}
+                      >
+                        {line}
+                      </span>
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </Typography>
+              </Box>
             ))}
           </Box>
         </Card>

@@ -122,7 +122,7 @@ const Contact = () => {
                   href="mailto:hello@somesankarit.com"
                   variant="body-text"
                 >
-                  hello@somesankarit.com
+                  hello@somesankarit.fi
                 </Typography>
               </Stack>
               {/* Phone */}

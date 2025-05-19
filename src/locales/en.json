@@ -105,45 +105,59 @@
     "services": {
       "romanMirko": {
         "shortTitle": "Mirko & Roman",
-        "longTitle": "Short Video Marketing",
-        "description": "We create authentic and bold short videos that speak for your brand. We reach the right audience and help build trust between your customers and your brand. Videos are a powerful way to communicate – they make your brand approachable and help your message stand out.",
+        "longTitle": "Mirko & Roman as the Faces of Short Videos",
+        "description": "The Mirko & Roman combo is known for their funny and memorable TikTok videos. This duo creates authentic and engaging short videos for your company, helping you build a larger audience. We reach the right audience and help build trust between your customers and your brand. Short videos are the most effective way to communicate – they make your brand approachable and help your message stand out.",
         "features": {
-          "1": "Short video marketing",
-          "2": "Content creation for social media",
-          "3": "Video editing and post-production",
-          "4": "Creative storytelling"
+          "1": "Video production and publishing",
+          "2": "TikTok, Instagram, Facebook",
+          "3": "Results reporting once a month"
         },
         "prices": {
-          "2months": "300€ / 2 months",
-          "4months": "400€ / 4 months",
-          "6months": "500€ / 6 months"
+          "8videos": "8 videos/month\n3 100€",
+          "12videos": "12 videos/month\n4 100€",
+          "16videos": "16 videos/month\n5 000€"
+        }
+      },
+      "youShine": {
+        "shortTitle": "You Shine",
+        "longTitle": "You Shine, We Produce",
+        "description": "Let's make you the social media star of your company. The heroes script, film, edit, and publish the videos. You are the main character. This way, you become familiar to your future customers and build more lasting recognition on social media. We reach the right audience and help build trust between your customers and your brand. Short videos are the most effective way to communicate.",
+        "features": {
+          "1": "Video scripting, filming, and editing",
+          "2": "TikTok, Instagram, Facebook",
+          "3": "Results reporting once a month and coaching"
+        },
+        "prices": {
+          "4videos": "4 videos/month\n1 600€",
+          "8videos": "8 videos/month\n2 200€",
+          "12videos": "12 videos/month\n3 000€"
         }
       },
       "photoVideo": {
-        "shortTitle": "Photo Video",
+        "shortTitle": "Photo & Video",
         "longTitle": "Photo and Video Production",
-        "description": "We create high-quality photo and video content that captures your brand's essence. Our team specializes in storytelling through visuals, ensuring your message resonates with your audience.",
+        "description": "We offer high-quality photography and video production for your company's needs – from marketing materials to event documentation and brand videos. We create visually impactful content that brings your story to life and strengthens your company's visibility.",
         "features": {
-          "1": "Brand photo shoots",
-          "2": "Event coverage",
-          "3": "Post-production editing and enhancement",
+          "1": "Photography",
+          "3": "Video production: Commercials/Websites/Social Media/TV/YouTube",
           "4": "Music videos"
         },
         "prices": {
-          "default": "Starting at 500€"
+          "valokuvaus": "Photography\nFrom 500€",
+          "videotuotanto": "Video production\nFrom 600€"
         }
       },
       "other": {
         "shortTitle": "Other Services",
-        "longTitle": "Additional Services",
-        "description": "We offer a range of additional services to complement our core offerings. Whether you need social media management, influencer marketing, or branding strategy, we've got you covered.",
+        "longTitle": "Other Services",
+        "description": "",
         "features": {
-          "1": "Social media management",
-          "2": "Influencer marketing",
-          "3": "Building a website for your brand"
+          "1": "Social Media Skills Development Service\nWe offer practical training for effective and goal-oriented use of social media. Trainings are tailored to your needs – you will learn to build visibility, engage your audience, and utilize social media channels to support your business.",
+          "2": "Websites\nModern and clear websites that work smoothly on all devices. You get easily manageable sites that support your business and enhance your company's appeal."
         },
         "prices": {
-          "default": "Contact us for pricing"
+          "socialMedia": "Social Media Skills\nDevelopment Service\nFrom 1 400€",
+          "website": "Website\nFrom 1 000€"
         }
       }
     }

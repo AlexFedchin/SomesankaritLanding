@@ -105,45 +105,59 @@
     "services": {
       "romanMirko": {
         "shortTitle": "Mirko & Roman",
-        "longTitle": "Lyhytvideomarkkinointi",
-        "description": "Luomme aitoja ja rohkeita lyhytvideoita, jotka puhuvat brändisi puolesta. Tavoitamme oikean yleisön ja autamme rakentamaan luottamusta asiakkaidesi ja brändisi välille. Videot ovat tehokas tapa viestiä – ne tekevät brändistäsi helposti lähestyttävän ja auttavat viestisi erottumaan.",
+        "longTitle": "Mirko & Roman lyhytvideoiden kasvoiksi",
+        "description": "Mirko & Roman kombo on tunnettu TikTokin hauskoista ja mieleenpainuvista videoista. Tämä kaksikko luo sinun yrityksellesi aitoja ja kiinnostavia lyhytvideoita, joiden avulla rakennat suurempaa yleisöä yrityksellesi. Tavoitamme oikean yleisön ja autamme rakentamaan luottamusta asiakkaidesi ja brändisi välille. Lyhytvideot ovat tehokkain tapa viestiä – ne tekevät brändistäsi helposti lähestyttävän ja auttavat viestisi erottumaan.",
         "features": {
-          "1": "Lyhytvideomarkkinointi",
-          "2": "Sisällöntuotanto sosiaaliseen mediaan",
-          "3": "Videoeditointi ja jälkituotanto",
-          "4": "Luova tarinankerronta"
+          "1": "Videoiden tuotanto ja julkaisu",
+          "2": "TikTok, Instagram, Facebook",
+          "3": "Tulosten raportointi 1 krt/kk"
         },
         "prices": {
-          "2months": "300€ / 2 kuukautta",
-          "4months": "400€ / 4 kuukautta",
-          "6months": "500€ / 6 kuukautta"
+          "8videos": "8 videota/kk\n3 100€",
+          "12videos": "12 videota/kk\n4 100€",
+          "16videos": "16 videota/kk\n5 000€"
+        }
+      },
+      "youShine": {
+        "shortTitle": "Sinä loistat",
+        "longTitle": "Sinä loistat, me tuotamme",
+        "description": "Tehdään sinusta yrityksesi sometähti. Sankarit käsikirjoittavat, kuvaavat, editoivat ja julkaisevat videot. Sinä toimit päähenkilönä. Näin tulet myös itse tutuksi tuleville asiakkaillesi ja rakennat kestävämpää tunnettavuutta somessa. Tavoitamme oikean yleisön ja autamme rakentamaan luottamusta asiakkaidesi ja brändisi välille. Lyhytvideot ovat tehokkain tapa viestiä.",
+        "features": {
+          "1": "Videoiden käsikirjoitus, kuvaaminen ja editointi",
+          "2": "TikTok, Instagram, Facebook",
+          "3": "Tulosten raportointi 1 krt/kk ja sparraus"
+        },
+        "prices": {
+          "4videos": "4 videota/kk\n1 600€",
+          "8videos": "8 videota/kk\n2 200€",
+          "12videos": "12 videota/kk\n3 000€"
         }
       },
       "photoVideo": {
         "shortTitle": "Kuva & Video",
         "longTitle": "Kuva- ja Videotuotanto",
-        "description": "Tuotamme korkealaatuista kuva- ja videosisältöä, joka vangitsee brändisi ytimen. Tiimimme on erikoistunut visuaaliseen tarinankerrontaan, jotta viestisi tavoittaa yleisösi vaikuttavasti.",
+        "description": "Tarjoamme laadukasta valokuvausta ja videotuotantoa yrityksesi tarpeisiin – aina markkinointimateriaaleista tapahtumataltiointeihin ja brändivideoihin. Toteutamme visuaalisesti vaikuttavaa sisältöä, joka tuo tarinasi esiin ja vahvistaa yrityksesi näkyvyyttä.",
         "features": {
-          "1": "Brändikuvausten järjestäminen",
-          "2": "Tapahtumien taltiointi",
-          "3": "Jälkituotanto ja editointi",
+          "1": "Valokuvaus",
+          "3": "Videotuotanto Mainosvideot/Nettisivut/Some/TV/YouTube ",
           "4": "Musiikkivideot"
         },
         "prices": {
-          "default": "Alkaen 500€"
+          "valokuvaus": "Valokuvaus\nAlkaen 500€",
+          "videotuotanto": "Videotuotanto\nAlkaen 600€"
         }
       },
       "other": {
         "shortTitle": "Muut Palvelut",
-        "longTitle": "Lisäpalvelut",
-        "description": "Tarjoamme joukon lisäpalveluita täydentämään ydintarjontaamme. Tarvitsetpa sosiaalisen median hallintaa, vaikuttajamarkkinointia tai brändäysstrategiaa, autamme mielellämme.",
+        "longTitle": "Muut Palvelut",
+        "description": "",
         "features": {
-          "1": "Sosiaalisen median hallinta",
-          "2": "Vaikuttajamarkkinointi",
-          "3": "Verkkosivujen rakentaminen brändillesi"
+          "1": "Someosaamisen kehittämispalvelu\nTarjoamme käytännönläheisiä koulutuksia sosiaalisen median tehokkaaseen ja tavoitteelliseen käyttöön. Koulutukset räätälöidään tarpeidesi mukaan – opit rakentamaan näkyvyyttä, sitouttamaan yleisöä ja hyödyntämään somekanavia liiketoimintasi tukena.",
+          "2": "Verkkosivut\nModerneja ja selkeitä verkkosivuja, jotka toimivat sujuvasti kaikilla laitteilla. Saat helposti hallittavat sivut, jotka tukevat liiketoimintaasi ja parantavat yrityksesi houkuttelevuutta."
         },
         "prices": {
-          "default": "Ota yhteyttä hinnoittelusta"
+          "socialMedia": "Someosaamisen\nkehittämispalvelu\nAlkaen 1 400€",
+          "website": "Verkkosivu\nAlkaen 1000€"
         }
       }
     }
