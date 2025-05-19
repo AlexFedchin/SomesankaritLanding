@@ -114,7 +114,6 @@ const PersonCard = ({ image, firstName, secondName, roles, description }) => {
                   }}
                 >
                   <Typography
-                    variant="h4"
                     sx={{
                       fontWeight: "bold",
                       fontSize: isMobile
