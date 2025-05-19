@@ -232,7 +232,7 @@ const Services = () => {
                   alt="Flash"
                   sx={{
                     height: isMobile ? "16px" : isTablet ? "18px" : "20px",
-                    width: "auto",
+                    width: isMobile ? "16px" : isTablet ? "18px" : "20px",
                   }}
                 />
                 <Typography variant="card-text">

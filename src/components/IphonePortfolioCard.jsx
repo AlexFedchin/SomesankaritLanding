@@ -186,8 +186,8 @@ const IphonePortfolioCard = ({ project, style }) => {
                   alt="bulletpoint-icon"
                   src="/img/icons/flash-glow.webp"
                   sx={{
-                    maxHeight: isMobile ? "14px" : isTablet ? "16px" : "18px",
-                    width: "auto",
+                    height: isMobile ? "14px" : isTablet ? "16px" : "18px",
+                    width: isMobile ? "14px" : isTablet ? "16px" : "18px",
                     mb: isMobile ? "-3px" : isTablet ? "-4px" : "-5px",
                   }}
                 />{" "}
