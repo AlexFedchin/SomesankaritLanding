@@ -66,7 +66,6 @@ const CustomFooter = () => {
                 }}
               /> */}
               <Typography
-                variant="h6"
                 sx={{
                   fontWeight: "bold",
                   fontSize: isMobile ? "28px" : isTablet ? "32px" : "36px",
