@@ -297,7 +297,6 @@ const Services = () => {
                 }}
               >
                 <Typography
-                  variant="h6"
                   sx={{
                     textAlign: "center",
                     color: "var(--off-white)",
