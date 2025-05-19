@@ -144,7 +144,6 @@ const IphonePortfolioCard = ({ project, style }) => {
           }}
         >
           <Typography
-            variant="h5"
             sx={{
               fontWeight: "bold",
               fontSize: isMobile ? "1rem" : isTablet ? "1.2rem" : "1.5rem",
@@ -184,6 +183,7 @@ const IphonePortfolioCard = ({ project, style }) => {
               <React.Fragment key={idx}>
                 <Box
                   component="img"
+                  alt="bulletpoint-icon"
                   src="/img/icons/flash-glow.webp"
                   sx={{
                     maxHeight: isMobile ? "14px" : isTablet ? "16px" : "18px",
