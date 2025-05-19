@@ -68,7 +68,8 @@ const IphonePortfolioCard = ({ project, style }) => {
           rel="noopener noreferrer"
           sx={{
             width: "100%",
-            height: "auto",
+            minHeight: isMobile ? "189px" : "236.25px",
+            maxHeight: isMobile ? "189px" : "236.25px",
             zIndex: 3,
             borderRadius: "10px",
             cursor: project.link ? "pointer" : "default",
