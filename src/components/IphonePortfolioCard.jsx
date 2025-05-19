@@ -181,7 +181,16 @@ const IphonePortfolioCard = ({ project, style }) => {
           >
             {project.description.split("\n").map((line, idx) => (
               <React.Fragment key={idx}>
-                · {line}
+                <Box
+                  component="img"
+                  src="/img/icons/flash-glow.webp"
+                  sx={{
+                    maxHeight: isMobile ? "14px" : isTablet ? "16px" : "18px",
+                    width: "auto",
+                    mb: isMobile ? "-3px" : isTablet ? "-4px" : "-5px",
+                  }}
+                />{" "}
+                {line}
                 <br />
               </React.Fragment>
             ))}
