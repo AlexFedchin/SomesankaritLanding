@@ -45,8 +45,7 @@ const Intro = () => {
         >
           <source
             src={
-              // isMobile ? "/video/intro-bg-mobile.mp4" : "/video/intro-bg.mp4"
-              "/video/intro-bg.mp4"
+              isMobile ? "/video/intro-bg-mobile.mp4" : "/video/intro-bg.mp4"
             }
             type="video/mp4"
           />
