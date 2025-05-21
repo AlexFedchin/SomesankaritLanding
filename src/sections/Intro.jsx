@@ -29,7 +29,7 @@ const Intro = () => {
           height: "100%",
           overflow: "hidden",
           zIndex: -3,
-          filter: "brightness(0.85)",
+          filter: isMobile ? "brightness(1.05)" : "brightness(0.85)",
         }}
       >
         <video
