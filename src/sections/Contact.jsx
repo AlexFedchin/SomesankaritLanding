@@ -123,7 +123,7 @@ const Contact = () => {
 
                 <Typography
                   component="a"
-                  href="mailto:hello@somesankarit.com"
+                  href="mailto:hello@somesankarit.fi"
                   variant="body-text"
                 >
                   hello@somesankarit.fi
