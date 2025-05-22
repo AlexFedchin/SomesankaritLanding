@@ -279,20 +279,21 @@ const Services = () => {
                   display: "grid",
                   placeItems: "center",
                   textDecoration: "none",
-                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  backgroundColor: "rgba(0, 0, 0, 0.2)",
                   borderRadius: "4px",
-                  border: "1px solid rgba(255, 255, 255, 0.1)",
+                  border: "1px solid rgba(255, 255, 255, 0.05)",
                   px: 2,
                   py: 1,
                   flexWrap: "wrap",
-                  transition: "all 0.3s ease",
+                  transition:
+                    "background 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
                   "&:active": {
-                    backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+                    backgroundColor: "rgba(0, 0, 0, 0.35)",
+                    boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)",
                   },
                   "&:hover": {
-                    backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+                    backgroundColor: "rgba(0, 0, 0, 0.35)",
+                    boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
               >

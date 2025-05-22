@@ -14,7 +14,6 @@ const Intro = () => {
         position: "relative",
         height: "100vh",
         overflow: "hidden",
-        color: "#fff",
         textAlign: "center",
         width: "100%",
       }}

@@ -34,11 +34,15 @@ const Contact = () => {
           width: "100%",
         }}
       >
-        {/* Fun Picture */}
+        {/* Fun Picture Desktop */}
         {!isMobile && (
           <Box
             component="img"
-            src="/img/contact-fun.webp"
+            src={
+              isTablet
+                ? "/img/contact-fun.webp"
+                : "/img/contact-fun-desktop.webp"
+            }
             alt="Contact Us"
             draggable="false"
             sx={{
@@ -145,10 +149,10 @@ const Contact = () => {
 
                 <Typography
                   component="a"
-                  href="tel:+358123456789"
+                  href="tel:+358409384447"
                   variant="body-text"
                 >
-                  +358 123 456 789
+                  +358 40 938 4447
                 </Typography>
               </Stack>
               {/* Address */}
