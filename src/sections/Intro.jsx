@@ -69,7 +69,8 @@ const Intro = () => {
           sx={{
             fontWeight: "bold",
             fontSize: isMobile ? "1.5rem" : isTablet ? "2.5rem" : "3.5rem",
-            textShadow: "0 0 16px var(--off-black)",
+            textShadow:
+              "0 0 4px var(--off-white), 0 0 16px var(--primary), 0 0 32px var(--off-white)",
           }}
         >
           {t("intro.title")}
@@ -78,7 +79,8 @@ const Intro = () => {
           sx={{
             fontSize: isMobile ? "1rem" : isTablet ? "1.25rem" : "1.5rem",
             letterSpacing: 2,
-            textShadow: "0 0 8px var(--off-black), 0 0 16px var(--off-black)",
+            textShadow:
+              "0 0 4px var(--off-white), 0 0 16px var(--primary), 0 0 32px var(--off-white)",
             fontWeight: 200,
           }}
         >
