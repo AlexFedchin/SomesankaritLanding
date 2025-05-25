@@ -271,7 +271,6 @@ const Services = () => {
                 component="a"
                 href="#contact"
                 aria-label={`Price for ${selectedService?.longTitle}`}
-                className="strong-bg-blur"
                 draggable="false"
                 role="button"
                 onClick={(e) => e.stopPropagation()}
@@ -279,7 +278,7 @@ const Services = () => {
                   display: "grid",
                   placeItems: "center",
                   textDecoration: "none",
-                  backgroundColor: "rgba(0, 0, 0, 0.2)",
+                  backgroundColor: "rgba(0, 0, 0, 0.1)",
                   borderRadius: "4px",
                   border: "1px solid rgba(255, 255, 255, 0.05)",
                   px: 2,
@@ -288,11 +287,11 @@ const Services = () => {
                   transition:
                     "background 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
                   "&:active": {
-                    backgroundColor: "rgba(0, 0, 0, 0.35)",
+                    backgroundColor: "rgba(0, 0, 0, 0.2)",
                     boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)",
                   },
                   "&:hover": {
-                    backgroundColor: "rgba(0, 0, 0, 0.35)",
+                    backgroundColor: "rgba(0, 0, 0, 0.2)",
                     boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)",
                   },
                 }}
