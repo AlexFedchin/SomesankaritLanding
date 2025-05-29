@@ -66,7 +66,7 @@
     "title": "Referenssit",
     "projects": {
       "project1": {
-        "descriptions": "Näyttökertojen keskiarvo +58K\nTykkäykset suosituimmassa videossa +6K"
+        "description": "Näyttökertojen keskiarvo +58K\nTykkäykset suosituimmassa videossa +6K"
       },
       "project2": {
         "description": "Ensimmäisenä kuukautena +1.1 miljoonaa näyttökertaa\nKokonaisuutena +2.9 miljoonaa näyttökertaa\nTykkäykset +130K\nSeuraajat +20K\nYhteistyö jatkuu"
@@ -166,7 +166,7 @@
   "contact": {
     "title": "Ota Yhteyttä",
     "subtitle": "Haluamme kuulla sinusta!",
-    "description": "Ota meihin yhteyttä sähköpostitse, puhelimitse tai vieraile toimistollamme. Autamme sinua kasvattamaan sosiaalisen median läsnäoloasi.",
+    "description": "Ota meihin yhteyttä sähköpostitse, puhelimitse tai laita tekstari. Autamme sinua kasvattamaan sosiaalisen median läsnäoloasi.",
     "email": "Sähköposti",
     "phone": "Puhelin",
     "address": "Osoite"
