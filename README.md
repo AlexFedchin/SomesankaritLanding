@@ -4,7 +4,7 @@ This project is a landing page for the Social Media Marketing agency **Somesanka
 
 ## Accessing Page
 
-The landing page is currently hosted publically using Netlify on this url: [somesankarit.netlify.app](https://somesankarit.netlify.app/). Instructions on how to run the project locally are placed below.
+The landing page is currently hosted publically using Netlify on this url: [somesankarit.fi](https://somesankarit.fi). Instructions on how to run the project locally are placed below.
 
 ## Screenshots
 
