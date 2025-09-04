@@ -8,11 +8,13 @@ The landing page is currently hosted publically using Netlify on this url: [some
 
 ## Screenshots
 
-<img src="public/img/screenshots/screenshot1.webp" alt="App Screenshot 1" width="400"/>
-<img src="public/img/screenshots/screenshot2.webp" alt="App Screenshot 2" width="400"/>
-<img src="public/img/screenshots/screenshot3.webp" alt="App Screenshot 3" width="400"/>
-<img src="public/img/screenshots/screenshot4.webp" alt="App Screenshot 4" width="400"/>
-<img src="public/img/screenshots/screenshot5.webp" alt="App Screenshot 5" width="400"/>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+   <img src="public/img/screenshots/screenshot1.webp" alt="App Screenshot 1" width="500"/>
+   <img src="public/img/screenshots/screenshot2.webp" alt="App Screenshot 2" width="500"/>
+   <img src="public/img/screenshots/screenshot3.webp" alt="App Screenshot 3" width="500"/>
+   <img src="public/img/screenshots/screenshot4.webp" alt="App Screenshot 4" width="500"/>
+   <img src="public/img/screenshots/screenshot5.webp" alt="App Screenshot 5" width="500"/>
+</div>
 
 ## Project Structure
 
