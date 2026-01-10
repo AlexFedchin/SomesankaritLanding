@@ -4,11 +4,17 @@ This project is a landing page for the Social Media Marketing agency **Somesanka
 
 ## Accessing Page
 
-The landing page is currently hosted publically using Netlify on this url: [somesankarit.netlify.app](https://somesankarit.netlify.app/). Instructions on how to run the project locally are placed below.
+The landing page is currently hosted publically using Netlify on this url: [somesankarit.fi](https://somesankarit.fi). Instructions on how to run the project locally are placed below.
 
 ## Screenshots
 
-_Coming soon..._
+<div style="display: flex; flex-direction: column; gap: 8px;">
+   <img src="public/img/screenshots/screenshot1.webp" alt="App Screenshot 1" width="500"/>
+   <img src="public/img/screenshots/screenshot2.webp" alt="App Screenshot 2" width="500"/>
+   <img src="public/img/screenshots/screenshot3.webp" alt="App Screenshot 3" width="500"/>
+   <img src="public/img/screenshots/screenshot4.webp" alt="App Screenshot 4" width="500"/>
+   <img src="public/img/screenshots/screenshot5.webp" alt="App Screenshot 5" width="500"/>
+</div>
 
 ## Project Structure
 

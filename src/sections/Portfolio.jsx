@@ -83,12 +83,6 @@ const Portfolio = () => {
         reposts: "184",
         link: "https://www.tiktok.com/@roskafest/video/7500918509128535318?is_from_webapp=1&sender_device=pc&web_id=7486393158625936918",
       },
-      {
-        title: "F2F EVENT",
-        description: t("portfolio.projects.project7.description"),
-        image: "/img/projects/project7.webp",
-        link: "",
-      },
     ],
     [t]
   );
