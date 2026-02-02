@@ -119,8 +119,8 @@ const PersonCard = ({ image, firstName, secondName, roles, description }) => {
                       fontSize: isMobile
                         ? "1rem"
                         : isTablet
-                        ? "1.5rem"
-                        : "2rem",
+                          ? "1.5rem"
+                          : "2rem",
                       letterSpacing: 4,
                       color: "var(--off-white)",
                       userSelect: "none",
@@ -146,7 +146,13 @@ const PersonCard = ({ image, firstName, secondName, roles, description }) => {
                 }}
               />
               {/* Description */}
-              <Typography variant="body-text">{description}</Typography>
+              <Typography variant="body-text">
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: description,
+                  }}
+                />
+              </Typography>
             </>
           )}
         </Stack>
@@ -172,7 +178,11 @@ const PersonCard = ({ image, firstName, secondName, roles, description }) => {
               fontSize: isMobile ? "0.9rem" : isTablet ? "1.15rem" : "1.25rem",
             }}
           >
-            {description}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: description,
+              }}
+            />
           </Typography>
         </>
       ) : null}

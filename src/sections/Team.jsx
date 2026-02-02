@@ -50,6 +50,16 @@ const Team = () => {
       roles: [t("meetTheTeam.team.santeri.roles.1")],
       description: t("meetTheTeam.team.santeri.description"),
     },
+    {
+      image: "/img/team/ella.webp",
+      firstName: "Ella",
+      secondName: "Pöllänen",
+      roles: [
+        t("meetTheTeam.team.ella.roles.1"),
+        t("meetTheTeam.team.ella.roles.2"),
+      ],
+      description: t("meetTheTeam.team.ella.description"),
+    },
   ];
 
   return (
@@ -93,13 +103,13 @@ const Team = () => {
           mt: isMobile
             ? "calc((200px - 1.5rem) / 2 - 48px)"
             : isTablet
-            ? "calc((300px - 2rem) / 2 - 63px)"
-            : "calc((400px - 2.5rem) / 2 - 90px)",
+              ? "calc((300px - 2rem) / 2 - 63px)"
+              : "calc((400px - 2.5rem) / 2 - 90px)",
           mb: isMobile
             ? "calc((200px - 1.5rem) / 2 + 36px)"
             : isTablet
-            ? "calc((300px - 2rem) / 2 + 47px)"
-            : "calc((400px - 2.5rem) / 2 + 70px)",
+              ? "calc((300px - 2rem) / 2 + 47px)"
+              : "calc((400px - 2.5rem) / 2 + 70px)",
         }}
       >
         {t("meetTheTeam.title").toUpperCase()}

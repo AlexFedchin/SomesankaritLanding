@@ -146,7 +146,7 @@ const Services = () => {
             "opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease",
           opacity: showDetailsCard ? 1 : 0,
           transform: showDetailsCard ? "translateY(0)" : "translateY(-20px)",
-          maxHeight: showDetailsCard ? "600px" : 0,
+          maxHeight: showDetailsCard ? "620px" : 0,
           overflow: "hidden",
         }}
       >
@@ -303,8 +303,8 @@ const Services = () => {
                     fontSize: isMobile
                       ? "0.9rem"
                       : isTablet
-                      ? "1rem"
-                      : "1.2rem",
+                        ? "1rem"
+                        : "1.2rem",
                     width: "100%",
                   }}
                 >
