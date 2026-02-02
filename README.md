@@ -35,7 +35,7 @@ The landing page is currently hosted publically using Netlify on this url: [some
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/AlexFedchin/Somesankarit-Landing.git
+   git clone https://github.com/AlexFedchin/SomesankaritLanding.git
    cd Somesankarit-Landing
    ```
 
