@@ -123,10 +123,10 @@ const Contact = () => {
 
                 <Typography
                   component="a"
-                  href="mailto:hello@somesankarit.fi"
+                  href="mailto:mirko@somesankarit.fi"
                   variant="body-text"
                 >
-                  hello@somesankarit.fi
+                  mirko@somesankarit.fi
                 </Typography>
               </Stack>
               {/* Phone */}
